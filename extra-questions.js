@@ -1,0 +1,1 @@
+window.extraQuestions=[[0,2,'True or false: Homeostasis maintains internal conditions within a regulated range.',['False','True'],1,'Homeostasis allows normal fluctuations while maintaining conditions within a range.']];
