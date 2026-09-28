@@ -15,6 +15,7 @@ const spatial=[
 ["The brain is ___ to the spinal cord.",["inferior","superior","distal","superficial"],1,"The brain is above the spinal cord.",0,3]
 ];
 spatial.forEach((x,i)=>q.push([x[4],x[5],x[0],x[1],x[2],x[3],500+i]));
+q.forEach(item=>{let order=shuffle(item[3].map((_,i)=>i));let correct=item[4];item[3]=order.map(i=>item[3][i]);item[4]=order.indexOf(correct)});
 const old=window.show;
 const definitions=[
 ["Superior","Toward the head or above"],["Inferior","Toward the feet or below"],["Anterior","Toward the front"],["Posterior","Toward the back"],["Medial","Toward the midline"],["Lateral","Away from the midline"],["Proximal","Closer to a limb's attachment"],["Distal","Farther from a limb's attachment"],["Superficial","Closer to the body surface"],["Deep","Farther from the body surface"]
