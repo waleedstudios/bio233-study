@@ -1,49 +1,265 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BIO 233 · Lecture Exam 2</title><style>:root{font-family:system-ui,-apple-system,sans-serif;color:#f3f6fc;background:#090e1a;--pink:#f36aaa;--panel:#151e31;--edge:#40506b;--muted:#b5c1d7}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 90% -5%,#382449 0%,transparent 38%),radial-gradient(ellipse at 0% 20%,#162b46 0%,transparent 38%),#090e1a;min-height:100vh}header{position:sticky;top:0;z-index:10;background:#0d1425eb;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff20}.wrap{max-width:1080px;margin:auto;padding:18px}h1{margin:6px 0;font-size:clamp(28px,5vw,44px)}h2{margin-top:0}.muted{color:var(--muted);line-height:1.65}.tag{color:#ff99c9;font-size:12px;font-weight:800;letter-spacing:.13em}.card{background:linear-gradient(150deg,#1b2940,#131d30);border:1px solid #ffffff20;border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 15px 40px #0003}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.mini{background:#111e32;border:1px solid #42516d;border-radius:14px;padding:16px;line-height:1.55}.mini b{color:#ffa6d0}.nav, .toolbar{display:flex;gap:9px;flex-wrap:wrap}.nav a,button{font:inherit;color:white;text-decoration:none;border:1px solid #576583;background:#293652;border-radius:11px;padding:11px 15px;cursor:pointer}.nav a.active,button.primary{background:linear-gradient(110deg,#f36aaa,#f9a0c7);color:#241021;border-color:#f36aaa;font-weight:750}.chapter{cursor:pointer}.chapter:hover{border-color:#f36aaa}.chapter small{display:block;color:#c7d2e7;margin-top:8px;line-height:1.45}.hidden{display:none}.choice{display:block;width:100%;text-align:left;margin:8px 0;padding:14px}.right{border-color:#6fdbb2!important;background:#173e39!important}.wrong{border-color:#f1849c!important;background:#46283a!important}.feedback{margin-top:12px;padding:14px;border-radius:12px;background:#122e32;border:1px solid #3c887c;line-height:1.55}.chapterView h3{color:#ffa6d0}.chapterView li{margin:8px 0;line-height:1.5}@media(max-width:550px){header{position:relative}.wrap{padding:14px}.card{padding:18px}}</style></head><body><header><div class="wrap"><div class="tag">BIO 233 STUDY HUB</div><h1>Lecture Exam 2</h1><p class="muted">Chapters 5–10 · Lecture presentations + Martini & Nath textbook.</p><nav class="nav"><a href="index.html">Lecture Exam 1 · Chapters 1–4</a><a href="lab.html" class="active">Lecture Exam 2 · Chapters 5–10</a></nav></div></header><main class="wrap"><section class="card"><div class="tag">EXAM 2 HOME</div><h2>Choose a chapter</h2><p class="muted">Start with the chapter summaries, then use mixed practice. Lecture summaries are supplemented with textbook explanations and printed page references. Chapters 7 and 8 are covered fully for now; their actual tested scope is pending your update.</p><div id="chapters" class="grid"></div><p class="muted">Textbook source: Fundamentals of Anatomy & Physiology, Martini & Nath, Pearson (2017), uploaded excerpt. Page references below are printed book pages, not PDF positions. Chapter 11 is outside this section.</p></section><section id="chapterView" class="card chapterView hidden"></section><section class="card"><div class="tag">MIXED PRACTICE</div><h2>Lecture Exam 2 practice</h2><p class="muted">Questions mix Chapters 5–10. Answer first, then the explanation appears.</p><div class="toolbar"><button class="primary" onclick="startQuiz()">All chapters · 61 questions</button><button onclick="startQuiz(7)">Chapter 7</button><button onclick="startQuiz(8)">Chapter 8</button><button onclick="reviewMissed()">Review missed</button></div><div id="quiz"></div></section></main><script src="textbook-supplement.js"></script><script>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIO 233 · Lecture Exam 2</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f3f6fc;background:#090e1a;--pink:#f36aaa;--pink2:#f9a0c7;--panel:#151e31;--panel2:#111e32;--edge:#40506b;--muted:#b5c1d7;--good:#6fdbb2;--bad:#f1849c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% -5%,#382449 0%,transparent 38%),radial-gradient(ellipse at 0% 20%,#162b46 0%,transparent 38%),#090e1a;min-height:100vh}
+header{position:sticky;top:0;z-index:20;background:#0d1425eb;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff20}.wrap{max-width:1080px;margin:auto;padding:18px}
+h1{margin:6px 0;font-size:clamp(28px,5vw,44px);letter-spacing:-.045em}h2{letter-spacing:-.025em}h3{color:#ffa6d0}.muted{color:var(--muted);line-height:1.65}.tag{color:#ff99c9;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.card{background:linear-gradient(150deg,#1b2940,#131d30);border:1px solid #ffffff20;border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 15px 40px #0003}
+.hero{background:linear-gradient(110deg,#27234c,#192e48);border:1px solid #6d547c}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.mini{background:#111e32;border:1px solid #42516d;border-radius:14px;padding:16px;line-height:1.55}.mini b{color:#ffa6d0}
+.nav,.toolbar,.chips{display:flex;gap:9px;flex-wrap:wrap}.chips{margin:12px 0}.nav a,button{font:inherit;color:white;text-decoration:none;border:1px solid #576583;background:#293652;border-radius:11px;padding:11px 15px;cursor:pointer;transition:.16s}
+.nav a:hover,button:hover{transform:translateY(-1px);border-color:var(--pink)}.nav a.active,button.primary{background:linear-gradient(110deg,var(--pink),var(--pink2));color:#241021;border-color:var(--pink);font-weight:750}
+.chapter{min-height:142px;text-align:left;background:linear-gradient(135deg,#243551,#191c35)}.chapter b{font-size:19px}.chapter small{display:block;color:#c7d2e7;margin-top:8px;line-height:1.45}
+.hidden{display:none}.choice{display:block;width:100%;text-align:left;margin:8px 0;padding:14px;line-height:1.45;background:#17263d}.choice.right{border-color:var(--good)!important;background:#173e39!important}.choice.wrong{border-color:var(--bad)!important;background:#46283a!important}
+.feedback{margin-top:12px;padding:14px;border-radius:12px;background:#122e32;border:1px solid #3c887c;line-height:1.55}.feedback.bad{background:#362333;border-color:#a65c80}
+.topic{border-left:4px solid var(--pink);padding-left:15px;margin:20px 0}.topic p{line-height:1.7}.topic .mini{margin-top:10px}
+.count{display:inline-flex;align-items:center;border:1px solid #73516c;color:#ffb1d5;border-radius:30px;padding:5px 11px;font-size:12px}
+#progress{height:5px;background:#303950;position:sticky;top:94px;z-index:18;border-radius:8px;overflow:hidden}#bar{height:100%;width:0;background:linear-gradient(90deg,#e74e98,#ffc1db)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:14px;border:1px solid #42516d;background:#101a2d;border-radius:14px;text-align:center}.stat strong{display:block;font-size:24px;color:#ffa6d0}
+.question-card{margin-top:14px}.question-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+details{background:#19263b;border:1px solid #42516d;border-radius:12px;padding:12px;margin-top:10px}summary{cursor:pointer;font-weight:700}
+@media(max-width:650px){header{position:relative}.wrap{padding:14px}.card{padding:18px}.stats{grid-template-columns:1fr}#progress{top:0}.nav a{flex:1;text-align:center}.toolbar button{flex:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="tag">BIO 233 STUDY HUB</div>
+    <h1>Lecture Exam 2</h1>
+    <p class="muted">Chapters 5–10 · lecture slides + assigned Martini & Nath textbook material.</p>
+    <nav class="nav">
+      <a href="index.html">Lecture Exam 1 · Chapters 1–4</a>
+      <a href="lab.html" class="active">Lecture Exam 2 · Chapters 5–10</a>
+    </nav>
+    <div class="toolbar" style="margin-top:12px">
+      <button onclick="showHome()">Home</button>
+      <button onclick="startQuiz()">Mixed practice</button>
+      <button onclick="reviewMissed()">Review missed</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<div id="progress"><div id="bar"></div></div>
+
+<section id="home">
+  <div class="card hero">
+    <div class="tag">Exam 2 Home</div>
+    <h2>Study it the same way as Lecture Exam 1.</h2>
+    <p class="muted">Read one chapter at a time, work through the lecture foundation, use textbook explanations to fill in the “why,” then answer chapter questions before moving on. Your missed questions stay saved on this device.</p>
+    <div class="stats">
+      <div class="stat"><strong>6</strong>chapters</div>
+      <div class="stat"><strong id="totalQ">0</strong>practice questions</div>
+      <div class="stat"><strong id="missedCount">0</strong>saved missed</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tag">Choose a chapter</div>
+    <h2>Lecture Exam 2 content</h2>
+    <p class="muted">Chapters 7 and 8 are still shown with full coverage for now. Once you give me your professor's exact tested material for those chapters, we can trim them down.</p>
+    <div id="chapters" class="grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="tag">Mixed Practice</div>
+    <h2>Test all chapters</h2>
+    <p class="muted">Questions are built from your lecture material and the textbook explanations already added to this study hub.</p>
+    <div class="toolbar">
+      <button class="primary" onclick="startQuiz()">Start all questions</button>
+      <button onclick="reviewMissed()">Review missed</button>
+      <button onclick="resetMissed()">Clear missed list</button>
+    </div>
+  </div>
+</section>
+
+<section id="chapterView" class="hidden"></section>
+<section id="quizView" class="hidden"></section>
+</main>
+
+<script src="textbook-supplement.js"></script>
+<script src="exam2-extra.js"></script>
+<script>
 const chapters=[
-{n:5,title:'The Integumentary System',sub:'Skin layers, cells, accessory structures, vitamin D and regulation',points:['Integumentary functions include physical protection, immune coordination, sensory information, vitamin D3 synthesis, excretion, thermoregulation and lipid storage.','The cutaneous membrane consists of epidermis and dermis; the dermis has papillary and reticular layers.','Stratum basale is the deepest epidermal layer and contains basal cells, melanocytes and tactile (Merkel) cells.','Accessory structures include hair follicles, exocrine glands and nails.','Insensible perspiration is continuous water loss that cannot be seen or felt; severe burns can make this water loss dangerous.','Vitamin D pathway in the lecture: cholecalciferol → liver intermediate → kidney calcitriol; calcitriol promotes calcium and phosphate absorption.']},
-{n:6,title:'Bones and Bone Structure',sub:'Bone types, markings, cells, growth and ossification',points:['Bone shapes in the lecture include sutural, irregular, short, flat, long and sesamoid bones.','Bone markings include projections for attachment or joints and depressions/openings such as sulcus and fossa.','Endochondral ossification begins with a cartilage model; blood vessels invade, a primary ossification center develops, and remodeling creates the medullary cavity.','Intramembranous ossification begins when mesenchymal cells become osteoblasts and secrete osteoid; trapped osteoblasts become osteocytes.','Bone growth and remodeling depend on coordinated bone deposition and resorption.']},
-{n:7,title:'The Axial Skeleton',sub:'Skull, vertebral column and thoracic cage',points:['The axial skeleton contains 80 bones.','Its major divisions are the skull and associated bones, thoracic cage and vertebral column.','The thoracic cage includes the sternum and 24 ribs.','The vertebral column includes 24 vertebrae plus the sacrum and coccyx.','Lecture clinical material also distinguishes osteoarthritis from rheumatoid arthritis and discusses growth-related disorders.']},
-{n:8,title:'The Appendicular Skeleton',sub:'Girdles and upper/lower limbs',points:['The appendicular skeleton contains 126 bones.','Pectoral girdles include the clavicles and scapulae.','Upper limbs include humerus, radius, ulna, carpals, metacarpals and phalanges.','The pelvic girdle consists of the hip bones.','Lower limbs include femur, patella, tibia, fibula, tarsals, metatarsals and phalanges.','The hip bone is organized around the ilium, ischium and pubis.']},
-{n:9,title:'Joints',sub:'Joint classifications, synovial joints and movement',points:['Functional joint categories are synarthrosis, amphiarthrosis and diarthrosis.','Synarthroses are immovable; amphiarthroses allow slight movement; diarthroses are freely movable synovial joints.','A synovial joint includes a fibrous joint capsule, synovial membrane, articular cartilages, joint cavity containing synovial fluid and ligaments.','Knee accessory structures include bursae, fat pads, menisci and stabilizing ligaments.','Sacroiliac joints have slight movement; individual vertebral joints contribute small portions of total spinal motion.']},
-{n:10,title:'Muscle Tissue',sub:'Organization, sarcomeres, contraction, metabolism and training',points:['Muscle tissue produces movement, maintains posture/balance, supports soft tissues, guards entrances/exits and helps maintain body temperature.','Epimysium surrounds the entire muscle; perimysium surrounds a fascicle; endomysium surrounds a single muscle fiber.','Thin filaments contain actin with troponin and tropomyosin; thick filaments are built from myosin.','During contraction the A band stays the same width while Z lines move closer together and the I band gets smaller.','Excitation–contraction coupling: motor neuron stimulus → ACh release → sarcolemma action potential → T tubules → Ca2+ release from sarcoplasmic reticulum → Ca2+ binds troponin → tropomyosin moves → cross-bridges form.','Lecture 04 focuses on aerobic metabolism, muscle metabolism, recovery, lactate removal/recycling, oxygen debt, fast/slow fibers, fatigue, conditioning, endurance and effects of training.']}
+{n:5,title:'The Integumentary System',sub:'Skin layers, cells, accessory structures, vitamin D, burns and regulation',points:[
+['Integumentary functions','Physical protection, immune coordination, sensory information, vitamin D3 synthesis, excretion, thermoregulation and lipid storage.'],
+['Cutaneous membrane','The cutaneous membrane is epidermis + dermis. The hypodermis is beneath the skin and is not part of the cutaneous membrane.'],
+['Epidermis','Keratinized stratified squamous epithelium. Stratum basale is deepest. Thick skin has basale → spinosum → granulosum → lucidum → corneum.'],
+['Epidermal cells','Keratinocytes produce keratin; melanocytes produce melanin; tactile/Merkel cells participate in touch; dendritic/Langerhans cells contribute to immune defense.'],
+['Dermis','Papillary layer is areolar connective tissue. Reticular layer is dense irregular connective tissue and contains sensory receptors, vessels, glands and follicles.'],
+['Accessory structures','Hair follicles, sebaceous glands, sweat glands and nails. Eccrine/merocrine sweat helps cooling; apocrine glands are concentrated in axillary and anogenital regions.'],
+['Vitamin D pathway','UV exposure initiates vitamin D3 production in skin → liver processing → kidney activation to calcitriol → increased calcium and phosphate absorption.'],
+['Burns and repair','Severe burns compromise the water barrier. Full-thickness burns destroy epidermis and dermis and may require grafting.']
+]},
+{n:6,title:'Bones and Bone Structure',sub:'Bone shapes, markings, cells, compact/spongy bone, ossification, growth and repair',points:[
+['Bone functions','Support, protection, leverage, mineral storage and blood-cell production in marrow.'],
+['Bone cells','Osteogenic cells produce osteoblasts; osteoblasts deposit osteoid; osteocytes maintain matrix; osteoclasts resorb matrix.'],
+['Long bone anatomy','Diaphysis = shaft; epiphyses = ends; periosteum covers outer bone; endosteum lines internal surfaces and medullary cavity.'],
+['Compact bone','Osteons contain concentric lamellae around central canals. Osteocytes sit in lacunae and communicate through canaliculi.'],
+['Spongy bone','Organized into trabeculae aligned with stress. It generally lacks true osteons.'],
+['Bone markings','Examples include foramen = opening, fossa = shallow depression, condyle = articular projection, tuberosity = rough attachment area.'],
+['Ossification','Intramembranous ossification develops directly from mesenchyme. Endochondral ossification replaces a hyaline cartilage model.'],
+['Growth and remodeling','Epiphyseal plates lengthen bones; appositional growth increases diameter. Osteoblasts and osteoclasts continuously remodel bone.'],
+['Calcium regulation','Low blood calcium stimulates parathyroid hormone. Calcitriol helps increase intestinal calcium absorption.'],
+['Fracture repair','Hematoma → soft/internal and external callus → bony callus → remodeling.']
+]},
+{n:7,title:'The Axial Skeleton',sub:'Skull, vertebral column and thoracic cage',points:[
+['Axial overview','The axial skeleton contains 80 bones: skull and associated bones, vertebral column and thoracic cage.'],
+['Skull','Eight cranial bones protect the brain; fourteen facial bones form the face. The occipital bone contains the foramen magnum.'],
+['Infant skull and sinuses','Fontanelles allow molding and growth. Paranasal sinuses occur in frontal, ethmoid, sphenoid and maxillary bones.'],
+['Vertebral regions','7 cervical, 12 thoracic and 5 lumbar vertebrae, plus the sacrum and coccyx.'],
+['Special vertebrae','Atlas = C1 and supports the skull. Axis = C2 and has the dens. Cervicals have transverse foramina.'],
+['Spinal curves','Thoracic and sacral are primary curves; cervical and lumbar are secondary curves.'],
+['Intervertebral discs','Anulus fibrosus = outer ring; nucleus pulposus = gel-like center.'],
+['Thoracic cage','Sternum + 12 pairs of ribs. True ribs 1–7 attach directly; ribs 11–12 are floating.']
+]},
+{n:8,title:'The Appendicular Skeleton',sub:'Pectoral/pelvic girdles and upper/lower limbs',points:[
+['Appendicular overview','The appendicular skeleton contains 126 bones and includes the girdles and limbs.'],
+['Pectoral girdle','Clavicle + scapula. The glenoid cavity of the scapula receives the humeral head.'],
+['Upper limb','Humerus in the arm. Radius is lateral/thumb side; ulna is medial/little-finger side.'],
+['Hand','8 carpals, 5 metacarpals and 14 phalanges per hand. The thumb has 2 phalanges.'],
+['Pelvic girdle','Each hip bone forms from ilium + ischium + pubis. All three meet at the acetabulum.'],
+['Lower limb','Femur in the thigh; patella is sesamoid; tibia is medial/weight-bearing; fibula is lateral.'],
+['Foot','7 tarsals, 5 metatarsals and 14 phalanges per foot. Talus meets the tibia; calcaneus forms the heel.'],
+['Pelvic differences','Typical female pelvis has a broader inlet/outlet and wider subpubic angle, though individual variation exists.']
+]},
+{n:9,title:'Joints',sub:'Classifications, synovial joints, movement and major joint examples',points:[
+['Functional classes','Synarthrosis = immovable; amphiarthrosis = slightly movable; diarthrosis = freely movable.'],
+['Structural classes','Fibrous, cartilaginous and synovial. All synovial joints are diarthroses.'],
+['Synovial joint anatomy','Articular cartilage, fibrous capsule, synovial membrane, joint cavity, synovial fluid and ligaments.'],
+['Accessory structures','Bursae reduce friction. Menisci improve fit/distribute load. Ligaments connect bone to bone.'],
+['Movement terms','Flexion/extension, abduction/adduction, rotation, pronation/supination, dorsiflexion/plantar flexion, inversion/eversion.'],
+['Six synovial types','Plane, hinge, pivot, condylar, saddle and ball-and-socket.'],
+['Knee, shoulder and hip','Knee menisci and cruciate ligaments aid stability. Shoulder favors mobility; hip favors stability.'],
+['Joint injury/aging','Sprain = ligament injury; strain = muscle/tendon injury; dislocation = loss of normal articular contact.']
+]},
+{n:10,title:'Muscle Tissue',sub:'Organization, sarcomeres, contraction, metabolism and training',points:[
+['Muscle functions','Movement, posture/balance, support of soft tissues, guarding entrances/exits and heat production.'],
+['Organization','Whole muscle → fascicle → muscle fiber → myofibril → sarcomere → myofilaments.'],
+['Connective tissue layers','Epimysium surrounds whole muscle; perimysium surrounds fascicles; endomysium surrounds individual fibers.'],
+['Sarcomere','Z line to Z line. Thin filaments contain actin, troponin and tropomyosin; thick filaments contain myosin.'],
+['Sliding filament','A band stays the same width; I band and H zone shrink; Z lines move closer. Filaments slide rather than shorten.'],
+['Neuromuscular junction','Motor neuron AP → ACh release → motor end plate depolarization → muscle AP. Acetylcholinesterase removes ACh.'],
+['Excitation–contraction coupling','AP travels through T tubules → SR releases Ca2+ → Ca2+ binds troponin → tropomyosin shifts → cross-bridges form.'],
+['Cross-bridge cycle','Myosin binds actin and power-strokes; ATP binding detaches myosin; ATP hydrolysis re-cocks the head.'],
+['Motor units and tension','A motor unit is one motor neuron plus all fibers it innervates. Recruitment activates additional units.'],
+['Contraction types','Isometric = tension without length change; concentric = active shortening; eccentric = active lengthening.'],
+['ATP and metabolism','Creatine phosphate rapidly regenerates ATP; glycolysis is fast; aerobic metabolism supports prolonged work.'],
+['Fiber types and training','Slow oxidative fibers resist fatigue. Fast glycolytic fibers are powerful but fatigue sooner. Resistance training promotes hypertrophy; endurance training improves aerobic capacity.']
+]}
 ];
-const qs=[
-['Which layer is the deepest layer of the epidermis?',['Stratum corneum','Stratum basale','Papillary layer','Reticular layer'],1,'The lecture identifies stratum basale as the deepest basal layer.'],
-['Which dermal layer contains sensory receptors and blood vessels that assist thermoregulation?',['Reticular layer','Stratum lucidum','Stratum basale','Epidermal ridge'],0,'The reticular layer contains sensory receptors and blood vessels involved in thermoregulation.'],
-['Calcitriol primarily stimulates absorption of which ions?',['Sodium and potassium','Calcium and phosphate','Chloride and iron','Magnesium and sodium'],1,'The vitamin D figure links calcitriol with calcium and phosphate ion absorption.'],
-['Which bone type includes the patella?',['Flat','Long','Sesamoid','Sutural'],2,'The patella is the lecture example of a sesamoid bone.'],
-['A fossa is best described as a:',['Pointed process','Shallow depression','Large rough projection','Small flat articular surface'],1,'The bone-marking slide defines fossa as a shallow depression.'],
-['Endochondral ossification begins from a model made of:',['Hyaline cartilage','Dense regular CT','Compact bone','Elastic cartilage'],0,'The endochondral sequence shown in lecture begins with a hyaline cartilage model.'],
-['How many bones are in the adult axial skeleton?',['80','126','206','60'],0,'The axial skeleton contains 80 of the adult skeleton’s 206 bones.'],
-['Which belongs to the thoracic cage?',['Clavicle','Scapula','Sternum','Hip bone'],2,'The lecture groups the sternum and ribs in the thoracic cage.'],
-['The vertebral column includes 24 vertebrae plus the:',['Sternum and ribs','Sacrum and coccyx','Clavicle and scapula','Ilium and ischium'],1,'The axial skeleton slide lists 24 vertebrae, one sacrum and one coccyx.'],
-['How many bones are in the appendicular skeleton?',['80','126','206','25'],1,'The appendicular skeleton contains 126 bones.'],
-['Which bones form the pectoral girdles?',['Clavicle and scapula','Radius and ulna','Femur and patella','Ilium and ischium'],0,'Each pectoral girdle includes a clavicle and scapula.'],
-['Which is NOT one of the three main parts of the hip bone?',['Ilium','Ischium','Pubis','Sacrum'],3,'The hip bone is composed of ilium, ischium and pubis.'],
-['Which functional joint category is immovable?',['Diarthrosis','Amphiarthrosis','Synarthrosis','Synovial'],2,'Synarthrosis means no movement.'],
-['Which functional joint category allows slight movement?',['Amphiarthrosis','Synarthrosis','Diarthrosis','Gomphosis only'],0,'Amphiarthroses are slightly movable joints.'],
-['What fills the cavity of a synovial joint?',['Blood','Synovial fluid','Bone marrow','Cerebrospinal fluid'],1,'The joint cavity contains synovial fluid.'],
-['Which connective tissue sheath surrounds an entire skeletal muscle?',['Endomysium','Perimysium','Epimysium','Sarcolemma'],2,'Epimysium surrounds the entire muscle.'],
-['Which sheath surrounds a fascicle?',['Perimysium','Epimysium','Endomysium','Titin'],0,'Perimysium surrounds a fascicle, or bundle of muscle fibers.'],
-['During skeletal muscle contraction, which band stays the same width?',['I band','H band','A band','Z line'],2,'The lecture slide states that the A band stays the same width during contraction.'],
-['Calcium binds to which protein to begin exposing active sites?',['Myosin','Troponin','Titin','Nebulin'],1,'Ca2+ binds troponin, causing tropomyosin to move away from active sites.'],
-['ACh is released into the:',['Medullary cavity','Synaptic cleft','Joint cavity','Sarcomere'],1,'The action potential causes ACh release into the synaptic cleft at the neuromuscular junction.'],
-['Calcium used for skeletal muscle contraction is released from the:',['Golgi apparatus','Sarcoplasmic reticulum','Nucleus','Mitochondrial matrix'],1,'The action potential travels down T tubules and triggers Ca2+ release from the sarcoplasmic reticulum.'],
-['As a sarcomere contracts, the Z lines:',['Move farther apart','Move closer together','Disappear','Stay fixed'],1,'Z lines move closer together as the sarcomere shortens.'],
-['Which is listed as a Chapter 10 Lecture 04 focus?',['Fast and slow fibers','Skin pigmentation','Skull sutures','Bone markings'],0,'Lecture 04 explicitly lists fast and slow fibers among its focus topics.'],
-['Which is a function of muscle tissue from the lecture?',['Produce movement','Synthesize vitamin D3','Form epidermal ridges','Produce synovial fluid'],0,'The muscle lecture lists production of movement as a major function.']
+
+const baseQs=[
+['Which layer is the deepest layer of the epidermis?',['Stratum corneum','Stratum basale','Papillary layer','Reticular layer'],1,'The lecture identifies stratum basale as the deepest epidermal layer.',5],
+['Which dermal layer contains many sensory receptors and blood vessels involved in thermoregulation?',['Reticular layer','Stratum lucidum','Stratum basale','Epidermal ridge'],0,'The reticular dermis contains vessels and many sensory structures.',5],
+['Calcitriol primarily supports absorption of which ions?',['Sodium and potassium','Calcium and phosphate','Chloride and iron','Magnesium and sodium'],1,'The vitamin D pathway links calcitriol with calcium and phosphate absorption.',5],
+['Which bone type includes the patella?',['Flat','Long','Sesamoid','Sutural'],2,'The patella is a sesamoid bone.',6],
+['A fossa is best described as a:',['Pointed process','Shallow depression','Large rough projection','Small flat articular surface'],1,'A fossa is a shallow depression.',6],
+['Endochondral ossification begins from a model made of:',['Hyaline cartilage','Dense regular CT','Compact bone','Elastic cartilage'],0,'Endochondral ossification begins with a hyaline cartilage model.',6],
+['How many bones are in the adult axial skeleton?',['80','126','206','60'],0,'The axial skeleton contains 80 bones.',7],
+['Which belongs to the thoracic cage?',['Clavicle','Scapula','Sternum','Hip bone'],2,'The sternum belongs to the thoracic cage.',7],
+['The vertebral column includes 24 vertebrae plus the:',['Sternum and ribs','Sacrum and coccyx','Clavicle and scapula','Ilium and ischium'],1,'The vertebral column includes 24 vertebrae plus sacrum and coccyx.',7],
+['How many bones are in the appendicular skeleton?',['80','126','206','25'],1,'The appendicular skeleton contains 126 bones.',8],
+['Which bones form the pectoral girdles?',['Clavicle and scapula','Radius and ulna','Femur and patella','Ilium and ischium'],0,'Each pectoral girdle consists of clavicle and scapula.',8],
+['Which is NOT one of the three main parts of the hip bone?',['Ilium','Ischium','Pubis','Sacrum'],3,'The hip bone consists of ilium, ischium and pubis.',8],
+['Which functional joint category is immovable?',['Diarthrosis','Amphiarthrosis','Synarthrosis','Synovial'],2,'Synarthrosis means no movement.',9],
+['Which functional joint category allows slight movement?',['Amphiarthrosis','Synarthrosis','Diarthrosis','Gomphosis only'],0,'Amphiarthrosis means slight movement.',9],
+['What fills the cavity of a synovial joint?',['Blood','Synovial fluid','Bone marrow','Cerebrospinal fluid'],1,'The synovial joint cavity contains synovial fluid.',9],
+['Which connective tissue sheath surrounds an entire skeletal muscle?',['Endomysium','Perimysium','Epimysium','Sarcolemma'],2,'Epimysium surrounds the entire muscle.',10],
+['Which sheath surrounds a fascicle?',['Perimysium','Epimysium','Endomysium','Titin'],0,'Perimysium surrounds a fascicle.',10],
+['During skeletal muscle contraction, which band stays the same width?',['I band','H band','A band','Z line'],2,'The A band stays the same width during contraction.',10],
+['Calcium binds to which protein to begin exposing active sites?',['Myosin','Troponin','Titin','Nebulin'],1,'Ca2+ binds troponin, moving tropomyosin away from actin active sites.',10],
+['ACh is released into the:',['Medullary cavity','Synaptic cleft','Joint cavity','Sarcomere'],1,'ACh is released into the synaptic cleft at the neuromuscular junction.',10],
+['Calcium used for skeletal muscle contraction is released from the:',['Golgi apparatus','Sarcoplasmic reticulum','Nucleus','Mitochondrial matrix'],1,'The sarcoplasmic reticulum stores and releases Ca2+.',10],
+['As a sarcomere contracts, the Z lines:',['Move farther apart','Move closer together','Disappear','Stay fixed'],1,'Z lines move closer together as the sarcomere shortens.',10],
+['Which is a Chapter 10 metabolism/training focus?',['Fast and slow fibers','Skin pigmentation','Skull sutures','Bone markings'],0,'The muscle lecture includes fast and slow fiber types and effects of training.',10],
+['Which is a function of muscle tissue?',['Produce movement','Synthesize vitamin D3','Form epidermal ridges','Produce synovial fluid'],0,'Production of movement is a major function of muscle tissue.',10]
 ];
-const lectureQuestionChapters=[5,5,5,6,6,6,7,7,7,8,8,8,9,9,9,10,10,10,10,10,10,10,10,10];
-qs.forEach((q,i)=>q.push(lectureQuestionChapters[i]));
-textbookTopics.forEach(t=>qs.push([t.question,t.options,0,t.notes+' Textbook pp. '+t.pages+'.',t.ch]));
-const box=document.getElementById('chapters');box.innerHTML=chapters.map((c,i)=>`<button class="chapter" onclick="showChapter(${i})"><b>Chapter ${c.n}</b><br>${c.title}<small>${c.sub}</small></button>`).join('');
-function showChapter(i){let c=chapters[i],v=document.getElementById('chapterView');v.classList.remove('hidden');v.innerHTML=`<div class="tag">CHAPTER ${c.n}${[7,8].includes(c.n)?' · FULL COVERAGE FOR NOW':''}</div><h2>${c.title}</h2><p class="muted">${c.sub}</p><h3>Lecture foundation</h3><ul>${c.points.map(x=>`<li>${x}</li>`).join('')}</ul><h3>Textbook explanations</h3>${textbookTopics.filter(t=>t.ch===c.n).map(t=>`<article class="mini" style="margin:14px 0"><h3>${t.title}</h3><p class="muted">Textbook pp. ${t.pages}</p><p>${t.notes}</p><details><summary>Active recall: ${t.question}</summary><p><b>${t.options[0]}</b></p><p>${t.notes}</p></details></article>`).join('')}<button class="primary" onclick="startQuiz(${c.n})">Practice Chapter ${c.n}</button>`;v.scrollIntoView({behavior:'smooth'});}
-let order=[],pos=0,score=0,choiceOrder=[],answered=false,missed=new Set();
-try{missed=new Set(JSON.parse(localStorage.getItem('bio233exam2missed-v1')||'[]').filter(i=>Number.isInteger(i)&&i>=0&&i<qs.length))}catch(e){}
-function saveMissed(){try{localStorage.setItem('bio233exam2missed-v1',JSON.stringify([...missed]))}catch(e){}}
+
+const qs=[...baseQs];
+(textbookTopics||[]).forEach(t=>qs.push([t.question,t.options,0,t.notes+' Textbook pp. '+t.pages+'.',t.ch]));
+(window.exam2ExtraQuestions||[]).forEach(q=>qs.push(q));
+
+const chapterBox=document.getElementById('chapters');
+chapterBox.innerHTML=chapters.map((c,i)=>{
+  const n=qs.filter(q=>q[4]===c.n).length;
+  return '<button class="chapter" onclick="showChapter('+i+')"><b>Chapter '+c.n+'</b><br>'+c.title+'<small>'+c.sub+'</small><span class="count" style="margin-top:12px">'+n+' questions</span></button>'
+}).join('');
+
+let order=[],pos=0,score=0,choiceOrder=[],answered=false,currentChapter=null;
+let missed=new Set();
+try{missed=new Set(JSON.parse(localStorage.getItem('bio233exam2missed-v2')||'[]').filter(i=>Number.isInteger(i)&&i>=0&&i<qs.length))}catch(e){}
+document.getElementById('totalQ').textContent=qs.length;
+refreshStats();
+
+function refreshStats(){
+  document.getElementById('missedCount').textContent=missed.size;
+  document.getElementById('bar').style.width=(qs.length?((qs.length-missed.size)/qs.length*100):0)+'%';
+}
+function saveMissed(){try{localStorage.setItem('bio233exam2missed-v2',JSON.stringify([...missed]))}catch(e){}refreshStats()}
+function showOnly(id){['home','chapterView','quizView'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id));window.scrollTo(0,0)}
+function showHome(){showOnly('home')}
+function showChapter(i){
+  currentChapter=chapters[i];
+  const c=currentChapter;
+  const v=document.getElementById('chapterView');
+  const chapterQuestions=qs.map((q,idx)=>({q,idx})).filter(x=>x.q[4]===c.n);
+  const textbook=(textbookTopics||[]).filter(t=>t.ch===c.n);
+  v.innerHTML=
+    '<div class="card hero"><div class="tag">Chapter '+c.n+([7,8].includes(c.n)?' · full coverage for now':'')+'</div><h2>'+c.title+'</h2><p class="muted">'+c.sub+'</p><div class="toolbar"><button onclick="showHome()">← All chapters</button><button class="primary" onclick="startQuiz('+c.n+')">Practice Chapter '+c.n+' · '+chapterQuestions.length+' questions</button></div></div>'+
+    '<div class="card"><div class="tag">Lecture foundation</div><h2>Read • understand • recall</h2>'+
+      c.points.map((p,j)=>'<div class="topic"><div class="question-meta"><h3 style="margin:0">Topic '+(j+1)+': '+p[0]+'</h3><span class="count">lecture</span></div><p>'+p[1]+'</p></div>').join('')+
+    '</div>'+
+    '<div class="card"><div class="tag">Textbook support</div><h2>Fill in the “why”</h2><p class="muted">These are the textbook explanations already paired with your lecture scope.</p>'+
+      textbook.map(t=>'<article class="mini" style="margin:14px 0"><div class="question-meta"><h3 style="margin:0">'+t.title+'</h3><span class="count">pp. '+t.pages+'</span></div><p>'+t.notes+'</p><details><summary>Active recall: '+t.question+'</summary><p><b>'+t.options[0]+'</b></p></details></article>').join('')+
+    '</div>'+
+    '<div class="card"><div class="tag">Chapter practice</div><h2>'+chapterQuestions.length+' questions</h2><p class="muted">Use this after reading the chapter foundation.</p><div class="toolbar"><button class="primary" onclick="startQuiz('+c.n+')">Start Chapter '+c.n+'</button><button onclick="reviewMissed('+c.n+')">Review missed from Chapter '+c.n+'</button></div></div>';
+  showOnly('chapterView');
+}
 function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function startQuiz(ch){order=shuffle(qs.map((_,i)=>i).filter(i=>ch===undefined||qs[i][4]===ch));pos=0;score=0;renderQ();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})}
-function reviewMissed(){order=shuffle([...missed]);pos=0;score=0;renderQ();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})}
-function renderQ(){let q=document.getElementById('quiz');answered=false;if(!order.length){q.innerHTML='<div class="feedback">No missed questions saved on this device yet.</div>';return}if(pos>=order.length){q.innerHTML=`<div class="feedback"><h2>${score} / ${order.length}</h2><p>Practice complete. Missed questions are saved on this device.</p><button onclick="reviewMissed()">Review missed</button></div>`;return}let x=qs[order[pos]];choiceOrder=shuffle(x[1].map((_,i)=>i));q.innerHTML=`<div class="card"><div class="tag">CHAPTER ${x[4]} · QUESTION ${pos+1} OF ${order.length}</div><h3>${x[0]}</h3>${choiceOrder.map((original,i)=>`<button class="choice" onclick="pick(${original},this)">${String.fromCharCode(65+i)}. ${x[1][original]}</button>`).join('')}<div id="fb"></div></div>`}
-function pick(i,b){if(answered)return;answered=true;let id=order[pos],x=qs[id],buttons=[...document.querySelectorAll('#quiz .choice')];buttons.forEach(z=>z.disabled=true);buttons[choiceOrder.indexOf(x[2])].classList.add('right');if(i===x[2]){score++;missed.delete(id)}else{b.classList.add('wrong');missed.add(id)}saveMissed();document.getElementById('fb').innerHTML=`<div class="feedback"><b>${i===x[2]?'Correct':'Correct answer: '+x[1][x[2]]}</b><p>${x[3]}</p><button class="primary" onclick="pos++;renderQ()">Next →</button></div>`}
-</script></body></html>
+function startQuiz(ch){
+  order=shuffle(qs.map((_,i)=>i).filter(i=>ch===undefined||qs[i][4]===ch));
+  pos=0;score=0;currentChapter=ch||null;renderQ();showOnly('quizView');
+}
+function reviewMissed(ch){
+  order=shuffle([...missed].filter(i=>ch===undefined||qs[i][4]===ch));
+  pos=0;score=0;currentChapter=ch||null;renderQ();showOnly('quizView');
+}
+function resetMissed(){if(confirm('Clear your saved missed-question list for Lecture Exam 2?')){missed.clear();saveMissed()}}
+function renderQ(){
+  const qv=document.getElementById('quizView');
+  answered=false;
+  if(!order.length){
+    qv.innerHTML='<div class="card"><h2>No missed questions saved'+(currentChapter?' for Chapter '+currentChapter:'')+'.</h2><button onclick="showHome()">Back home</button></div>';
+    return;
+  }
+  if(pos>=order.length){
+    const pct=Math.round(score/order.length*100);
+    qv.innerHTML='<div class="card hero"><div class="tag">Practice complete</div><h2>'+score+' / '+order.length+' · '+pct+'%</h2><p class="muted">Missed questions are saved on this device so you can review them again.</p><div class="toolbar"><button class="primary" onclick="'+(currentChapter?'startQuiz('+currentChapter+')':'startQuiz()')+'">Try again</button><button onclick="'+(currentChapter?'reviewMissed('+currentChapter+')':'reviewMissed()')+'">Review missed</button><button onclick="'+(currentChapter?'showChapter('+(currentChapter-5)+')':'showHome()')+'">Back</button></div></div>';
+    return;
+  }
+  const id=order[pos],x=qs[id];
+  choiceOrder=shuffle(x[1].map((_,i)=>i));
+  qv.innerHTML='<div class="card question-card"><div class="question-meta"><div class="tag">Chapter '+x[4]+' · Question '+(pos+1)+' of '+order.length+'</div><span class="count">'+(missed.has(id)?'previously missed':'practice')+'</span></div><h2>'+x[0]+'</h2>'+
+    choiceOrder.map((original,i)=>'<button class="choice" onclick="pick('+original+',this)">'+String.fromCharCode(65+i)+'. '+x[1][original]+'</button>').join('')+
+    '<div id="fb"></div></div>';
+}
+function pick(i,b){
+  if(answered)return;
+  answered=true;
+  const id=order[pos],x=qs[id],buttons=[...document.querySelectorAll('#quizView .choice')];
+  buttons.forEach(z=>z.disabled=true);
+  buttons[choiceOrder.indexOf(x[2])].classList.add('right');
+  const correct=i===x[2];
+  if(correct){score++;missed.delete(id)}else{b.classList.add('wrong');missed.add(id)}
+  saveMissed();
+  document.getElementById('fb').innerHTML='<div class="feedback '+(correct?'':'bad')+'"><b>'+(correct?'✓ Correct':'Correct answer: '+x[1][x[2]])+'</b><p><strong>Why:</strong> '+x[3]+'</p><button class="primary" onclick="pos++;renderQ()">Next →</button></div>';
+}
+</script>
+</body>
+</html>
