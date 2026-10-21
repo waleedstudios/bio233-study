@@ -1,262 +1,265 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0; url=modern.html"><title>BIO 233 Visual Study Hub</title><script>location.replace('modern.html'+location.search+location.hash)</script>
-<style id="visual-redesign-v3">
-:root{
-  --chapterAccent:#ff6fb7;
-  --chapterAccent2:#7c5cff;
-  --bgA:#08111f;
-  --bgB:#10162d;
-  --glass:rgba(14,23,42,.72);
-  --glass2:rgba(255,255,255,.055);
-}
-html{scroll-behavior:smooth}
-body{
-  overflow-x:hidden;
-  background:
-    radial-gradient(circle at 8% 15%,rgba(0,216,255,.15),transparent 28%),
-    radial-gradient(circle at 92% 8%,rgba(255,82,168,.20),transparent 32%),
-    radial-gradient(circle at 70% 78%,rgba(125,92,255,.16),transparent 34%),
-    linear-gradient(135deg,var(--bgA),var(--bgB) 48%,#09101f);
-  background-attachment:fixed;
-}
-body:before,body:after{
-  content:"";position:fixed;pointer-events:none;z-index:-2;border-radius:50%;filter:blur(70px);opacity:.38;
-  animation:bioFloat 16s ease-in-out infinite alternate;
-}
-body:before{width:34rem;height:34rem;background:#ff4aa8;left:-12rem;top:18%}
-body:after{width:30rem;height:30rem;background:#5a67ff;right:-9rem;bottom:8%;animation-delay:-7s}
-@keyframes bioFloat{from{transform:translate3d(0,-24px,0) scale(.9)}to{transform:translate3d(30px,35px,0) scale(1.12)}}
-header{
-  background:rgba(6,11,24,.68)!important;
-  border-bottom:1px solid rgba(255,255,255,.09)!important;
-  box-shadow:0 18px 50px rgba(0,0,0,.22);
-}
-.wrap{max-width:1180px!important}
-.card{
-  background:linear-gradient(145deg,rgba(20,31,54,.82),rgba(10,17,32,.8))!important;
-  border:1px solid rgba(255,255,255,.10)!important;
-  backdrop-filter:blur(18px);
-  box-shadow:0 24px 70px rgba(0,0,0,.24)!important;
-}
-.hero{
-  overflow:hidden;position:relative;
-  background:
-    linear-gradient(135deg,rgba(255,85,170,.14),rgba(73,106,255,.15)),
-    linear-gradient(150deg,rgba(21,29,52,.96),rgba(10,17,32,.94))!important;
-}
-.hero:after{
-  content:"";position:absolute;width:290px;height:290px;border-radius:50%;
-  background:radial-gradient(circle,var(--chapterAccent),transparent 67%);
-  opacity:.16;right:-100px;top:-110px;filter:blur(12px);pointer-events:none
-}
-h1{font-size:clamp(36px,6vw,66px)!important;line-height:.98!important;letter-spacing:-.055em!important}
-h2{font-size:clamp(25px,3.6vw,38px)}
-.tag{color:#ffb5db!important}
-.nav a,button{
-  border:1px solid rgba(255,255,255,.13)!important;
-  background:rgba(255,255,255,.065)!important;
-  backdrop-filter:blur(10px);
-}
-.nav a.active,button.primary{
-  background:linear-gradient(110deg,var(--chapterAccent),var(--chapterAccent2))!important;
-  border-color:transparent!important;color:#fff!important;
-  box-shadow:0 10px 28px color-mix(in srgb,var(--chapterAccent) 28%,transparent);
-}
-.chapter{
-  min-height:190px!important;position:relative;overflow:hidden;
-  background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.035))!important;
-  border-radius:22px!important;padding:22px!important;
-  transform-style:preserve-3d;
-}
-.chapter:before{content:"";position:absolute;inset:auto -20% -40% 25%;height:130px;background:radial-gradient(circle,var(--cc,#ff6fae),transparent 70%);opacity:.18}
-.chapter:hover{transform:translateY(-5px) scale(1.01)!important;box-shadow:0 20px 45px rgba(0,0,0,.28)}
-.chapter-icon{font-size:34px;display:block;margin-bottom:12px;filter:drop-shadow(0 7px 14px rgba(0,0,0,.25))}
-.chapter-number{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#d9e3f7;font-weight:800}
-.chapter b{font-size:21px!important}
-.chapter small{min-height:62px}
-#progress{background:rgba(255,255,255,.09)!important}
-#bar{background:linear-gradient(90deg,#00d8ff,#7b61ff,#ff5cad,#ffb86b)!important;box-shadow:0 0 18px rgba(255,92,173,.65)}
-.chapter-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(260px,.9fr);gap:28px;align-items:center}
-.hero-visual,.topic-visual{
-  border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.12);
-  background:
-    radial-gradient(circle at 20% 20%,color-mix(in srgb,var(--chapterAccent) 30%,transparent),transparent 45%),
-    linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
-}
-.hero-visual{padding:20px;min-height:250px;display:grid;place-items:center}
-.hero-visual svg{width:100%;max-height:260px}
-.topic-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
-.topic-card{
-  position:relative;overflow:hidden;border-radius:22px;padding:0;
-  background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.028));
-  border:1px solid rgba(255,255,255,.10);
-  opacity:0;transform:translateY(26px) scale(.985);
-  transition:opacity .65s ease,transform .65s cubic-bezier(.2,.8,.2,1),border-color .2s ease;
-}
-.topic-card.revealed{opacity:1;transform:none}
-.topic-card:hover{border-color:color-mix(in srgb,var(--chapterAccent) 58%,white 8%)}
-.topic-visual{border-radius:0;border:0;border-bottom:1px solid rgba(255,255,255,.09);min-height:210px;display:grid;place-items:center;padding:16px}
-.topic-visual svg{width:100%;height:190px;display:block}
-.topic-copy{padding:20px}
-.topic-kicker{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
-.topic-kicker span:first-child{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#b9c6de}
-.topic-copy h3{font-size:21px;margin:0 0 8px;color:#fff!important}
-.topic-copy p{color:#c9d4e8;line-height:1.72;margin:0}
-.source-pill{
-  display:inline-flex;align-items:center;gap:7px;margin-top:14px;padding:7px 10px;border-radius:999px;
-  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);font-size:12px;color:#dce6f7;
-}
-.source-pill:before{content:"◉";color:var(--chapterAccent)}
-.resource-note{
-  margin-top:18px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.045);
-  border:1px dashed rgba(255,255,255,.14);color:#bfcbe0;line-height:1.6;font-size:13px
-}
-.textbook-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.textbook-card{padding:0!important;overflow:hidden}
-.textbook-card .topic-visual{min-height:155px}.textbook-card .topic-visual svg{height:140px}
-.textbook-body{padding:18px}
-.textbook-body h3{color:#fff!important}
-.textbook-body details{margin-top:14px}
-.chapter-source-banner{
-  display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:16px 0 0;
-  color:#c5d1e5;font-size:13px
-}
-.chapter-source-banner strong{color:white}
-.floating-chip{
-  position:absolute;right:18px;top:18px;padding:7px 10px;border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);background:rgba(6,12,25,.35);font-size:11px;color:#dce7f8
-}
-#cursorDot,#cursorRing{position:fixed;pointer-events:none;z-index:9999;left:0;top:0;transform:translate(-50%,-50%);display:none}
-#cursorDot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 18px var(--chapterAccent)}
-#cursorRing{width:34px;height:34px;border-radius:50%;border:1px solid color-mix(in srgb,var(--chapterAccent) 72%,white);transition:width .18s,height .18s,background .18s,border-color .18s;mix-blend-mode:screen}
-body.cursor-on{cursor:none}.cursor-on a,.cursor-on button,.cursor-on summary{cursor:none}
-#cursorRing.hot{width:52px;height:52px;background:color-mix(in srgb,var(--chapterAccent) 12%,transparent);border-color:#fff}
-.scroll-meter{position:fixed;right:18px;bottom:18px;z-index:70;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(8,14,29,.72);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(12px);font-size:11px;color:#fff}
-.scroll-meter:before{content:"";position:absolute;inset:4px;border-radius:50%;background:conic-gradient(var(--chapterAccent) var(--scroll,0%),rgba(255,255,255,.08) 0);-webkit-mask:radial-gradient(circle,transparent 55%,#000 57%);mask:radial-gradient(circle,transparent 55%,#000 57%)}
-@media(max-width:760px){
-  .chapter-hero-grid,.topic-gallery,.textbook-grid{grid-template-columns:1fr}
-  .hero-visual{min-height:210px}
-  .topic-card{opacity:1;transform:none}
-  .scroll-meter{right:10px;bottom:10px}
-}
-@media(pointer:fine){#cursorDot,#cursorRing{display:block}}
-@media(prefers-reduced-motion:reduce){
-  body:before,body:after{animation:none}
-  .topic-card{opacity:1;transform:none;transition:none}
-  .chapter:hover{transform:none!important}
-}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIO 233 · Lecture Exam 2</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f3f6fc;background:#090e1a;--pink:#f36aaa;--pink2:#f9a0c7;--panel:#151e31;--panel2:#111e32;--edge:#40506b;--muted:#b5c1d7;--good:#6fdbb2;--bad:#f1849c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% -5%,#382449 0%,transparent 38%),radial-gradient(ellipse at 0% 20%,#162b46 0%,transparent 38%),#090e1a;min-height:100vh}
+header{position:sticky;top:0;z-index:20;background:#0d1425eb;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff20}.wrap{max-width:1080px;margin:auto;padding:18px}
+h1{margin:6px 0;font-size:clamp(28px,5vw,44px);letter-spacing:-.045em}h2{letter-spacing:-.025em}h3{color:#ffa6d0}.muted{color:var(--muted);line-height:1.65}.tag{color:#ff99c9;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.card{background:linear-gradient(150deg,#1b2940,#131d30);border:1px solid #ffffff20;border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 15px 40px #0003}
+.hero{background:linear-gradient(110deg,#27234c,#192e48);border:1px solid #6d547c}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.mini{background:#111e32;border:1px solid #42516d;border-radius:14px;padding:16px;line-height:1.55}.mini b{color:#ffa6d0}
+.nav,.toolbar,.chips{display:flex;gap:9px;flex-wrap:wrap}.chips{margin:12px 0}.nav a,button{font:inherit;color:white;text-decoration:none;border:1px solid #576583;background:#293652;border-radius:11px;padding:11px 15px;cursor:pointer;transition:.16s}
+.nav a:hover,button:hover{transform:translateY(-1px);border-color:var(--pink)}.nav a.active,button.primary{background:linear-gradient(110deg,var(--pink),var(--pink2));color:#241021;border-color:var(--pink);font-weight:750}
+.chapter{min-height:142px;text-align:left;background:linear-gradient(135deg,#243551,#191c35)}.chapter b{font-size:19px}.chapter small{display:block;color:#c7d2e7;margin-top:8px;line-height:1.45}
+.hidden{display:none}.choice{display:block;width:100%;text-align:left;margin:8px 0;padding:14px;line-height:1.45;background:#17263d}.choice.right{border-color:var(--good)!important;background:#173e39!important}.choice.wrong{border-color:var(--bad)!important;background:#46283a!important}
+.feedback{margin-top:12px;padding:14px;border-radius:12px;background:#122e32;border:1px solid #3c887c;line-height:1.55}.feedback.bad{background:#362333;border-color:#a65c80}
+.topic{border-left:4px solid var(--pink);padding-left:15px;margin:20px 0}.topic p{line-height:1.7}.topic .mini{margin-top:10px}
+.count{display:inline-flex;align-items:center;border:1px solid #73516c;color:#ffb1d5;border-radius:30px;padding:5px 11px;font-size:12px}
+#progress{height:5px;background:#303950;position:sticky;top:94px;z-index:18;border-radius:8px;overflow:hidden}#bar{height:100%;width:0;background:linear-gradient(90deg,#e74e98,#ffc1db)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:14px;border:1px solid #42516d;background:#101a2d;border-radius:14px;text-align:center}.stat strong{display:block;font-size:24px;color:#ffa6d0}
+.question-card{margin-top:14px}.question-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+details{background:#19263b;border:1px solid #42516d;border-radius:12px;padding:12px;margin-top:10px}summary{cursor:pointer;font-weight:700}
+@media(max-width:650px){header{position:relative}.wrap{padding:14px}.card{padding:18px}.stats{grid-template-columns:1fr}#progress{top:0}.nav a{flex:1;text-align:center}.toolbar button{flex:1}}
 </style>
-</head><body style="font-family:system-ui;background:#07101f;color:white;padding:30px">Loading the redesigned BIO 233 Visual Study Hub… <a href="modern.html" style="color:#ff7eae">Open it here</a>.
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="tag">BIO 233 STUDY HUB</div>
+    <h1>Lecture Exam 2</h1>
+    <p class="muted">Chapters 5–10 · lecture slides + assigned Martini & Nath textbook material.</p>
+    <nav class="nav">
+      <a href="index.html">Lecture Exam 1 · Chapters 1–4</a>
+      <a href="lab.html" class="active">Lecture Exam 2 · Chapters 5–10</a>
+    </nav>
+    <div class="toolbar" style="margin-top:12px">
+      <button onclick="showHome()">Home</button>
+      <button onclick="startQuiz()">Mixed practice</button>
+      <button onclick="reviewMissed()">Review missed</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+<div id="progress"><div id="bar"></div></div>
+
+<section id="home">
+  <div class="card hero">
+    <div class="tag">Exam 2 Home</div>
+    <h2>Study it the same way as Lecture Exam 1.</h2>
+    <p class="muted">Read one chapter at a time, work through the lecture foundation, use textbook explanations to fill in the “why,” then answer chapter questions before moving on. Your missed questions stay saved on this device.</p>
+    <div class="stats">
+      <div class="stat"><strong>6</strong>chapters</div>
+      <div class="stat"><strong id="totalQ">0</strong>practice questions</div>
+      <div class="stat"><strong id="missedCount">0</strong>saved missed</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tag">Choose a chapter</div>
+    <h2>Lecture Exam 2 content</h2>
+    <p class="muted">Chapters 7 and 8 are still shown with full coverage for now. Once you give me your professor's exact tested material for those chapters, we can trim them down.</p>
+    <div id="chapters" class="grid"></div>
+  </div>
+
+  <div class="card">
+    <div class="tag">Mixed Practice</div>
+    <h2>Test all chapters</h2>
+    <p class="muted">Questions are built from your lecture material and the textbook explanations already added to this study hub.</p>
+    <div class="toolbar">
+      <button class="primary" onclick="startQuiz()">Start all questions</button>
+      <button onclick="reviewMissed()">Review missed</button>
+      <button onclick="resetMissed()">Clear missed list</button>
+    </div>
+  </div>
+</section>
+
+<section id="chapterView" class="hidden"></section>
+<section id="quizView" class="hidden"></section>
+</main>
+
+<script src="textbook-supplement.js"></script>
+<script src="exam2-extra.js"></script>
 <script>
-/* FULL VISUAL REDESIGN V3 */
-(function(){
-  const palette={
-    5:["#ff6f91","#ff9f6e"],
-    6:["#55d6be","#4f8cff"],
-    7:["#62d0ff","#7c5cff"],
-    8:["#7b61ff","#ff6fb7"],
-    9:["#ffb347","#ff5c8a"],
-    10:["#00d8ff","#ff5cad"]
-  };
-  const icons={5:"🧬",6:"🦴",7:"💀",8:"🦿",9:"🦾",10:"💪"};
-  const sourceAnchors={
-    5:["Fig. 5-1/5-2 · integument overview","Fig. 5-2 · cutaneous membrane","Fig. 5-3 · epidermis","Fig. 5-3 · epidermal cells","Fig. 5-6 · dermal circulation","Fig. 5-12/5-14 · hair + sweat glands","Fig. 5-10 · vitamin D3","Clinical Note 5-4 · burns"],
-    6:["Fig. 6-1 · bone classification","Ch. 6 lecture · bone cells","Fig. 6-3 · long bone anatomy","Fig. 6-6/6-7 · compact bone + osteons","Fig. 6-7 · spongy/compact organization","Ch. 6 lecture · bone markings","Fig. 6-11/6-13 · ossification","Ch. 6 lecture · growth/remodeling","Fig. 6-16 · calcium regulation","Fig. 6-17 · fractures + repair"],
-    7:["Fig. 7-1 · axial skeleton","Fig. 7-4 · skull anatomy","Fig. 7-16 · infant skull/fontanelles","Fig. 7-18 · vertebral anatomy","Fig. 7-18 · atlas/axis context","Ch. 7 handout · spinal curves","Ch. 7 handout · discs","Fig. 7-1 · thoracic cage"],
-    8:["Fig. 8-1 · appendicular skeleton","Fig. 8-2 · clavicle/scapula","Ch. 8 handout · upper limb","Ch. 8 handout · hand","Fig. 8-7/8-8 · pelvic girdle","Fig. 8-10/8-12 · lower limb","Fig. 8-13 · foot","Fig. 8-14 · skeletal sex differences"],
-    9:["Table 9-1 · joint classes","Table 9-1 · structural classes","Fig. 9-1 · synovial joint","Fig. 9-8 · knee accessories","Fig. 9-3/9-5 · movement","Ch. 9 lecture · six synovial types","Fig. 9-8/9-9/9-10 · knee/shoulder/hip","Clinical Note 9-2 · injury"],
-    10:["Fig. 10-6 · muscle organization","Fig. 10-6 · organization levels","Fig. 10-5 · sarcomere","Fig. 10-7 · filaments","Fig. 10-8 · sliding filament","Fig. 10-10 · neuromuscular junction","Fig. 10-11 · excitation-contraction","Fig. 10-12 · cross-bridge cycle","Fig. 10-17 · motor units","Fig. 10-18 · contraction types","Ch. 10 lecture · ATP pathways","Ch. 10 lecture · fiber types/training"]
-  };
-  const setAccent=(ch)=>{
-    const p=palette[ch]||palette[5];
-    document.documentElement.style.setProperty("--chapterAccent",p[0]);
-    document.documentElement.style.setProperty("--chapterAccent2",p[1]);
-  };
-  const svgWrap=(inner,label)=>'<svg viewBox="0 0 520 220" role="img" aria-label="'+label.replace(/"/g,"&quot;")+'">'+inner+'</svg>';
-  function visualFor(ch,idx,title){
-    const p=palette[ch]||palette[5], a=p[0], b=p[1], white="#eef6ff", muted="#9fb0c9";
-    if(ch===5){
-      if(idx===6) return svgWrap('<circle cx="90" cy="65" r="35" fill="'+a+'" opacity=".9"/><g stroke="'+a+'" stroke-width="5">'+Array.from({length:10},(_,i)=>'<line x1="90" y1="8" x2="'+(90+Math.cos(i*.628)*60)+'" y2="'+(65+Math.sin(i*.628)*60)+'"/>').join('')+'</g><path d="M150 70 C230 70 230 145 300 145 S390 145 450 145" fill="none" stroke="'+b+'" stroke-width="12" stroke-linecap="round"/><rect x="205" y="115" width="70" height="45" rx="18" fill="'+a+'" opacity=".35"/><rect x="330" y="115" width="70" height="45" rx="18" fill="'+b+'" opacity=".35"/><text x="90" y="140" fill="'+white+'" text-anchor="middle" font-size="16">UV</text><text x="240" y="185" fill="'+muted+'" text-anchor="middle" font-size="14">Liver</text><text x="365" y="185" fill="'+muted+'" text-anchor="middle" font-size="14">Kidney → calcitriol</text>',title);
-      if(idx===7) return svgWrap('<rect x="55" y="30" width="410" height="38" rx="15" fill="#ffb5b5"/><rect x="55" y="68" width="410" height="65" fill="'+a+'" opacity=".55"/><rect x="55" y="133" width="410" height="55" rx="0 0 18 18" fill="#f7c57a" opacity=".45"/><path d="M260 25 l-22 58 22-12 20 40 19-10-23-43 23-8z" fill="'+b+'"/><text x="260" y="211" fill="'+white+'" text-anchor="middle" font-size="15">Burn depth across skin layers</text>',title);
-      return svgWrap('<rect x="40" y="25" width="440" height="42" rx="17" fill="#ffd2df"/><rect x="40" y="67" width="440" height="65" fill="'+a+'" opacity=".52"/><rect x="40" y="132" width="440" height="55" rx="0 0 18 18" fill="#f0bc79" opacity=".35"/><path d="M140 20 C130 75 132 150 125 190" stroke="#3f2c27" stroke-width="10" fill="none"/><circle cx="125" cy="165" r="24" fill="'+b+'" opacity=".55"/><path d="M335 80 q40 25 0 50 q-40 25 0 50" fill="none" stroke="'+b+'" stroke-width="9"/><text x="410" y="104" fill="'+white+'" font-size="14">epidermis</text><text x="410" y="150" fill="'+white+'" font-size="14">dermis</text><text x="410" y="181" fill="'+muted+'" font-size="13">hypodermis</text>',title);
-    }
-    if(ch===6){
-      if([3,4].includes(idx)) return svgWrap('<circle cx="260" cy="110" r="82" fill="none" stroke="'+a+'" stroke-width="18"/><circle cx="260" cy="110" r="55" fill="none" stroke="'+b+'" stroke-width="13"/><circle cx="260" cy="110" r="28" fill="#0a1526" stroke="'+white+'" stroke-width="5"/>'+Array.from({length:8},(_,i)=>{const x=260+Math.cos(i*.785)*67,y=110+Math.sin(i*.785)*67;return '<circle cx="'+x+'" cy="'+y+'" r="6" fill="'+white+'"/><line x1="'+x+'" y1="'+y+'" x2="260" y2="110" stroke="'+muted+'" opacity=".45"/>'}).join('')+'<text x="260" y="116" fill="'+white+'" text-anchor="middle" font-size="13">canal</text>',title);
-      if(idx===9) return svgWrap('<path d="M110 35 q-35 25 -15 58 l60 15 35-14 30 16 95-15 50-25 q18-28-14-43 l-70 15-55 38-47-30z" fill="'+a+'" opacity=".55"/><path d="M245 60 l-18 26 18 18-25 27" stroke="#fff" stroke-width="6" fill="none"/><path d="M244 104 l29 24-16 31" stroke="'+b+'" stroke-width="9" fill="none"/><text x="260" y="195" fill="'+white+'" text-anchor="middle" font-size="15">Fracture → callus → remodeling</text>',title);
-      return svgWrap('<path d="M225 20 q-38 13-38 48 v85 q0 48 38 48 h70 q38 0 38-48V68q0-35-38-48z" fill="'+a+'" opacity=".48"/><ellipse cx="260" cy="55" rx="74" ry="28" fill="'+b+'" opacity=".7"/><ellipse cx="260" cy="165" rx="74" ry="28" fill="'+b+'" opacity=".7"/><rect x="235" y="67" width="50" height="88" rx="20" fill="#0a1526" opacity=".85"/><text x="260" y="116" fill="'+white+'" text-anchor="middle" font-size="14">medullary</text><text x="260" y="133" fill="'+white+'" text-anchor="middle" font-size="14">cavity</text>',title);
-    }
-    if(ch===7){
-      if(idx>=3&&idx<=6) return svgWrap('<path d="M252 18 c-22 20-25 45-5 62 c-28 18-27 48-3 66 c-17 18-14 39 8 59" fill="none" stroke="'+white+'" stroke-width="18" stroke-linecap="round"/>'+Array.from({length:6},(_,i)=>'<ellipse cx="'+(252+(i%2?8:-7))+'" cy="'+(42+i*27)+'" rx="32" ry="12" fill="'+(i%2?a:b)+'" opacity=".75"/>').join('')+'<text x="360" y="55" fill="'+a+'" font-size="15">cervical</text><text x="360" y="110" fill="'+b+'" font-size="15">thoracic</text><text x="360" y="165" fill="'+white+'" font-size="15">lumbar</text>',title);
-      return svgWrap('<path d="M260 25 c-70 0-108 48-100 108 5 36 28 63 55 69 l15-37 30 7 30-7 15 37 c27-6 50-33 55-69 8-60-30-108-100-108z" fill="'+a+'" opacity=".46" stroke="'+white+'" stroke-width="4"/><circle cx="220" cy="105" r="20" fill="#08111f"/><circle cx="300" cy="105" r="20" fill="#08111f"/><path d="M245 140 q15 18 30 0" fill="none" stroke="'+white+'" stroke-width="6"/><path d="M232 170 h56" stroke="'+b+'" stroke-width="8"/>',title);
-    }
-    if(ch===8){
-      if(idx===4||idx===7) return svgWrap('<path d="M145 65 q35-40 80 5 l35 55-35 55q-45 45-80 0l22-55z" fill="'+a+'" opacity=".55"/><path d="M375 65 q-35-40-80 5 l-35 55 35 55q45 45 80 0l-22-55z" fill="'+b+'" opacity=".55"/><circle cx="260" cy="125" r="28" fill="#08111f" stroke="'+white+'" stroke-width="4"/><path d="M260 25v70M260 153v45" stroke="'+white+'" stroke-width="8" stroke-linecap="round"/>',title);
-      return svgWrap('<circle cx="260" cy="32" r="22" fill="'+a+'"/><path d="M260 55v70M260 75l-70 45M260 75l70 45M260 125l-52 72M260 125l52 72" stroke="'+white+'" stroke-width="14" stroke-linecap="round"/><circle cx="190" cy="120" r="8" fill="'+b+'"/><circle cx="330" cy="120" r="8" fill="'+b+'"/><circle cx="208" cy="197" r="8" fill="'+a+'"/><circle cx="312" cy="197" r="8" fill="'+a+'"/>',title);
-    }
-    if(ch===9){
-      if(idx===4||idx===5) return svgWrap('<circle cx="260" cy="110" r="64" fill="none" stroke="'+a+'" stroke-width="18"/><path d="M260 20 A90 90 0 0 1 345 80" fill="none" stroke="'+b+'" stroke-width="8" stroke-linecap="round"/><path d="M345 80 l-17-2 10 15z" fill="'+b+'"/><path d="M260 200 A90 90 0 0 1 175 140" fill="none" stroke="'+white+'" stroke-width="6" opacity=".8"/><path d="M175 140 l17 2-10-15z" fill="'+white+'"/><text x="260" y="116" fill="'+white+'" text-anchor="middle" font-size="18">motion</text>',title);
-      return svgWrap('<path d="M85 82 q55-50 125 0 l38 34-38 35q-70 50-125 0l45-34z" fill="'+a+'" opacity=".55"/><path d="M435 82 q-55-50-125 0 l-38 34 38 35q70 50 125 0l-45-34z" fill="'+b+'" opacity=".55"/><ellipse cx="260" cy="116" rx="45" ry="60" fill="#08111f" stroke="'+white+'" stroke-width="5"/><path d="M226 70q35 20 68 0M226 160q35-20 68 0" fill="none" stroke="'+white+'" stroke-width="4" opacity=".8"/>',title);
-    }
-    if(ch===10){
-      if(idx===5||idx===6) return svgWrap('<circle cx="90" cy="70" r="32" fill="'+a+'" opacity=".7"/><path d="M120 70 C180 70 180 120 230 120" fill="none" stroke="'+a+'" stroke-width="9"/>'+Array.from({length:5},(_,i)=>'<circle cx="'+(260+i*35)+'" cy="120" r="11" fill="'+b+'"/>').join('')+'<rect x="235" y="150" width="210" height="20" rx="10" fill="'+white+'" opacity=".25"/><text x="345" y="198" fill="'+white+'" text-anchor="middle" font-size="14">ACh → action potential → Ca²⁺</text>',title);
-      if(idx===7) return svgWrap('<path d="M65 75h150M305 75h150M65 145h150M305 145h150" stroke="'+a+'" stroke-width="10" stroke-linecap="round"/><path d="M210 55v40M310 55v40M210 125v40M310 125v40" stroke="'+white+'" stroke-width="6"/><path d="M215 75h90M215 145h90" stroke="'+b+'" stroke-width="12" stroke-linecap="round"/><text x="260" y="202" fill="'+white+'" text-anchor="middle" font-size="14">ATP drives attach → pull → detach → reset</text>',title);
-      if(idx===9) return svgWrap('<path d="M110 175 C145 105 180 75 220 65 C275 52 330 92 390 165" fill="none" stroke="'+a+'" stroke-width="18" stroke-linecap="round"/><path d="M130 175 C175 125 210 110 260 108 C305 108 340 130 375 165" fill="none" stroke="'+b+'" stroke-width="7" stroke-dasharray="11 8"/><text x="165" y="55" fill="'+white+'" font-size="14">concentric</text><text x="335" y="55" fill="'+muted+'" font-size="14">eccentric</text>',title);
-      return svgWrap('<line x1="55" y1="55" x2="465" y2="55" stroke="'+white+'" stroke-width="5"/><line x1="55" y1="165" x2="465" y2="165" stroke="'+white+'" stroke-width="5"/><g stroke="'+a+'" stroke-width="12">'+Array.from({length:8},(_,i)=>'<line x1="'+(85+i*45)+'" y1="55" x2="'+(150+i*28)+'" y2="110"/>').join('')+'</g><g stroke="'+b+'" stroke-width="12">'+Array.from({length:8},(_,i)=>'<line x1="'+(85+i*45)+'" y1="165" x2="'+(150+i*28)+'" y2="110"/>').join('')+'</g><text x="260" y="118" fill="'+white+'" text-anchor="middle" font-size="16">sarcomere</text>',title);
-    }
-    return svgWrap('<circle cx="260" cy="110" r="70" fill="'+a+'" opacity=".6"/><circle cx="260" cy="110" r="40" fill="'+b+'" opacity=".65"/>',title);
+const chapters=[
+{n:5,title:'The Integumentary System',sub:'Skin layers, cells, accessory structures, vitamin D, burns and regulation',points:[
+['Integumentary functions','Physical protection, immune coordination, sensory information, vitamin D3 synthesis, excretion, thermoregulation and lipid storage.'],
+['Cutaneous membrane','The cutaneous membrane is epidermis + dermis. The hypodermis is beneath the skin and is not part of the cutaneous membrane.'],
+['Epidermis','Keratinized stratified squamous epithelium. Stratum basale is deepest. Thick skin has basale → spinosum → granulosum → lucidum → corneum.'],
+['Epidermal cells','Keratinocytes produce keratin; melanocytes produce melanin; tactile/Merkel cells participate in touch; dendritic/Langerhans cells contribute to immune defense.'],
+['Dermis','Papillary layer is areolar connective tissue. Reticular layer is dense irregular connective tissue and contains sensory receptors, vessels, glands and follicles.'],
+['Accessory structures','Hair follicles, sebaceous glands, sweat glands and nails. Eccrine/merocrine sweat helps cooling; apocrine glands are concentrated in axillary and anogenital regions.'],
+['Vitamin D pathway','UV exposure initiates vitamin D3 production in skin → liver processing → kidney activation to calcitriol → increased calcium and phosphate absorption.'],
+['Burns and repair','Severe burns compromise the water barrier. Full-thickness burns destroy epidermis and dermis and may require grafting.']
+]},
+{n:6,title:'Bones and Bone Structure',sub:'Bone shapes, markings, cells, compact/spongy bone, ossification, growth and repair',points:[
+['Bone functions','Support, protection, leverage, mineral storage and blood-cell production in marrow.'],
+['Bone cells','Osteogenic cells produce osteoblasts; osteoblasts deposit osteoid; osteocytes maintain matrix; osteoclasts resorb matrix.'],
+['Long bone anatomy','Diaphysis = shaft; epiphyses = ends; periosteum covers outer bone; endosteum lines internal surfaces and medullary cavity.'],
+['Compact bone','Osteons contain concentric lamellae around central canals. Osteocytes sit in lacunae and communicate through canaliculi.'],
+['Spongy bone','Organized into trabeculae aligned with stress. It generally lacks true osteons.'],
+['Bone markings','Examples include foramen = opening, fossa = shallow depression, condyle = articular projection, tuberosity = rough attachment area.'],
+['Ossification','Intramembranous ossification develops directly from mesenchyme. Endochondral ossification replaces a hyaline cartilage model.'],
+['Growth and remodeling','Epiphyseal plates lengthen bones; appositional growth increases diameter. Osteoblasts and osteoclasts continuously remodel bone.'],
+['Calcium regulation','Low blood calcium stimulates parathyroid hormone. Calcitriol helps increase intestinal calcium absorption.'],
+['Fracture repair','Hematoma → soft/internal and external callus → bony callus → remodeling.']
+]},
+{n:7,title:'The Axial Skeleton',sub:'Skull, vertebral column and thoracic cage',points:[
+['Axial overview','The axial skeleton contains 80 bones: skull and associated bones, vertebral column and thoracic cage.'],
+['Skull','Eight cranial bones protect the brain; fourteen facial bones form the face. The occipital bone contains the foramen magnum.'],
+['Infant skull and sinuses','Fontanelles allow molding and growth. Paranasal sinuses occur in frontal, ethmoid, sphenoid and maxillary bones.'],
+['Vertebral regions','7 cervical, 12 thoracic and 5 lumbar vertebrae, plus the sacrum and coccyx.'],
+['Special vertebrae','Atlas = C1 and supports the skull. Axis = C2 and has the dens. Cervicals have transverse foramina.'],
+['Spinal curves','Thoracic and sacral are primary curves; cervical and lumbar are secondary curves.'],
+['Intervertebral discs','Anulus fibrosus = outer ring; nucleus pulposus = gel-like center.'],
+['Thoracic cage','Sternum + 12 pairs of ribs. True ribs 1–7 attach directly; ribs 11–12 are floating.']
+]},
+{n:8,title:'The Appendicular Skeleton',sub:'Pectoral/pelvic girdles and upper/lower limbs',points:[
+['Appendicular overview','The appendicular skeleton contains 126 bones and includes the girdles and limbs.'],
+['Pectoral girdle','Clavicle + scapula. The glenoid cavity of the scapula receives the humeral head.'],
+['Upper limb','Humerus in the arm. Radius is lateral/thumb side; ulna is medial/little-finger side.'],
+['Hand','8 carpals, 5 metacarpals and 14 phalanges per hand. The thumb has 2 phalanges.'],
+['Pelvic girdle','Each hip bone forms from ilium + ischium + pubis. All three meet at the acetabulum.'],
+['Lower limb','Femur in the thigh; patella is sesamoid; tibia is medial/weight-bearing; fibula is lateral.'],
+['Foot','7 tarsals, 5 metatarsals and 14 phalanges per foot. Talus meets the tibia; calcaneus forms the heel.'],
+['Pelvic differences','Typical female pelvis has a broader inlet/outlet and wider subpubic angle, though individual variation exists.']
+]},
+{n:9,title:'Joints',sub:'Classifications, synovial joints, movement and major joint examples',points:[
+['Functional classes','Synarthrosis = immovable; amphiarthrosis = slightly movable; diarthrosis = freely movable.'],
+['Structural classes','Fibrous, cartilaginous and synovial. All synovial joints are diarthroses.'],
+['Synovial joint anatomy','Articular cartilage, fibrous capsule, synovial membrane, joint cavity, synovial fluid and ligaments.'],
+['Accessory structures','Bursae reduce friction. Menisci improve fit/distribute load. Ligaments connect bone to bone.'],
+['Movement terms','Flexion/extension, abduction/adduction, rotation, pronation/supination, dorsiflexion/plantar flexion, inversion/eversion.'],
+['Six synovial types','Plane, hinge, pivot, condylar, saddle and ball-and-socket.'],
+['Knee, shoulder and hip','Knee menisci and cruciate ligaments aid stability. Shoulder favors mobility; hip favors stability.'],
+['Joint injury/aging','Sprain = ligament injury; strain = muscle/tendon injury; dislocation = loss of normal articular contact.']
+]},
+{n:10,title:'Muscle Tissue',sub:'Organization, sarcomeres, contraction, metabolism and training',points:[
+['Muscle functions','Movement, posture/balance, support of soft tissues, guarding entrances/exits and heat production.'],
+['Organization','Whole muscle → fascicle → muscle fiber → myofibril → sarcomere → myofilaments.'],
+['Connective tissue layers','Epimysium surrounds whole muscle; perimysium surrounds fascicles; endomysium surrounds individual fibers.'],
+['Sarcomere','Z line to Z line. Thin filaments contain actin, troponin and tropomyosin; thick filaments contain myosin.'],
+['Sliding filament','A band stays the same width; I band and H zone shrink; Z lines move closer. Filaments slide rather than shorten.'],
+['Neuromuscular junction','Motor neuron AP → ACh release → motor end plate depolarization → muscle AP. Acetylcholinesterase removes ACh.'],
+['Excitation–contraction coupling','AP travels through T tubules → SR releases Ca2+ → Ca2+ binds troponin → tropomyosin shifts → cross-bridges form.'],
+['Cross-bridge cycle','Myosin binds actin and power-strokes; ATP binding detaches myosin; ATP hydrolysis re-cocks the head.'],
+['Motor units and tension','A motor unit is one motor neuron plus all fibers it innervates. Recruitment activates additional units.'],
+['Contraction types','Isometric = tension without length change; concentric = active shortening; eccentric = active lengthening.'],
+['ATP and metabolism','Creatine phosphate rapidly regenerates ATP; glycolysis is fast; aerobic metabolism supports prolonged work.'],
+['Fiber types and training','Slow oxidative fibers resist fatigue. Fast glycolytic fibers are powerful but fatigue sooner. Resistance training promotes hypertrophy; endurance training improves aerobic capacity.']
+]}
+];
+
+const baseQs=[
+['Which layer is the deepest layer of the epidermis?',['Stratum corneum','Stratum basale','Papillary layer','Reticular layer'],1,'The lecture identifies stratum basale as the deepest epidermal layer.',5],
+['Which dermal layer contains many sensory receptors and blood vessels involved in thermoregulation?',['Reticular layer','Stratum lucidum','Stratum basale','Epidermal ridge'],0,'The reticular dermis contains vessels and many sensory structures.',5],
+['Calcitriol primarily supports absorption of which ions?',['Sodium and potassium','Calcium and phosphate','Chloride and iron','Magnesium and sodium'],1,'The vitamin D pathway links calcitriol with calcium and phosphate absorption.',5],
+['Which bone type includes the patella?',['Flat','Long','Sesamoid','Sutural'],2,'The patella is a sesamoid bone.',6],
+['A fossa is best described as a:',['Pointed process','Shallow depression','Large rough projection','Small flat articular surface'],1,'A fossa is a shallow depression.',6],
+['Endochondral ossification begins from a model made of:',['Hyaline cartilage','Dense regular CT','Compact bone','Elastic cartilage'],0,'Endochondral ossification begins with a hyaline cartilage model.',6],
+['How many bones are in the adult axial skeleton?',['80','126','206','60'],0,'The axial skeleton contains 80 bones.',7],
+['Which belongs to the thoracic cage?',['Clavicle','Scapula','Sternum','Hip bone'],2,'The sternum belongs to the thoracic cage.',7],
+['The vertebral column includes 24 vertebrae plus the:',['Sternum and ribs','Sacrum and coccyx','Clavicle and scapula','Ilium and ischium'],1,'The vertebral column includes 24 vertebrae plus sacrum and coccyx.',7],
+['How many bones are in the appendicular skeleton?',['80','126','206','25'],1,'The appendicular skeleton contains 126 bones.',8],
+['Which bones form the pectoral girdles?',['Clavicle and scapula','Radius and ulna','Femur and patella','Ilium and ischium'],0,'Each pectoral girdle consists of clavicle and scapula.',8],
+['Which is NOT one of the three main parts of the hip bone?',['Ilium','Ischium','Pubis','Sacrum'],3,'The hip bone consists of ilium, ischium and pubis.',8],
+['Which functional joint category is immovable?',['Diarthrosis','Amphiarthrosis','Synarthrosis','Synovial'],2,'Synarthrosis means no movement.',9],
+['Which functional joint category allows slight movement?',['Amphiarthrosis','Synarthrosis','Diarthrosis','Gomphosis only'],0,'Amphiarthrosis means slight movement.',9],
+['What fills the cavity of a synovial joint?',['Blood','Synovial fluid','Bone marrow','Cerebrospinal fluid'],1,'The synovial joint cavity contains synovial fluid.',9],
+['Which connective tissue sheath surrounds an entire skeletal muscle?',['Endomysium','Perimysium','Epimysium','Sarcolemma'],2,'Epimysium surrounds the entire muscle.',10],
+['Which sheath surrounds a fascicle?',['Perimysium','Epimysium','Endomysium','Titin'],0,'Perimysium surrounds a fascicle.',10],
+['During skeletal muscle contraction, which band stays the same width?',['I band','H band','A band','Z line'],2,'The A band stays the same width during contraction.',10],
+['Calcium binds to which protein to begin exposing active sites?',['Myosin','Troponin','Titin','Nebulin'],1,'Ca2+ binds troponin, moving tropomyosin away from actin active sites.',10],
+['ACh is released into the:',['Medullary cavity','Synaptic cleft','Joint cavity','Sarcomere'],1,'ACh is released into the synaptic cleft at the neuromuscular junction.',10],
+['Calcium used for skeletal muscle contraction is released from the:',['Golgi apparatus','Sarcoplasmic reticulum','Nucleus','Mitochondrial matrix'],1,'The sarcoplasmic reticulum stores and releases Ca2+.',10],
+['As a sarcomere contracts, the Z lines:',['Move farther apart','Move closer together','Disappear','Stay fixed'],1,'Z lines move closer together as the sarcomere shortens.',10],
+['Which is a Chapter 10 metabolism/training focus?',['Fast and slow fibers','Skin pigmentation','Skull sutures','Bone markings'],0,'The muscle lecture includes fast and slow fiber types and effects of training.',10],
+['Which is a function of muscle tissue?',['Produce movement','Synthesize vitamin D3','Form epidermal ridges','Produce synovial fluid'],0,'Production of movement is a major function of muscle tissue.',10]
+];
+
+const qs=[...baseQs];
+(textbookTopics||[]).forEach(t=>qs.push([t.question,t.options,0,t.notes+' Textbook pp. '+t.pages+'.',t.ch]));
+(window.exam2ExtraQuestions||[]).forEach(q=>qs.push(q));
+
+const chapterBox=document.getElementById('chapters');
+chapterBox.innerHTML=chapters.map((c,i)=>{
+  const n=qs.filter(q=>q[4]===c.n).length;
+  return '<button class="chapter" onclick="showChapter('+i+')"><b>Chapter '+c.n+'</b><br>'+c.title+'<small>'+c.sub+'</small><span class="count" style="margin-top:12px">'+n+' questions</span></button>'
+}).join('');
+
+let order=[],pos=0,score=0,choiceOrder=[],answered=false,currentChapter=null;
+let missed=new Set();
+try{missed=new Set(JSON.parse(localStorage.getItem('bio233exam2missed-v2')||'[]').filter(i=>Number.isInteger(i)&&i>=0&&i<qs.length))}catch(e){}
+document.getElementById('totalQ').textContent=qs.length;
+refreshStats();
+
+function refreshStats(){
+  document.getElementById('missedCount').textContent=missed.size;
+  document.getElementById('bar').style.width=(qs.length?((qs.length-missed.size)/qs.length*100):0)+'%';
+}
+function saveMissed(){try{localStorage.setItem('bio233exam2missed-v2',JSON.stringify([...missed]))}catch(e){}refreshStats()}
+function showOnly(id){['home','chapterView','quizView'].forEach(x=>document.getElementById(x).classList.toggle('hidden',x!==id));window.scrollTo(0,0)}
+function showHome(){showOnly('home')}
+function showChapter(i){
+  currentChapter=chapters[i];
+  const c=currentChapter;
+  const v=document.getElementById('chapterView');
+  const chapterQuestions=qs.map((q,idx)=>({q,idx})).filter(x=>x.q[4]===c.n);
+  const textbook=(textbookTopics||[]).filter(t=>t.ch===c.n);
+  v.innerHTML=
+    '<div class="card hero"><div class="tag">Chapter '+c.n+([7,8].includes(c.n)?' · full coverage for now':'')+'</div><h2>'+c.title+'</h2><p class="muted">'+c.sub+'</p><div class="toolbar"><button onclick="showHome()">← All chapters</button><button class="primary" onclick="startQuiz('+c.n+')">Practice Chapter '+c.n+' · '+chapterQuestions.length+' questions</button></div></div>'+
+    '<div class="card"><div class="tag">Lecture foundation</div><h2>Read • understand • recall</h2>'+
+      c.points.map((p,j)=>'<div class="topic"><div class="question-meta"><h3 style="margin:0">Topic '+(j+1)+': '+p[0]+'</h3><span class="count">lecture</span></div><p>'+p[1]+'</p></div>').join('')+
+    '</div>'+
+    '<div class="card"><div class="tag">Textbook support</div><h2>Fill in the “why”</h2><p class="muted">These are the textbook explanations already paired with your lecture scope.</p>'+
+      textbook.map(t=>'<article class="mini" style="margin:14px 0"><div class="question-meta"><h3 style="margin:0">'+t.title+'</h3><span class="count">pp. '+t.pages+'</span></div><p>'+t.notes+'</p><details><summary>Active recall: '+t.question+'</summary><p><b>'+t.options[0]+'</b></p></details></article>').join('')+
+    '</div>'+
+    '<div class="card"><div class="tag">Chapter practice</div><h2>'+chapterQuestions.length+' questions</h2><p class="muted">Use this after reading the chapter foundation.</p><div class="toolbar"><button class="primary" onclick="startQuiz('+c.n+')">Start Chapter '+c.n+'</button><button onclick="reviewMissed('+c.n+')">Review missed from Chapter '+c.n+'</button></div></div>';
+  showOnly('chapterView');
+}
+function shuffle(a){for(let i=a.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function startQuiz(ch){
+  order=shuffle(qs.map((_,i)=>i).filter(i=>ch===undefined||qs[i][4]===ch));
+  pos=0;score=0;currentChapter=ch||null;renderQ();showOnly('quizView');
+}
+function reviewMissed(ch){
+  order=shuffle([...missed].filter(i=>ch===undefined||qs[i][4]===ch));
+  pos=0;score=0;currentChapter=ch||null;renderQ();showOnly('quizView');
+}
+function resetMissed(){if(confirm('Clear your saved missed-question list for Lecture Exam 2?')){missed.clear();saveMissed()}}
+function renderQ(){
+  const qv=document.getElementById('quizView');
+  answered=false;
+  if(!order.length){
+    qv.innerHTML='<div class="card"><h2>No missed questions saved'+(currentChapter?' for Chapter '+currentChapter:'')+'.</h2><button onclick="showHome()">Back home</button></div>';
+    return;
   }
-  window.bioVisualFor=visualFor;
-  const oldShowChapter=window.showChapter;
-  window.showChapter=function(i){
-    currentChapter=chapters[i];
-    const c=currentChapter;
-    setAccent(c.n);
-    const v=document.getElementById("chapterView");
-    const chapterQuestions=qs.map((q,idx)=>({q,idx})).filter(x=>x.q[4]===c.n);
-    const textbook=(textbookTopics||[]).filter(t=>t.ch===c.n);
-    const heroVisual=visualFor(c.n,Math.min(2,c.points.length-1),c.title);
-    v.innerHTML=
-      '<div class="card hero"><div class="chapter-hero-grid"><div><div class="tag">Chapter '+c.n+'</div><h2>'+c.title+'</h2><p class="muted">'+c.sub+'</p><div class="chapter-source-banner"><strong>Visual source anchors:</strong><span>Your lecture slides + Martini & Nath textbook figures</span></div><div class="toolbar" style="margin-top:18px"><button onclick="showHome()">← All chapters</button><button class="primary" onclick="startQuiz('+c.n+')">Practice Chapter '+c.n+' · '+chapterQuestions.length+' questions</button></div></div><figure class="hero-visual">'+heroVisual+'<span class="floating-chip">interactive visual</span></figure></div></div>'+
-      '<div class="card"><div class="tag">Visual lecture map</div><h2>Every topic, with a picture</h2><p class="muted">Each card pairs your lecture wording with a visual model and the closest figure or section from your uploaded class resources.</p><div class="topic-gallery">'+
-        c.points.map((p,j)=>'<article class="topic-card"><figure class="topic-visual">'+visualFor(c.n,j,p[0])+'</figure><div class="topic-copy"><div class="topic-kicker"><span>Topic '+(j+1)+'</span><span class="count">lecture</span></div><h3>'+p[0]+'</h3><p>'+p[1]+'</p><div class="source-pill">'+((sourceAnchors[c.n]||[])[j]||("Chapter "+c.n+" lecture + textbook"))+'</div></div></article>').join('')+
-      '</div><div class="resource-note">The figure labels above point you back to the uploaded lecture decks and textbook material used to build this study hub. The colorful diagrams here are original study visuals so the site stays fast, responsive, and readable on your phone.</div></div>'+
-      '<div class="card"><div class="tag">Textbook support</div><h2>Fill in the “why” visually</h2><div class="textbook-grid">'+
-        textbook.map((t,j)=>'<article class="mini textbook-card"><figure class="topic-visual">'+visualFor(c.n,j,t.title)+'</figure><div class="textbook-body"><div class="question-meta"><h3 style="margin:0">'+t.title+'</h3><span class="count">pp. '+t.pages+'</span></div><p>'+t.notes+'</p><details><summary>Active recall: '+t.question+'</summary><p><b>'+t.options[0]+'</b></p></details></div></article>').join('')+
-      '</div></div>'+
-      '<div class="card"><div class="tag">Chapter practice</div><h2>'+chapterQuestions.length+' questions</h2><p class="muted">Use the visuals first, then test recognition and recall.</p><div class="toolbar"><button class="primary" onclick="startQuiz('+c.n+')">Start Chapter '+c.n+'</button><button onclick="reviewMissed('+c.n+')">Review missed from Chapter '+c.n+'</button></div></div>';
-    showOnly("chapterView");
-    requestAnimationFrame(()=>initReveals());
-  };
-  function initReveals(){
-    const cards=[...document.querySelectorAll(".topic-card")];
-    if(!("IntersectionObserver" in window)){cards.forEach(x=>x.classList.add("revealed"));return}
-    const obs=new IntersectionObserver((entries)=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("revealed");obs.unobserve(e.target)}}),{threshold:.13});
-    cards.forEach(x=>obs.observe(x));
+  if(pos>=order.length){
+    const pct=Math.round(score/order.length*100);
+    qv.innerHTML='<div class="card hero"><div class="tag">Practice complete</div><h2>'+score+' / '+order.length+' · '+pct+'%</h2><p class="muted">Missed questions are saved on this device so you can review them again.</p><div class="toolbar"><button class="primary" onclick="'+(currentChapter?'startQuiz('+currentChapter+')':'startQuiz()')+'">Try again</button><button onclick="'+(currentChapter?'reviewMissed('+currentChapter+')':'reviewMissed()')+'">Review missed</button><button onclick="'+(currentChapter?'showChapter('+(currentChapter-5)+')':'showHome()')+'">Back</button></div></div>';
+    return;
   }
-  const chapterColors=["#ff6f91","#55d6be","#62d0ff","#7b61ff","#ffb347","#00d8ff"];
-  document.querySelectorAll(".chapter").forEach((btn,i)=>{
-    btn.style.setProperty("--cc",chapterColors[i]||"#ff6fae");
-    const b=btn.querySelector("b");
-    if(b&&!btn.querySelector(".chapter-icon")){
-      b.insertAdjacentHTML("beforebegin",'<span class="chapter-icon">'+(icons[i+5]||"✦")+'</span><span class="chapter-number">Chapter '+(i+5)+'</span><br>');
-    }
-  });
-  const hero=document.querySelector("#home .hero");
-  if(hero&&!hero.querySelector(".chapter-source-banner")){
-    hero.querySelector("p").insertAdjacentHTML("afterend",'<div class="chapter-source-banner"><strong>Built from:</strong><span>your Chapters 5–10 lecture decks · Martini & Nath · your handwritten-note question bank</span></div>');
-  }
-  const dot=document.createElement("div"), ring=document.createElement("div");
-  dot.id="cursorDot";ring.id="cursorRing";document.body.append(dot,ring);
-  if(matchMedia("(pointer:fine)").matches){
-    document.body.classList.add("cursor-on");
-    let mx=0,my=0,rx=0,ry=0;
-    addEventListener("mousemove",e=>{mx=e.clientX;my=e.clientY;dot.style.transform="translate("+(mx-3.5)+"px,"+(my-3.5)+"px)"});
-    const loop=()=>{rx+=(mx-rx)*.16;ry+=(my-ry)*.16;ring.style.transform="translate("+(rx-17)+"px,"+(ry-17)+"px)";requestAnimationFrame(loop)};loop();
-    document.addEventListener("mouseover",e=>{if(e.target.closest("button,a,summary,.topic-card"))ring.classList.add("hot")});
-    document.addEventListener("mouseout",e=>{if(e.target.closest("button,a,summary,.topic-card"))ring.classList.remove("hot")});
-  }
-  const meter=document.createElement("div");meter.className="scroll-meter";meter.textContent="TOP";meter.title="Scroll progress / back to top";meter.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));document.body.append(meter);
-  const updateMeter=()=>{const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;const pct=max?Math.round(d.scrollTop/max*100):0;meter.style.setProperty("--scroll",pct+"%");meter.textContent=pct+"%"};addEventListener("scroll",updateMeter,{passive:true});updateMeter();
-  setAccent(10);
-})();
+  const id=order[pos],x=qs[id];
+  choiceOrder=shuffle(x[1].map((_,i)=>i));
+  qv.innerHTML='<div class="card question-card"><div class="question-meta"><div class="tag">Chapter '+x[4]+' · Question '+(pos+1)+' of '+order.length+'</div><span class="count">'+(missed.has(id)?'previously missed':'practice')+'</span></div><h2>'+x[0]+'</h2>'+
+    choiceOrder.map((original,i)=>'<button class="choice" onclick="pick('+original+',this)">'+String.fromCharCode(65+i)+'. '+x[1][original]+'</button>').join('')+
+    '<div id="fb"></div></div>';
+}
+function pick(i,b){
+  if(answered)return;
+  answered=true;
+  const id=order[pos],x=qs[id],buttons=[...document.querySelectorAll('#quizView .choice')];
+  buttons.forEach(z=>z.disabled=true);
+  buttons[choiceOrder.indexOf(x[2])].classList.add('right');
+  const correct=i===x[2];
+  if(correct){score++;missed.delete(id)}else{b.classList.add('wrong');missed.add(id)}
+  saveMissed();
+  document.getElementById('fb').innerHTML='<div class="feedback '+(correct?'':'bad')+'"><b>'+(correct?'✓ Correct':'Correct answer: '+x[1][x[2]])+'</b><p><strong>Why:</strong> '+x[3]+'</p><button class="primary" onclick="pos++;renderQ()">Next →</button></div>';
+}
 </script>
-</body></html>
+</body>
+</html>
