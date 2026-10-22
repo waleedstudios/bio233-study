@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BIO 233 · Exam 2 Lab Muscles</title>
+<style>
+:root{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f3f6fc;background:#090e1a;--pink:#f36aaa;--pink2:#f9a0c7;--panel:#151e31;--panel2:#111e32;--edge:#40506b;--muted:#b5c1d7;--good:#6fdbb2;--bad:#f1849c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 90% -5%,#382449 0%,transparent 38%),radial-gradient(ellipse at 0% 20%,#162b46 0%,transparent 38%),#090e1a;min-height:100vh}
+header{position:sticky;top:0;z-index:20;background:#0d1425eb;backdrop-filter:blur(18px);border-bottom:1px solid #ffffff20}.wrap{max-width:1080px;margin:auto;padding:18px}
+h1{margin:6px 0;font-size:clamp(28px,5vw,44px);letter-spacing:-.045em}h2{letter-spacing:-.025em}h3{color:#ffa6d0}.muted{color:var(--muted);line-height:1.65}.tag{color:#ff99c9;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
+.card{background:linear-gradient(150deg,#1b2940,#131d30);border:1px solid #ffffff20;border-radius:22px;padding:24px;margin:18px 0;box-shadow:0 15px 40px #0003}
+.hero{background:linear-gradient(110deg,#27234c,#192e48);border:1px solid #6d547c}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.nav,.toolbar,.chips{display:flex;gap:9px;flex-wrap:wrap}.nav a,button{font:inherit;color:white;text-decoration:none;border:1px solid #576583;background:#293652;border-radius:11px;padding:11px 15px;cursor:pointer;transition:.16s}
+.nav a:hover,button:hover{transform:translateY(-1px);border-color:var(--pink)}.nav a.active,button.primary{background:linear-gradient(110deg,var(--pink),var(--pink2));color:#241021;border-color:var(--pink);font-weight:750}
+.hidden{display:none}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.stat{padding:14px;border:1px solid #42516d;background:#101a2d;border-radius:14px;text-align:center}.stat strong{display:block;font-size:24px;color:#ffa6d0}
+.muscle{background:#111e32;border:1px solid #42516d;border-radius:16px;padding:16px}.muscle h3{margin:0 0 10px}.oia{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.oia div{background:#17263d;border-radius:10px;padding:10px;line-height:1.45}.oia b{display:block;color:#ffb1d5;margin-bottom:4px}
+.mode{min-height:160px;text-align:left}.mode b{font-size:19px}.mode small{display:block;color:#c7d2e7;margin-top:8px;line-height:1.45}
+.flash{perspective:1000px;max-width:760px;margin:20px auto}.flash-inner{position:relative;min-height:340px;transition:transform .5s;transform-style:preserve-3d}.flash.flipped .flash-inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:22px;padding:28px;background:linear-gradient(145deg,#1d2b44,#151d31);border:1px solid #52617f;display:flex;flex-direction:column;justify-content:center}.back{transform:rotateY(180deg);overflow:auto}.face h2{text-align:center}.back .oia{grid-template-columns:1fr}
+.choice{display:block;width:100%;text-align:left;margin:8px 0;padding:14px;line-height:1.45;background:#17263d}.choice.right{border-color:var(--good)!important;background:#173e39!important}.choice.wrong{border-color:var(--bad)!important;background:#46283a!important}
+.feedback{margin-top:12px;padding:14px;border-radius:12px;background:#122e32;border:1px solid #3c887c;line-height:1.55}.feedback.bad{background:#362333;border-color:#a65c80}
+.pill{display:inline-flex;align-items:center;border:1px solid #73516c;color:#ffb1d5;border-radius:30px;padding:5px 11px;font-size:12px}
+.question-meta{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid #34425d;text-align:left;vertical-align:top;padding:12px}th{color:#ffb1d5;position:sticky;top:0;background:#151e31}
+.tablewrap{overflow:auto;max-height:68vh;border:1px solid #40506b;border-radius:14px}
+@media(max-width:700px){header{position:relative}.wrap{padding:14px}.card{padding:18px}.stats,.oia{grid-template-columns:1fr}.nav a{flex:1;text-align:center}.toolbar button{flex:1}.flash-inner{min-height:430px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="tag">BIO 233 STUDY HUB</div>
+<h1>Exam 2 Lab · Muscles</h1>
+<p class="muted">Muscle identification plus origin, insertion, and action.</p>
+<nav class="nav">
+<a href="index.html">Lecture Exam 1 · Chapters 1–4</a>
+<a href="lab.html">Lecture Exam 2 · Chapters 5–10</a>
+<a href="exam2-lab.html" class="active">Exam 2 Lab · Muscles</a>
+</nav>
+</div></header>
+<main class="wrap">
+<section id="home">
+<div class="card hero">
+<div class="tag">LAB PRACTICE</div><h2>Know the muscle. Know where it starts, where it attaches, and what it does.</h2>
+<p class="muted">Built from the two muscle tables you sent. Use Study Table first, then switch to the game modes until you can answer from either direction.</p>
+<div class="stats"><div class="stat"><strong>17</strong>muscles</div><div class="stat"><strong>3</strong>facts each</div><div class="stat"><strong>4</strong>study modes</div></div>
+</div>
+<div class="card"><div class="tag">Choose a lab mode</div><h2>Practice creatively</h2><div class="grid">
+<button class="mode" onclick="showStudy()"><b>📋 Study Table</b><small>Clean reference for every muscle, origin, insertion, and action.</small></button>
+<button class="mode" onclick="startFlash()"><b>🃏 Flip Flashcards</b><small>See the muscle first, then reveal all three O/I/A facts.</small></button>
+<button class="mode" onclick="startGuess()"><b>🕵️ Guess the Muscle</b><small>Get one origin, insertion, or action clue and identify the muscle.</small></button>
+<button class="mode" onclick="startOIA()"><b>🎯 O/I/A Challenge</b><small>Given a muscle, choose the correct origin, insertion, or action.</small></button>
+</div></div>
+</section>
+<section id="view" class="hidden"></section>
+</main>
+<script>
+const muscles=[
+{name:"Sternocleidomastoid",origin:"Sternum and clavicle",insertion:"Mastoid process of temporal bone",action:"Bilaterally flexes the cervical vertebral column and head; unilaterally laterally flexes and rotates the head to the side opposite the contracting muscle."},
+{name:"Trapezius",origin:"Occipital bone, ligamentum nuchae, and spinous processes of thoracic vertebrae",insertion:"Clavicle and scapula (acromion and scapular spine)",action:"Depending on active region: elevates, retracts, depresses, or rotates scapula upward; may elevate clavicle or extend neck."},
+{name:"Latissimus dorsi",origin:"Spines of inferior six thoracic vertebrae, lumbar vertebrae, crests of sacrum and ilium, inferior four ribs, and inferior angle of scapula",insertion:"Intertubercular groove of humerus",action:"Extends, adducts, and medially rotates arm at shoulder; draws arm inferiorly and posteriorly."},
+{name:"Pectoralis major",origin:"Clavicle (clavicular head), sternum, and cartilages of second to sixth ribs (sternocostal head)",insertion:"Greater tubercle and intertubercular groove of humerus",action:"As a whole adducts and medially rotates arm at shoulder; clavicular head flexes arm at shoulder."},
+{name:"Rectus abdominis",origin:"Pubic crest and pubic symphysis",insertion:"Cartilage of fifth to seventh ribs and xiphoid process",action:"Flexes vertebral column, especially lumbar portion, and compresses abdomen to aid defecation, urination, forced expiration, and childbirth."},
+{name:"Deltoid",origin:"Anterior fibers: acromial extremity of clavicle; middle fibers: acromion of scapula; posterior fibers: spine of scapula",insertion:"Deltoid tuberosity of humerus",action:"Middle fibers abduct arm; anterior fibers flex and medially rotate arm; posterior fibers extend and laterally rotate arm at shoulder."},
+{name:"Biceps brachii",origin:"Long head: supraglenoid tubercle of scapula; short head: coracoid process of scapula",insertion:"Radial tuberosity and bicipital aponeurosis",action:"Flexes forearm at elbow, supinates forearm at radioulnar joints, and flexes arm at shoulder."},
+{name:"Triceps brachii",origin:"Long head: inferior to glenoid cavity of scapula; lateral head: posterior humerus superior to radial groove; medial head: posterior humerus inferior to radial groove",insertion:"Olecranon of ulna",action:"Extends forearm at elbow and extends arm at shoulder."},
+{name:"Rectus femoris",origin:"Anterior inferior iliac spine",insertion:"Patella via quadriceps tendon and then tibial tuberosity via patellar ligament",action:"Extends leg at knee; rectus femoris also flexes thigh at hip."},
+{name:"Vastus medialis",origin:"Linea aspera of femur",insertion:"Patella via quadriceps tendon and then tibial tuberosity via patellar ligament",action:"Extends leg at knee."},
+{name:"Vastus lateralis",origin:"Greater trochanter and linea aspera of femur",insertion:"Patella via quadriceps tendon and then tibial tuberosity via patellar ligament",action:"Extends leg at knee."},
+{name:"Vastus intermedius",origin:"Anterior and lateral surfaces of body of femur",insertion:"Patella via quadriceps tendon and then tibial tuberosity via patellar ligament",action:"Extends leg at knee."},
+{name:"Biceps femoris",origin:"Long head: ischial tuberosity; short head: linea aspera of femur",insertion:"Head of fibula and lateral condyle of tibia",action:"Hamstring action: flexes leg at knee and extends thigh at hip."},
+{name:"Semitendinosus",origin:"Ischial tuberosity",insertion:"Proximal part of medial surface of shaft of tibia",action:"Hamstring action: flexes leg at knee and extends thigh at hip."},
+{name:"Semimembranosus",origin:"Ischial tuberosity",insertion:"Medial condyle of tibia",action:"Hamstring action: flexes leg at knee and extends thigh at hip."},
+{name:"Gastrocnemius",origin:"Lateral and medial condyles of femur and capsule of knee",insertion:"Calcaneus by way of calcaneal (Achilles) tendon",action:"Plantar flexes foot at ankle joint and flexes leg at knee joint."},
+{name:"Soleus",origin:"Posterior head and proximal fibula plus soleal line and medial border of tibia",insertion:"Calcaneus by way of calcaneal (Achilles) tendon",action:"Plantar flexes foot at ankle; important postural muscle."}
+];
+let current=0,score=0,total=0,flashOrder=[];
+const view=document.getElementById("view"),home=document.getElementById("home");
+function showOnlyView(){home.classList.add("hidden");view.classList.remove("hidden");scrollTo(0,0)}
+function back(){view.classList.add("hidden");home.classList.remove("hidden");scrollTo(0,0)}
+function shuf(a){return [...a].sort(()=>Math.random()-.5)}
+function showStudy(){
+view.innerHTML='<div class="card"><div class="question-meta"><div><div class="tag">REFERENCE MODE</div><h2>Muscle O/I/A Study Table</h2></div><button onclick="back()">← Lab home</button></div><div class="tablewrap"><table><thead><tr><th>Muscle</th><th>Origin</th><th>Insertion</th><th>Action</th></tr></thead><tbody>'+muscles.map(m=>'<tr><td><b>'+m.name+'</b></td><td>'+m.origin+'</td><td>'+m.insertion+'</td><td>'+m.action+'</td></tr>').join('')+'</tbody></table></div></div>';showOnlyView()}
+function startFlash(){
+flashOrder=shuf(muscles.map((_,i)=>i));current=0;
+renderFlash();showOnlyView()}
+function renderFlash(){
+const m=muscles[flashOrder[current]];
+view.innerHTML='<div class="card"><div class="question-meta"><span class="pill">Card '+(current+1)+' / '+flashOrder.length+'</span><button onclick="back()">← Lab home</button></div><div class="flash" id="flash" onclick="this.classList.toggle(\'flipped\')"><div class="flash-inner"><div class="face front"><div class="tag">NAME → O/I/A</div><h2>'+m.name+'</h2><p class="muted" style="text-align:center">Click the card to reveal origin, insertion, and action.</p></div><div class="face back"><h2>'+m.name+'</h2><div class="oia"><div><b>Origin</b>'+m.origin+'</div><div><b>Insertion</b>'+m.insertion+'</div><div><b>Action</b>'+m.action+'</div></div></div></div></div><div class="toolbar" style="justify-content:center"><button onclick="prevFlash()">← Previous</button><button class="primary" onclick="nextFlash()">Next →</button></div></div>'}
+function nextFlash(){current=(current+1)%flashOrder.length;renderFlash()}function prevFlash(){current=(current-1+flashOrder.length)%flashOrder.length;renderFlash()}
+function distractors(correct,field){return shuf([correct,...shuf(muscles.filter(x=>x!==correct)).slice(0,3)]).map(m=>field==="name"?m.name:m[field])}
+function startGuess(){score=0;total=0;renderGuess();showOnlyView()}
+function renderGuess(){
+const correct=muscles[Math.floor(Math.random()*muscles.length)];
+const fields=["origin","insertion","action"];const field=fields[Math.floor(Math.random()*3)];
+const opts=distractors(correct,"name");
+view.innerHTML='<div class="card"><div class="question-meta"><div><div class="tag">GUESS THE MUSCLE</div><h2>Which muscle matches this '+field+'?</h2></div><span class="pill">Score '+score+' / '+total+'</span></div><div class="muscle"><b style="color:#ffb1d5;text-transform:uppercase">'+field+'</b><p>'+correct[field]+'</p></div><div id="answers">'+opts.map(o=>'<button class="choice" onclick="answerGuess(this,\''+o.replace(/'/g,"\\'")+'\',\''+correct.name.replace(/'/g,"\\'")+'\')">'+o+'</button>').join('')+'</div><div id="feedback"></div><div class="toolbar" style="margin-top:15px"><button onclick="back()">← Lab home</button></div></div>'}
+function answerGuess(btn,choice,correct){if(document.querySelector("#answers .right,#answers .wrong"))return;total++;if(choice===correct){score++;btn.classList.add("right");feedback.innerHTML='<div class="feedback">Correct. <b>'+correct+'</b></div>'}else{btn.classList.add("wrong");[...document.querySelectorAll("#answers .choice")].find(x=>x.textContent===correct)?.classList.add("right");feedback.innerHTML='<div class="feedback bad">Correct answer: <b>'+correct+'</b></div>'}feedback.innerHTML+='<div class="toolbar" style="margin-top:12px"><button class="primary" onclick="renderGuess()">Next clue →</button></div>'}
+function startOIA(){score=0;total=0;renderOIA();showOnlyView()}
+function renderOIA(){
+const correct=muscles[Math.floor(Math.random()*muscles.length)];
+const fields=["origin","insertion","action"];const field=fields[Math.floor(Math.random()*3)];
+const opts=distractors(correct,field);
+view.innerHTML='<div class="card"><div class="question-meta"><div><div class="tag">O / I / A CHALLENGE</div><h2>'+correct.name+'</h2></div><span class="pill">Score '+score+' / '+total+'</span></div><p class="muted">Choose the correct <b>'+field+'</b>.</p><div id="answers">'+opts.map((o,i)=>'<button class="choice" onclick="answerOIA(this,'+i+','+JSON.stringify(correct[field]).replace(/"/g,"&quot;")+')">'+o+'</button>').join('')+'</div><div id="feedback"></div><div class="toolbar" style="margin-top:15px"><button onclick="back()">← Lab home</button></div></div>'}
+function answerOIA(btn,i,correct){if(document.querySelector("#answers .right,#answers .wrong"))return;total++;const choice=btn.textContent;if(choice===correct){score++;btn.classList.add("right");feedback.innerHTML='<div class="feedback">Correct.</div>'}else{btn.classList.add("wrong");[...document.querySelectorAll("#answers .choice")].find(x=>x.textContent===correct)?.classList.add("right");feedback.innerHTML='<div class="feedback bad">Review this one before moving on.</div>'}feedback.innerHTML+='<div class="toolbar" style="margin-top:12px"><button class="primary" onclick="renderOIA()">Next question →</button></div>'}
+</script>
+</body>
+</html>
