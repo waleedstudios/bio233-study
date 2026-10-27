@@ -67,10 +67,72 @@
   };
 
   function stripLabel(text){return String(text||'').replace(/^[A-D]\.\s*/, '').trim()}
-  function explainWrong(option, correct, mainWhy){
-    const o=option.toLowerCase();
-    for(const key in reasons){if(o.includes(key))return reasons[key]}
-    return 'This does not match the defining feature asked for. Compare it with the correct answer: '+correct+'. '+mainWhy;
+  const definitions = {
+    'skin':'Skin provides a protective barrier, sensation and temperature regulation; UVB exposure starts vitamin D3 synthesis.',
+    'pancreas':'The pancreas produces digestive enzymes and hormones such as insulin and glucagon that regulate blood glucose.',
+    'spleen':'The spleen filters blood, removes aging red blood cells and supports immune responses.',
+    'liver':'The liver converts vitamin D to calcidiol (25-hydroxyvitamin D), an intermediate form.',
+    'kidney':'The kidneys convert calcidiol to active calcitriol, which increases intestinal calcium and phosphate absorption.',
+    'stratum basale':'The deepest epidermal layer contains dividing cells that replace keratinocytes; melanocytes and tactile cells also occur here.',
+    'stratum spinosum':'This epidermal layer contains keratinocytes joined by strong desmosomes, helping resist mechanical stress.',
+    'stratum granulosum':'Keratinocytes flatten and accumulate keratohyalin granules here; released lipids help form the water barrier.',
+    'stratum corneum':'The outermost epidermal layer consists of dead, keratin-filled cells that protect against abrasion and water loss.',
+    'fibroblast':'Fibroblasts produce connective-tissue fibers and ground substance.',
+    'adipocyte':'Adipocytes store fat for energy, insulation and cushioning.',
+    'chondrocyte':'Chondrocytes maintain cartilage matrix while occupying spaces called lacunae.',
+    'areolar':'Areolar connective tissue loosely binds and cushions tissues and allows diffusion of tissue fluid.',
+    'dense regular':'Dense regular connective tissue has parallel collagen bundles that resist pulling in one main direction, as in tendons.',
+    'dense irregular':'Dense irregular connective tissue has collagen bundles in many directions, resisting stress from different angles.',
+    'hyaline cartilage':'Hyaline cartilage provides firm, flexible support and low-friction joint surfaces.',
+    'elastic cartilage':'Elastic cartilage provides flexible support, as in the external ear and epiglottis.',
+    'fibrocartilage':'Fibrocartilage resists compression and tension, as in intervertebral discs and menisci.',
+    'periosteum':'The periosteum covers the outer bone surface except at articular cartilage and supports attachment, growth and repair.',
+    'endosteum':'The endosteum lines internal bone surfaces and contains cells involved in bone growth and remodeling.',
+    'red marrow':'Red bone marrow produces blood cells.',
+    'yellow marrow':'Yellow bone marrow primarily stores fat.',
+    'calcitonin':'Calcitonin is released by thyroid C cells and can inhibit osteoclast-mediated bone resorption.',
+    'parathyroid hormone':'Parathyroid hormone raises blood calcium through effects on bone, kidneys and vitamin D activation.',
+    'acetylcholinesterase':'Acetylcholinesterase breaks down acetylcholine, ending its signal at the neuromuscular junction.',
+    'acetylcholine':'Acetylcholine activates receptors on the motor end plate, initiating depolarization of skeletal muscle.',
+    'atp':'ATP binding detaches myosin from actin; ATP hydrolysis energizes the myosin head, and ATP also powers calcium pumps.',
+    'calcium':'Calcium binds troponin in skeletal muscle, allowing tropomyosin to move away from actin binding sites.',
+    'condylar':'Condylar joints permit biaxial motion, such as flexion-extension and abduction-adduction at the knuckles.',
+    'flexion':'Flexion decreases the angle between articulating bones.',
+    'extension':'Extension increases the angle between articulating bones.',
+    'abduction':'Abduction moves a body part away from the midline.',
+    'adduction':'Adduction moves a body part toward the midline.',
+    'pronation':'Forearm pronation turns the palm posteriorly in anatomical position, crossing the radius over the ulna.',
+    'supination':'Forearm supination turns the palm anteriorly in anatomical position, with radius and ulna parallel.'
+  };
+  function normalize(text){return String(text).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+  function explainWrong(option, correct, mainWhy, question){
+    const o=normalize(option);
+    if(/vitamin d|calcitriol/i.test(question+' '+correct) && /→/.test(option)){
+      const parts=option.split('→').map(part=>part.trim());
+      const facts=parts.map(part=>{
+        const key=['skin','pancreas','spleen','liver','kidney'].find(k=>normalize(part).includes(k));
+        return key?definitions[key]:'';
+      }).filter(Boolean);
+      const problem=/pancreas|spleen/i.test(option)
+        ? 'The pancreas and spleen do not perform the liver and kidney conversion steps in this pathway.'
+        : 'These organs participate, but this order is reversed or misplaced: skin starts production, the liver processes it next, and the kidneys activate it last.';
+      return facts.join(' ')+' '+problem;
+    }
+    // Reuse a concept explanation only when this exact option is a correct answer elsewhere.
+    const bank=typeof qs!=='undefined'?qs:[];
+    const match=bank.find(q=>normalize(q[1][q[2]])===o && q[3] && q[0]!==question);
+    if(match)return match[3]+' In this question, '+mainWhy;
+    const entries=Object.entries({...reasons,...definitions}).sort((a,b)=>b[0].length-a[0].length);
+    const found=[]; let remaining=' '+o+' ';
+    for(const [key,fact] of entries){
+      const term=' '+normalize(key)+' ';
+      if(remaining.includes(term)){
+        found.push(fact);remaining=remaining.split(term).join(' ');
+      }
+    }
+    if(found.length)return found.join(' ');
+    // For an unrecognized proposition, explain the tested mechanism rather than inventing a definition.
+    return mainWhy+' The proposed alternative is “'+option+'”; the supported relationship is “'+correct+'”.';
   }
   function install(){
     if(typeof window.pick!=='function'||window.__exam2ExplainInstalled)return;
@@ -92,8 +154,8 @@
         const isRight=btn===right;
         let reason;
         if(isRight){reason=mainWhy||'This choice matches the lecture concept being tested.'}
-        else if(/true or false/i.test(question)){reason='This choice contradicts the lecture statement represented by the correct answer.'}
-        else{reason=explainWrong(option,correct,mainWhy)}
+        else if(/true or false/i.test(question)){reason=mainWhy}
+        else{reason=explainWrong(option,correct,mainWhy,question)}
         return '<div style="margin:9px 0;padding:10px 12px;border-radius:10px;border:1px solid '+(isRight?'#3c887c':'#6b5870')+';background:'+(isRight?'#12332f':'#211d2b')+'"><b>'+(isRight?'✓ ':'✗ ')+option+'</b><div style="margin-top:5px;color:#d7dfeb">'+reason+'</div></div>';
       }).join('');
       const panel=fb.querySelector('.feedback');
@@ -101,7 +163,7 @@
         const next=panel.querySelector('button.primary');
         const box=document.createElement('div');
         box.className='all-rationales';
-        box.innerHTML='<div style="margin-top:14px"><strong>Why each choice is right or wrong:</strong>'+rows+'</div>';
+        box.innerHTML='<div style="margin-top:14px"><strong>What each choice means:</strong>'+rows+'</div>';
         panel.insertBefore(box,next||null);
         if(whyP){whyP.innerHTML='<strong>Why the correct answer is right:</strong> '+mainWhy;}
       }
