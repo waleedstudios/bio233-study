@@ -268,5 +268,78 @@ function pick(i,b){
   document.getElementById('fb').innerHTML='<div class="feedback '+(correct?'':'bad')+'"><b>'+(correct?'✓ Correct':'Correct answer: '+x[1][x[2]])+'</b><p><strong>Why:</strong> '+x[3]+'</p><button class="primary" onclick="pos++;renderQ()">Next →</button></div>';
 }
 </script>
+<script>
+(function(){
+const facts={
+'I band':'The I band contains thin filaments without thick filaments and is bisected by a Z line. It narrows during contraction and widens as the sarcomere lengthens.',
+'H zone':'The H zone (H band) is the central part of the A band containing thick filaments without thin-filament overlap. It narrows during contraction and may disappear.',
+'A band':'The A band spans the entire length of the thick filaments, including overlap regions. Its width stays the same during contraction.',
+'Z line':'A Z line anchors thin filaments and marks a sarcomere boundary. Adjacent Z lines move closer during contraction.',
+'M line':'The M line lies at the center of the sarcomere and helps align and anchor thick filaments.',
+'Sarcomere':'One sarcomere extends from one Z line to the next. It shortens during contraction.',
+'Overlap':'Overlap between thick and thin filaments increases during contraction as thin filaments slide toward the M line.',
+'Filament length':'Actin and myosin filaments retain their individual lengths during contraction; they slide past one another.'
+};
+const items=[
+['Identify highlighted region 1.', ['I band','H zone','A band','M line'],0,'1'],
+['Identify highlighted region 2.', ['I band','A band','H zone','Z line'],1,'2'],
+['Identify highlighted region 3.', ['M line','Z line','H zone','I band'],2,'3'],
+['Identify highlighted structure 4.', ['A band','H zone','M line','Z line'],3,'4'],
+['Identify highlighted structure 5.', ['M line','I band','Z line','A band'],0,'5'],
+['Identify highlighted span 6.', ['H zone','Sarcomere','I band','A band'],1,'6'],
+['During contraction, what happens to the I band?', ['Widens','Stays the same width','Narrows','Disappears in every contraction'],2,'1'],
+['During contraction, what happens to the H zone?', ['Widens','Narrows and may disappear','Stays the same width','Becomes the entire A band'],1,'3'],
+['During contraction, what happens to the A band?', ['Narrows','Widens','Disappears','Stays the same width'],3,'2'],
+['During contraction, what happens to adjacent Z lines?', ['Move closer together','Move farther apart','Disappear','Turn into M lines'],0,'4'],
+['What becomes wider during contraction?', ['A band','I band','Region of thick–thin filament overlap','H zone'],2,'overlap'],
+['During contraction, what happens to actin and myosin filament lengths?', ['Both shorten','Both lengthen','Only myosin shortens','Both remain the same'],3,'filaments'],
+['As a shortened sarcomere lengthens toward its resting length, which regions widen?', ['A band and thick filaments','I band and H zone','M line and myosin filaments','Actin and myosin filaments'],1,'relax']
+];
+let at=0,answeredMini=false,miniScore=0;
+const host=document.createElement('div');host.id='sarcomereMini';host.className='card';
+const chapterGrid=document.getElementById('chapters');chapterGrid.parentElement.insertAdjacentElement('afterend',host);
+function diagram(active){
+const color=n=>active===n?'#ffcc66':'#adbed5';
+let svg='<svg viewBox="0 0 660 280" role="img" aria-label="Sarcomere schematic: thin filaments extend inward from Z lines; thick filaments span the central A band" style="width:100%;max-width:760px;background:#142133;border-radius:12px">';
+function line(x,y,x2,y2,c,w=3){svg+='<line x1="'+x+'" y1="'+y+'" x2="'+x2+'" y2="'+y2+'" stroke="'+c+'" stroke-width="'+w+'"/>'}
+function text(x,y,t,c){svg+='<text x="'+x+'" y="'+y+'" text-anchor="middle" fill="'+c+'" font-size="17" font-family="sans-serif">'+t+'</text>'}
+function bracket(x,x2,y,n){const c=color(n);line(x,y,x2,y,c);line(x,y-5,x,y+5,c);line(x2,y-5,x2,y+5,c);text((x+x2)/2,y-9,n,c)}
+// Partial neighboring sarcomeres show the full I band straddling the left Z line.
+for(const y of [110,140,170]){line(30,y,260,y,'#70dbdc',4);line(400,y,630,y,'#70dbdc',4)}
+for(const y of [122,152,182])line(180,y,480,y,'#ec93ce',8);
+line(105,88,105,199,color('4'),5);line(555,88,555,199,color('4'),5);line(330,97,330,195,color('5'),3);
+bracket(30,180,58,'1');bracket(180,480,35,'2');bracket(260,400,78,'3');bracket(105,555,245,'6');
+text(105,219,'4',color('4'));text(330,219,'5',color('5'));text(555,219,'4',color('4'));
+svg+='</svg>';return svg;
+}
+function render(){
+answeredMini=false;
+host.innerHTML='<div class="tag">Chapter 10 · Mini quiz</div><h2>Sarcomere labels & contraction</h2><p class="muted">13 questions · 1–4 to answer · Space/Enter to continue. Cyan = thin filaments; pink = thick filaments. Diagram is schematic.</p>';
+if(at===items.length){host.innerHTML+='<h3>'+miniScore+' / '+items.length+' correct</h3><p><b>Narrower:</b> I band and H zone. <b>Same width:</b> A band. <b>Wider:</b> filament overlap. Z lines move closer; filament lengths stay the same.</p><button class="primary" id="sarRestart">Try again</button>';host.querySelector('button').onclick=()=>{at=0;miniScore=0;render()};return}
+const q=items[at];host.innerHTML+='<p>Question '+(at+1)+' / '+items.length+'</p>'+diagram(q[3])+'<h3>'+q[0]+'</h3>'+q[1].map((a,i)=>'<button class="choice" data-mini="'+i+'">'+(i+1)+'. '+a+'</button>').join('')+'<div id="sarFeedback" aria-live="polite"></div>';
+host.querySelectorAll('[data-mini]').forEach(b=>b.onclick=()=>choose(Number(b.dataset.mini)));
+}
+function choose(i){
+if(answeredMini)return;answeredMini=true;
+const q=items[at];if(i===q[2])miniScore++;
+host.querySelectorAll('[data-mini]').forEach((b,k)=>{b.disabled=true;if(k===q[2])b.classList.add('right');else if(k===i)b.classList.add('wrong')});
+let keys=q[3]==='overlap'?['Overlap','A band','I band','H zone']:q[3]==='filaments'?['Filament length']:q[3]==='relax'?['I band','H zone','A band']:q[3]==='6'?['Sarcomere']:q[3]==='4'?['Z line']:q[3]==='5'?['M line']:q[3]==='1'?['I band']:q[3]==='2'?['A band']:['H zone'];
+if(at<6)keys=q[1];
+host.querySelector('#sarFeedback').innerHTML='<div class="feedback"><b>'+(i===q[2]?'✓ Correct':'Answer: '+q[1][q[2]])+'</b>'+keys.map(k=>'<p><b>'+k+':</b> '+facts[k]+'</p>').join('')+'<button class="primary" id="sarNext">Next →</button></div>';
+host.querySelector('#sarNext').onclick=()=>{at++;render()};
+}
+document.addEventListener('keydown',e=>{
+if(e.ctrlKey||e.metaKey||e.altKey||e.target.closest('input,textarea,select,[contenteditable]'))return;
+if(!host.getClientRects().length||at>=items.length)return;
+// On the home page, these keys belong to this mini quiz.
+if(!/^[1-4]$/.test(e.key)&&e.key!==' '&&e.key!=='Enter')return;
+e.preventDefault();e.stopImmediatePropagation();if(e.repeat)return;
+if(/^[1-4]$/.test(e.key))choose(Number(e.key)-1);
+else if(answeredMini)host.querySelector('#sarNext').click();
+},true);
+render();
+})();
+</script>
+
 </body>
 </html>
