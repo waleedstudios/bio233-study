@@ -103,5 +103,5 @@ const opts=distractors(correct,field);
 view.innerHTML='<div class="card"><div class="question-meta"><div><div class="tag">O / I / A CHALLENGE</div><h2>'+correct.name+'</h2></div><span class="pill">Score '+score+' / '+total+'</span></div><p class="muted">Choose the correct <b>'+field+'</b>.</p><div id="answers">'+opts.map((o,i)=>'<button class="choice" onclick="answerOIA(this,'+i+','+JSON.stringify(correct[field]).replace(/"/g,"&quot;")+')">'+o+'</button>').join('')+'</div><div id="feedback"></div><div class="toolbar" style="margin-top:15px"><button onclick="back()">← Lab home</button></div></div>'}
 function answerOIA(btn,i,correct){if(document.querySelector("#answers .right,#answers .wrong"))return;total++;const choice=btn.textContent;if(choice===correct){score++;btn.classList.add("right");feedback.innerHTML='<div class="feedback">Correct.</div>'}else{btn.classList.add("wrong");[...document.querySelectorAll("#answers .choice")].find(x=>x.textContent===correct)?.classList.add("right");feedback.innerHTML='<div class="feedback bad">Review this one before moving on.</div>'}feedback.innerHTML+='<div class="toolbar" style="margin-top:12px"><button class="primary" onclick="renderOIA()">Next question →</button></div>'}
 </script>
-</body>
+<script src="studio-legacy.js"></script></body>
 </html>

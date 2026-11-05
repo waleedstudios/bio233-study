@@ -1,0 +1,3968 @@
+{
+  "sources": [
+    {
+      "id": "textbook",
+      "title": "Textbook: Chapters 12-13 (chapters12-13.pdf)",
+      "pages": 76,
+      "note": "Combined user-supplied textbook excerpt. Citations count PDF pages from 1, not printed book pages. PDF 1-44 cover Chapter 12; PDF 45-76 cover Chapter 13."
+    },
+    {
+      "id": "ch12-l1",
+      "title": "233 Ch12_Lecture_01_Student HO.pdf",
+      "pages": 6,
+      "note": "Chapter 12, lecture 1 handout. PDF page numbers differ from the slide numbers printed on each sheet."
+    },
+    {
+      "id": "ch12-l2",
+      "title": "233 Ch12_Lecture_02_Student HO.pdf",
+      "pages": 8,
+      "note": "Chapter 12, lecture 2 handout. Contains both -55 mV annotations and -60 mV figure thresholds; see source notes."
+    },
+    {
+      "id": "ch12-l3",
+      "title": "233 Ch12_Lecture_03_Student HO.pdf",
+      "pages": 4,
+      "note": "Chapter 12, lecture 3 handout: propagation, synapses, summation, and presynaptic regulation."
+    },
+    {
+      "id": "ch13-l1",
+      "title": "233 Ch13_Lecture 01 Handout.pdf",
+      "pages": 5,
+      "note": "Chapter 13, lecture 1 handout: cord anatomy, meninges, sectional organization, peripheral nerves, and dermatomes."
+    },
+    {
+      "id": "ch13-l2",
+      "title": "233 Ch13_Lecture 02 Handout.pdf",
+      "pages": 5,
+      "note": "Chapter 13, lecture 2 handout: spinal nerve distribution and major plexuses."
+    },
+    {
+      "id": "ch13-l3",
+      "title": "233 Ch13_Lecture 03 Handout.pdf",
+      "pages": 4,
+      "note": "Chapter 13, lecture 3 handout: neuronal circuits and reflexes. Several annotations require qualification; see source notes."
+    },
+    {
+      "id": "transcript-1",
+      "title": "Supplied summary 1",
+      "pages": null,
+      "note": "First supplied Pasted text.txt, beginning with headings and a structured nervous-system summary. Untimestamped, secondary notes; not verified against audio. Used only for cautiously attributed emphasis."
+    },
+    {
+      "id": "transcript-2",
+      "title": "Supplied transcript 2",
+      "pages": null,
+      "note": "Second supplied Pasted text.txt. Untimestamped transcription with garbled terminology; academic passages cover synaptic integration and spinal anatomy. No audio was supplied."
+    },
+    {
+      "id": "transcript-3",
+      "title": "Supplied transcript 3",
+      "pages": null,
+      "note": "Third supplied Pasted text.txt. Untimestamped transcription with garbled terminology; academic passages review neurons, ionic gradients, and threshold. No audio was supplied."
+    }
+  ],
+  "topics": [
+    {
+      "id": "nervous-system-organization",
+      "chapter": 12,
+      "title": "Nervous system organization",
+      "summary": "Follow information from a receptor through sensory input and central processing to a motor response.",
+      "details": [
+        "The brain and spinal cord form the central nervous system (CNS), which processes information and coordinates responses.",
+        "Afferent pathways bring sensory information toward the CNS; efferent pathways carry commands toward peripheral effectors.",
+        "Somatic motor output acts on skeletal muscle, including automatic reflex contractions. Autonomic output regulates smooth muscle, cardiac muscle, glands, and adipose tissue.",
+        "Sympathetic and parasympathetic divisions belong to the autonomic system and often have opposing effects on the same organ.",
+        "This textbook treats the enteric nervous system (ENS) as a separate anatomical division. Its digestive-tract networks can coordinate local activity while receiving autonomic influence."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l1",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What do afferent and efferent describe?",
+          "back": "Direction relative to the CNS: afferent brings sensory input in; efferent sends motor commands out."
+        },
+        {
+          "front": "Which effectors distinguish somatic from autonomic motor output?",
+          "back": "Somatic output targets skeletal muscle. Autonomic output targets smooth muscle, cardiac muscle, glands, and adipose tissue."
+        },
+        {
+          "front": "What makes the ENS distinctive in this textbook?",
+          "back": "It is a digestive-tract neural network that can coordinate local reflex activity without a separate CNS command for every response."
+        }
+      ],
+      "questions": [
+        {
+          "id": "org-01",
+          "type": "single",
+          "prompt": "A signal from a skin receptor is traveling toward the spinal cord. Which functional division carries it?",
+          "options": [
+            "Efferent division",
+            "Afferent division",
+            "Somatic motor division",
+            "Parasympathetic motor division"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Efferent pathways carry commands away from the CNS.",
+            "Sensory information arriving at the CNS travels in the afferent division.",
+            "Somatic motor pathways carry output to skeletal muscle.",
+            "Parasympathetic motor pathways regulate visceral effectors rather than carrying this sensory input."
+          ],
+          "hint": "Classify the direction relative to the CNS.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "id": "org-02",
+          "type": "multiple",
+          "prompt": "Select all effectors that can receive autonomic motor output.",
+          "options": [
+            "Smooth muscle",
+            "Skeletal muscle fibers at a somatic neuromuscular junction",
+            "Cardiac muscle",
+            "Glands"
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "Smooth muscle is an autonomic effector.",
+            "Motor output to skeletal muscle belongs to the somatic division.",
+            "The autonomic system regulates cardiac muscle activity.",
+            "Glandular secretion is one target of autonomic regulation."
+          ],
+          "hint": "Autonomic output regulates visceral tissues.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "id": "org-03",
+          "type": "sequence",
+          "prompt": "Arrange this general sensory-to-motor pathway from stimulus detection to response.",
+          "options": [
+            "Efferent command travels toward an effector",
+            "CNS integrates the incoming information",
+            "A receptor detects a change",
+            "The effector responds",
+            "Afferent information travels toward the CNS"
+          ],
+          "answer": [
+            2,
+            4,
+            1,
+            0,
+            3
+          ],
+          "explanations": [
+            "Detection precedes afferent input, central integration, efferent output, and the effector's response."
+          ],
+          "hint": "Start at the receptor and end at the target tissue.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                3
+              ]
+            }
+          ]
+        },
+        {
+          "id": "org-04",
+          "type": "single",
+          "prompt": "An automatic reflex contracts a skeletal muscle before a conscious decision is made. How should its motor output be classified?",
+          "options": [
+            "Autonomic because it is automatic",
+            "Sensory because it begins at a receptor",
+            "Somatic because the effector is skeletal muscle",
+            "Enteric because it bypasses conscious control"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Automatic does not necessarily mean autonomic; the target tissue matters.",
+            "The motor limb carries output, even though sensory input initiated the reflex.",
+            "Somatic motor output controls skeletal muscle in both voluntary actions and reflexes.",
+            "The ENS is associated with digestive-tract networks."
+          ],
+          "hint": "Identify the effector rather than the level of awareness.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "ch12-l1",
+              "pages": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "org-05",
+          "type": "recall",
+          "prompt": "Explain how enteric activity can be locally coordinated while still being influenced by the autonomic nervous system.",
+          "model": "The ENS contains neural networks in the digestive-tract wall that organize local visceral reflexes. Sympathetic and parasympathetic pathways can influence those networks, but each local enteric response does not require a new command from the CNS.",
+          "explanations": [
+            "Local integration and external modulation can coexist."
+          ],
+          "hint": "Separate the location of the circuit from influences on that circuit.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                3,
+                4
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neuron-structure-types",
+      "chapter": 12,
+      "title": "Neuron structure and types",
+      "summary": "Connect a neuron's anatomy with reception, impulse propagation, secretion, and intracellular transport.",
+      "details": [
+        "In a typical multipolar neuron, dendrites and the soma receive much of the synaptic input; the initial segment initiates an action potential when threshold is reached; the axon and its branches carry the signal toward terminals.",
+        "Nissl bodies contain rough endoplasmic reticulum and ribosomes used in protein synthesis. The axolemma is the axon's membrane, and telodendria are its terminal branches.",
+        "Kinesin supports anterograde transport from soma toward terminals; dynein supports retrograde transport toward the soma. Both move cargo along microtubules using energy.",
+        "Structural categories are anaxonic, bipolar, unipolar, and multipolar. Functional categories are sensory, motor, and interneuron; a shape label alone does not specify every function.",
+        "Unipolar sensory neurons have the soma positioned to one side of a single main process. Multipolar neurons have multiple dendrites and one axon and include motor neurons and many CNS neurons."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l1",
+          "pages": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where are Nissl bodies, and what do they do?",
+          "back": "They are regions of rough ER and ribosomes in the soma that support protein synthesis."
+        },
+        {
+          "front": "Which transport motor carries cargo in each direction along an axon?",
+          "back": "Kinesin carries cargo anterogradely toward terminals; dynein carries it retrogradely toward the cell body."
+        },
+        {
+          "front": "What distinguishes bipolar from multipolar structure?",
+          "back": "Bipolar: one dendritic process and one axon on opposite sides of the soma. Multipolar: multiple dendrites and one axon."
+        }
+      ],
+      "questions": [
+        {
+          "id": "neuron-01",
+          "type": "single",
+          "prompt": "A neuron has one axon and several dendrites extending from its soma. Which structural label fits?",
+          "options": [
+            "Bipolar",
+            "Unipolar",
+            "Multipolar",
+            "Anaxonic solely because it has dendrites"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Bipolar neurons have two main processes, one dendrite and one axon.",
+            "A unipolar neuron has one main process with its soma off to the side.",
+            "Multiple dendrites plus one axon define the multipolar arrangement.",
+            "Anaxonic neurons lack an obvious axon; this neuron has a clearly identified axon."
+          ],
+          "hint": "Count the processes and distinguish dendrites from the axon.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuron-02",
+          "type": "multiple",
+          "prompt": "Select all correct structure-function pairings.",
+          "options": [
+            "Nissl bodies: protein synthesis",
+            "Axolemma: a bundle of peripheral neurons",
+            "Telodendria: terminal branches of an axon",
+            "Axon hillock: the region where the axon joins the soma"
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "Nissl bodies contain ribosomes and rough ER.",
+            "The axolemma is an axon's plasma membrane, not a nerve bundle.",
+            "Telodendria branch near axon endings.",
+            "The hillock is the soma-to-axon transition; the initial segment extends from it."
+          ],
+          "hint": "Separate a membrane, an organelle-rich region, and an axonal branch.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                4,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuron-03",
+          "type": "single",
+          "prompt": "A vesicle must move from the cell body toward a distant axon terminal. Which combination describes the transport?",
+          "options": [
+            "Dynein and anterograde flow",
+            "Kinesin and anterograde flow",
+            "Kinesin and retrograde flow",
+            "Dynein and retrograde flow"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Dynein is associated with transport toward the soma.",
+            "Kinesin supports anterograde transport toward the terminal.",
+            "Retrograde means toward the soma, the opposite destination.",
+            "This combination correctly describes transport back to the soma, not the requested trip."
+          ],
+          "hint": "Anterograde travels away from the cell body.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuron-04",
+          "type": "single",
+          "prompt": "A sensory neuron's soma sits beside a long process rather than between a separate dendrite and axon. Which arrangement is depicted?",
+          "options": [
+            "Unipolar",
+            "Bipolar",
+            "Multipolar",
+            "A peripheral nerve fascicle"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The off-to-the-side soma is characteristic of the unipolar arrangement shown in the sources.",
+            "A bipolar soma lies between its two distinct processes.",
+            "Multipolar structure has multiple dendrites emerging from the soma.",
+            "A fascicle is a bundle of axons, not one neuron's shape."
+          ],
+          "hint": "Use the location of the soma relative to the main process.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                6
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuron-05",
+          "type": "recall",
+          "prompt": "Why should 'multipolar' and 'motor' not be treated as interchangeable categories?",
+          "model": "Multipolar describes structure: one axon and multiple dendrites. Motor describes function: carrying commands to effectors. Skeletal motor neurons are multipolar, but multipolar neurons also occur widely within the CNS, including circuits that process information.",
+          "explanations": [
+            "Structural and functional classifications answer different questions."
+          ],
+          "hint": "One term describes shape; the other describes the neuron's job.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                6,
+                7
+              ]
+            },
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neuroglia-myelin-repair",
+      "chapter": 12,
+      "title": "Neuroglia, myelin, and repair",
+      "summary": "Distinguish supporting cells in the CNS and PNS and explain how myelin and repair support axon function.",
+      "details": [
+        "CNS glia include astrocytes, ependymal cells, oligodendrocytes, and microglia. PNS glia include satellite cells and Schwann cells.",
+        "Astrocytes regulate the local environment and help maintain blood-brain barrier properties. Ependymal cells line fluid-filled CNS spaces and participate in CSF functions. Microglia remove debris by phagocytosis.",
+        "One oligodendrocyte can myelinate segments of several CNS axons. One myelinating Schwann cell wraps a segment of one PNS axon; many Schwann cells are needed along a long axon.",
+        "Not every axon enclosed by a Schwann cell has a thick myelin sheath. Nodes interrupt adjacent myelinated internodes and support impulse regeneration.",
+        "After a peripheral axon is interrupted, its distal portion degenerates. Macrophages clear debris, Schwann cells can provide a guiding pathway, and a surviving neuron may regrow its axon; useful reconnection is not guaranteed.",
+        "CNS regrowth is more restricted by the local environment and scarring. Wallerian degeneration names distal breakdown, not the entire regeneration process."
+      ],
+      "emphasis": "Supplied summary 1 (transcript-1), 'Key comparison': explicitly reports that distinguishing oligodendrocytes/CNS from Schwann cells/PNS is particularly important. This is summary-derived emphasis, not audio-verified exam guidance.",
+      "sources": [
+        {
+          "id": "ch12-l1",
+          "pages": [
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            8,
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Which cells make CNS versus PNS myelin?",
+          "back": "Oligodendrocytes make CNS myelin; Schwann cells make PNS myelin."
+        },
+        {
+          "front": "What do microglia and satellite cells do?",
+          "back": "Microglia clear unwanted material within the CNS. Satellite cells regulate the environment around neuronal somas in PNS ganglia."
+        },
+        {
+          "front": "Does Wallerian degeneration mean successful nerve regeneration?",
+          "back": "No. It is degeneration of the axon distal to an interruption. Subsequent regrowth may occur, but it must reach appropriate targets to restore useful function."
+        }
+      ],
+      "questions": [
+        {
+          "id": "glia-01",
+          "type": "multiple",
+          "prompt": "Select all correct glial-cell pairings.",
+          "options": [
+            "Microglia: phagocytic cleanup in the CNS",
+            "Ependymal cells: lining the central canal and ventricles",
+            "Schwann cells: the principal myelin-forming cells of the CNS",
+            "Astrocytes: regulation of the local CNS environment"
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ],
+          "explanations": [
+            "Microglia engulf debris and other unwanted material.",
+            "Ependymal cells line these fluid-filled CNS spaces.",
+            "Schwann cells are PNS glia; oligodendrocytes form CNS myelin.",
+            "Astrocytes help regulate ions, nutrients, and neurotransmitters around neurons."
+          ],
+          "hint": "First locate each cell in the CNS or PNS.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3,
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                8,
+                10,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glia-02",
+          "type": "single",
+          "prompt": "Which glial cell would surround a sensory neuron's soma in a spinal ganglion?",
+          "options": [
+            "Oligodendrocyte",
+            "Ependymal cell",
+            "Satellite cell",
+            "Microglial cell"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Oligodendrocytes myelinate CNS axons.",
+            "Ependymal cells line CNS cavities.",
+            "Satellite cells surround neuronal cell bodies in PNS ganglia.",
+            "Microglia are CNS phagocytes."
+          ],
+          "hint": "A ganglion is outside the CNS.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glia-03",
+          "type": "recall",
+          "prompt": "Compare the myelinating territory of a single oligodendrocyte with that of a single myelinating Schwann cell.",
+          "model": "An oligodendrocyte can wrap portions of several axons in the CNS. A myelinating Schwann cell wraps one segment of one axon in the PNS. Neither cell alone supplies the full myelin covering of a long axon.",
+          "explanations": [
+            "The comparison requires both nervous-system location and number of axonal segments served."
+          ],
+          "hint": "Distinguish one segment from the complete axon.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                10,
+                11
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glia-04",
+          "type": "sequence",
+          "prompt": "Order the simplified peripheral-axon response after interruption, assuming the neuron survives and regrowth succeeds.",
+          "options": [
+            "Debris is removed and Schwann cells establish a guiding pathway",
+            "The growing axon extends into the distal pathway and becomes enclosed by Schwann cells",
+            "The distal axon and its myelin fragment",
+            "New axonal sprouts enter the Schwann-cell pathway"
+          ],
+          "answer": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "explanations": [
+            "Distal degeneration precedes clearance and pathway formation; sprouts then follow that pathway and extend toward former targets. The diagram summarizes overlapping biological processes."
+          ],
+          "hint": "A pathway must be cleared and available before sprouts can follow it.",
+          "sources": [
+            {
+              "id": "ch12-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                13
+              ]
+            }
+          ]
+        },
+        {
+          "id": "glia-05",
+          "type": "single",
+          "prompt": "Which wording best describes astrocytes' relationship to the blood-brain barrier?",
+          "options": [
+            "They are the entire wall of each CNS capillary",
+            "They help maintain the specialized barrier properties of CNS capillaries",
+            "They wrap every peripheral axon with myelin",
+            "They replace all lost CNS neurons after injury"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The capillary wall is not made entirely of astrocytes.",
+            "Astrocyte interactions help sustain the specialized permeability of CNS capillaries.",
+            "Myelinating peripheral axons is a Schwann-cell function.",
+            "Astrocytic scarring can restrict axonal regrowth; it is not complete neuronal replacement."
+          ],
+          "hint": "Prefer a supporting and regulatory role over an absolute claim.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                8,
+                13
+              ]
+            },
+            {
+              "id": "ch12-l1",
+              "pages": [
+                3,
+                4,
+                5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resting-membrane-potential",
+      "chapter": 12,
+      "title": "Resting membrane potential",
+      "summary": "Explain voltage at rest using unequal ion concentrations, selective permeability, and ongoing active transport.",
+      "details": [
+        "A representative neuronal resting potential is about -70 mV, meaning the inside is negative relative to the outside. This is a working example, not a value shared by every cell.",
+        "Na+ is more concentrated outside, while K+ and large negatively charged proteins are more concentrated inside. Resting permeability is greater to K+ than to Na+.",
+        "At -70 mV, the concentration gradient drives K+ outward while the electrical gradient draws it inward; the net K+ driving force is outward. Both forces favor Na+ entry.",
+        "The Na+/K+ ATPase uses one ATP to transport 3 Na+ out and 2 K+ in. It continually maintains concentration gradients against passive leaks.",
+        "An ion's equilibrium potential is the voltage where its opposing driving forces balance, giving no net movement of that ion. The source examples are about -90 mV for K+ and +66 mV for Na+.",
+        "These single-ion equilibrium values do not mean that simply stopping the pump instantly sets the membrane to -90 or +66 mV. Permeability to multiple ions and the existing gradients still matter."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l2",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            14,
+            15,
+            16,
+            17,
+            24
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What is the sodium-potassium pump's stoichiometry?",
+          "back": "Per ATP consumed, 3 Na+ move out and 2 K+ move in."
+        },
+        {
+          "front": "How do chemical and electrical forces act on K+ at -70 mV?",
+          "back": "The concentration difference favors exit; the negative interior favors entry. With the source's gradients, the net force favors exit."
+        },
+        {
+          "front": "What does an equilibrium potential describe?",
+          "back": "The voltage at which an individual ion has no net electrochemical driving force across a permeable membrane, not equal concentrations on both sides."
+        }
+      ],
+      "questions": [
+        {
+          "id": "rmp-01",
+          "type": "single",
+          "prompt": "Which exchange occurs during one cycle of the Na+/K+ ATPase?",
+          "options": [
+            "2 Na+ leave and 2 K+ enter without ATP",
+            "3 K+ leave and 2 Na+ enter using ATP",
+            "3 Na+ enter and 2 K+ leave using ATP",
+            "3 Na+ leave and 2 K+ enter using one ATP"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The pump requires energy and does not exchange two ions each way.",
+            "The transported ions and their directions are reversed.",
+            "This reverses the pump's normal transport directions.",
+            "The pump exports three sodium ions and imports two potassium ions per ATP."
+          ],
+          "hint": "The pump counters sodium entry and potassium loss.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                15,
+                17,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rmp-02",
+          "type": "multiple",
+          "prompt": "At a representative resting potential of -70 mV, which statements correctly describe K+ driving forces?",
+          "options": [
+            "The concentration gradient favors K+ leaving",
+            "The electrical gradient favors K+ leaving",
+            "The electrical gradient favors K+ entering",
+            "There is no K+ concentration difference across the membrane"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanations": [
+            "K+ concentration is higher inside, favoring outward diffusion.",
+            "A negative interior attracts positively charged K+ inward.",
+            "The electrical force opposes outward diffusion by attracting K+ inward.",
+            "The maintained concentration difference is central to the resting potential."
+          ],
+          "hint": "Evaluate concentration and electrical attraction separately.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                14,
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rmp-03",
+          "type": "single",
+          "prompt": "In an idealized membrane permeable only to K+, with the source's ion gradients held constant, which voltage would it approach?",
+          "options": [
+            "+66 mV",
+            "-90 mV",
+            "+30 mV",
+            "Exactly 0 mV because equilibrium requires equal concentrations"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "+66 mV is the source's sodium equilibrium example.",
+            "The source's K+ equilibrium potential is approximately -90 mV.",
+            "+30 mV is an illustrative action-potential peak, not the K+ equilibrium voltage.",
+            "Electrical and chemical forces can balance while concentrations remain unequal."
+          ],
+          "hint": "This is a single-ion permeability model, not a pump-off experiment.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                16
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rmp-04",
+          "type": "recall",
+          "prompt": "Why is the pump essential for sustained signaling even though it does not produce the rapid falling phase of each action potential?",
+          "model": "The pump uses ATP to maintain the Na+ and K+ concentration gradients over time. Rapid action-potential repolarization mainly reflects reduced Na+ entry and K+ leaving through voltage-gated channels. A single impulse transfers only a small fraction of the cell's ions, so gradient maintenance and millisecond voltage recovery are distinct processes.",
+          "explanations": [
+            "Separate active restoration of ionic gradients from rapid channel-mediated voltage changes."
+          ],
+          "hint": "Compare the amount of ion movement in one impulse with the long-term workload.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                17,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rmp-05",
+          "type": "single",
+          "prompt": "Which description best explains why a resting neuron is closer to the K+ equilibrium potential than to the Na+ equilibrium potential?",
+          "options": [
+            "Resting membrane permeability is much greater to K+ than to Na+",
+            "The resting membrane is impermeable to all ions",
+            "Na+ is more concentrated inside than outside",
+            "The pump exchanges equal numbers of Na+ and K+"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Greater resting K+ permeability gives K+ a larger influence on the voltage.",
+            "Leak channels permit ongoing ion movement at rest.",
+            "The source describes Na+ as more concentrated outside.",
+            "The pump exchanges three Na+ for two K+, and permeability is central to this comparison."
+          ],
+          "hint": "The voltage reflects which ions can most readily cross the membrane.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                14,
+                16,
+                17
+              ]
+            },
+            {
+              "id": "ch12-l2",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ion-channels-graded-potentials",
+      "chapter": 12,
+      "title": "Ion channels and graded potentials",
+      "summary": "Identify channel triggers and distinguish local voltage changes from a propagated action potential.",
+      "details": [
+        "Ligand-gated channels respond to a chemical binding event, mechanically gated channels respond to deformation, and voltage-gated channels respond to membrane voltage.",
+        "A graded potential changes size with the stimulus and spreads passively with a decreasing effect at greater distance. It can be depolarizing or hyperpolarizing.",
+        "Depolarization means the voltage becomes less negative or more positive. Repolarization is movement back toward resting voltage after depolarization; hyperpolarization moves it more negative than rest.",
+        "A local depolarization does not automatically become an action potential. In the typical neuron model, the initial segment must reach threshold.",
+        "For numerical exercises here, threshold is stated explicitly. Handout annotations often use -55 mV, while embedded figures use -60 mV; neither number should silently replace the other."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l2",
+          "pages": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            18,
+            19,
+            20,
+            21,
+            24
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What opens the three major types of gated channels?",
+          "back": "Ligand binding opens chemically gated channels; membrane deformation opens mechanically gated channels; voltage change opens voltage-gated channels."
+        },
+        {
+          "front": "Does depolarization necessarily mean an action potential?",
+          "back": "No. A small graded depolarization can remain below threshold and fade without initiating a propagated impulse."
+        },
+        {
+          "front": "What happens to a graded potential as it spreads?",
+          "back": "Its effect decreases with distance. Its amplitude can vary, and local potentials can combine by summation."
+        }
+      ],
+      "questions": [
+        {
+          "id": "graded-01",
+          "type": "multiple",
+          "prompt": "Select all correctly matched channel triggers.",
+          "options": [
+            "ACh binds a channel-associated receptor: chemically gated",
+            "Membrane is distorted by pressure: mechanically gated",
+            "A channel opens because voltage changes: mechanically gated",
+            "A channel responds to depolarization: voltage-gated"
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ],
+          "explanations": [
+            "A ligand binding event defines chemical gating in this example.",
+            "Physical distortion is the trigger for mechanical gating.",
+            "A voltage change is a voltage-gating trigger, not mechanical deformation.",
+            "Voltage-gated channel states respond to membrane potential."
+          ],
+          "hint": "Name the event that changes channel state.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                18,
+                19
+              ]
+            }
+          ]
+        },
+        {
+          "id": "graded-02",
+          "type": "single",
+          "prompt": "A small voltage change is largest near a dendritic synapse and weaker closer to the soma. Which process best fits?",
+          "options": [
+            "An all-or-none impulse regenerating at every point",
+            "Axonal transport of a vesicle",
+            "Passive spread of a graded potential",
+            "A sodium-potassium pump transporting the voltage packet"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Regenerated action potentials maintain their amplitude along an excitable axon.",
+            "Cargo transport is not this local electrical spread.",
+            "A graded potential decreases in magnitude with distance from its origin.",
+            "The pump transports ions across the membrane; it does not carry a voltage packet along a dendrite."
+          ],
+          "hint": "Use the declining amplitude as the key clue.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                19,
+                20,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "graded-03",
+          "type": "multiple",
+          "prompt": "Assume resting potential is -70 mV. Select all correctly named voltage changes.",
+          "options": [
+            "-70 to -64 mV: depolarization",
+            "-70 to -82 mV: depolarization",
+            "-64 back to -70 mV: repolarization",
+            "-70 to -64 mV: proof that an action potential occurred"
+          ],
+          "answer": [
+            0,
+            2
+          ],
+          "explanations": [
+            "The membrane becomes less negative, so it depolarizes.",
+            "Becoming more negative than rest is hyperpolarization.",
+            "Returning toward rest after depolarization is repolarization.",
+            "A subthreshold graded change is also a depolarization; the voltage change alone does not prove an impulse occurred."
+          ],
+          "hint": "Separate the direction of voltage change from the threshold requirement.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                20,
+                21
+              ]
+            }
+          ]
+        },
+        {
+          "id": "graded-04",
+          "type": "single",
+          "prompt": "Use a threshold of -55 mV. A graded input moves the initial segment from -70 to -62 mV and then fades. What follows in this model?",
+          "options": [
+            "A smaller-than-normal action potential travels down the axon",
+            "No action potential; the depolarization remained below threshold",
+            "A full action potential because any depolarization is sufficient",
+            "An action potential starts only after the membrane returns to -70 mV"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The all-or-none model does not generate a reduced impulse from a subthreshold input.",
+            "-62 mV is more negative than the stipulated -55 mV threshold.",
+            "Depolarization must be sufficient at the initial segment.",
+            "Returning to rest does not supply the missing threshold depolarization."
+          ],
+          "hint": "Compare the achieved voltage with the stated threshold.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                4,
+                6
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                21,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "graded-05",
+          "type": "recall",
+          "prompt": "Compare graded potentials and action potentials in amplitude, spread, summation, and refractory behavior.",
+          "model": "Graded potentials vary in amplitude, weaken with distance, can sum, and lack an action-potential refractory period. Action potentials require threshold, have an all-or-none amplitude in the same axon under comparable conditions, regenerate without decrement, and have refractory periods. Stimulus strength can change firing frequency rather than the size of each impulse.",
+          "explanations": [
+            "A local input signal and a regenerated axonal signal encode information differently."
+          ],
+          "hint": "Use four paired comparisons rather than only listing locations.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                4,
+                8
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                24,
+                40
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "action-potential-refractory",
+      "chapter": 12,
+      "title": "Action potentials and refractory periods",
+      "summary": "Trace the channel events behind an action potential and distinguish absolute from relative refractoriness.",
+      "details": [
+        "Depolarization to threshold activates voltage-gated Na+ channels. Na+ entry drives the rapid rising phase.",
+        "Na+ channels then inactivate as voltage-gated K+ conductance increases. Outward K+ current produces the falling phase; the pump does not instantly repolarize the membrane.",
+        "The handout's placement of K+ channel opening at +30 mV is a simplified teaching sequence. Treat K+ activation as slower than Na+ activation, rather than a universal switch at one exact voltage.",
+        "K+ channels close with a delay, so continued K+ exit can make the membrane briefly more negative than rest before resting conductances again dominate.",
+        "During absolute refractoriness, another action potential cannot be initiated at that membrane site. During relative refractoriness, a stronger-than-usual depolarization can initiate one.",
+        "All-or-none describes the size of a successfully generated impulse in comparable conditions. Stronger sustained stimulation can increase impulse frequency, bounded by refractory behavior."
+      ],
+      "emphasis": "Supplied summary 1 (transcript-1), 'Threshold': explicitly reports an instruction to remember approximately -55 mV. This is summary-derived and not audio-verified; source figures also use -60 mV, so numerical questions state their assumption.",
+      "sources": [
+        {
+          "id": "ch12-l2",
+          "pages": [
+            4,
+            6,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            21,
+            22,
+            23,
+            24,
+            39,
+            40
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Which ion currents dominate the rising and falling phases?",
+          "back": "Na+ entry dominates rapid depolarization; reduced Na+ entry plus outward K+ current produces repolarization."
+        },
+        {
+          "front": "Why can voltage briefly fall below the resting level?",
+          "back": "Voltage-gated K+ channels do not all close immediately, so continued K+ efflux produces an after-hyperpolarization."
+        },
+        {
+          "front": "How do absolute and relative refractory periods differ?",
+          "back": "Absolute: another impulse cannot start at that site. Relative: an impulse can start, but requires a larger depolarizing input than usual."
+        }
+      ],
+      "questions": [
+        {
+          "id": "ap-01",
+          "type": "sequence",
+          "prompt": "Order the simplified phases of one action potential, beginning with the stimulus reaching threshold.",
+          "options": [
+            "Na+ channels inactivate while K+ efflux becomes prominent",
+            "The initial segment reaches threshold",
+            "K+ channels finish closing and voltage settles toward rest",
+            "Na+ entry produces rapid depolarization",
+            "Continued K+ conductance produces a brief after-hyperpolarization"
+          ],
+          "answer": [
+            1,
+            3,
+            0,
+            4,
+            2
+          ],
+          "explanations": [
+            "Threshold precedes rapid Na+ entry. Na+ inactivation and K+ efflux produce repolarization, delayed K+ closure can produce an undershoot, and resting voltage is then reestablished."
+          ],
+          "hint": "The undershoot occurs after the rising and falling phases.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                6,
+                7
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                22,
+                23,
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ap-02",
+          "type": "single",
+          "prompt": "A second strong stimulus reaches an axonal patch while its Na+ channels are already activated or inactivated during an impulse. Why does a second impulse fail there?",
+          "options": [
+            "All cellular ATP was consumed by the first impulse",
+            "The neuron has permanently lost its K+ gradient",
+            "The patch is in its absolute refractory period",
+            "The stimulus is automatically converted into retrograde cargo transport"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "One ordinary impulse does not exhaust the cell's ATP.",
+            "One impulse moves only a small fraction of the available ions.",
+            "Unavailable Na+ channels prevent another action potential during absolute refractoriness.",
+            "Electrical stimulation is not converted into axonal cargo movement."
+          ],
+          "hint": "Focus on channel availability at the same membrane site.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                7
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ap-03",
+          "type": "single",
+          "prompt": "Na+ channels have recovered, but the membrane remains hyperpolarized with elevated K+ conductance. What is expected?",
+          "options": [
+            "Any tiny input must trigger an impulse",
+            "The membrane is permanently inexcitable",
+            "A second impulse must be smaller than the first",
+            "A larger-than-usual depolarization may trigger an impulse"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "Hyperpolarization and K+ conductance make threshold harder to reach.",
+            "This is a temporary phase, not permanent loss of excitability.",
+            "A successfully generated impulse remains an all-or-none event.",
+            "These conditions characterize relative refractoriness."
+          ],
+          "hint": "Recovered Na+ channels allow firing, but extra opposition remains.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                7
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                24
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ap-04",
+          "type": "multiple",
+          "prompt": "For the same healthy axon under comparable conditions, which statements follow from all-or-none firing and refractory behavior?",
+          "options": [
+            "A stronger stimulus makes every impulse proportionally taller",
+            "A stronger sustained input can increase firing frequency",
+            "Absolute refractoriness limits how closely impulses can follow each other",
+            "Several action potentials add together into one larger-amplitude action potential"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanations": [
+            "Impulse amplitude is not the usual code for stimulus strength in this model.",
+            "Sustained depolarization can produce more impulses per unit time.",
+            "The absolute refractory interval places a limit on firing frequency.",
+            "Graded potentials can sum; action potentials do not add their amplitudes in this way."
+          ],
+          "hint": "Distinguish impulse size from impulse rate.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                24,
+                39,
+                40
+              ]
+            },
+            {
+              "id": "ch12-l2",
+              "pages": [
+                7,
+                8
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ap-05",
+          "type": "single",
+          "prompt": "In a model neuron, voltage-gated K+ channels remain open longer than usual after Na+ entry subsides. Which direct effect is most likely?",
+          "options": [
+            "A prolonged period of voltage below the resting level",
+            "Immediate disappearance of the Na+ concentration gradient",
+            "A larger Na+ influx through the K+ channels",
+            "The pump becomes the channel that carries the falling phase"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Persistent K+ efflux can prolong after-hyperpolarization.",
+            "A delay in K+ channel closure does not instantly erase the sodium gradient.",
+            "The channels in this model selectively conduct K+ rather than Na+.",
+            "The pump maintains gradients; it does not become a voltage-gated channel."
+          ],
+          "hint": "Consider the effect of continued outward positive current.",
+          "sources": [
+            {
+              "id": "ch12-l2",
+              "pages": [
+                6,
+                7
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                23,
+                24
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "impulse-propagation",
+      "chapter": 12,
+      "title": "Impulse propagation",
+      "summary": "Explain how local current regenerates impulses along unmyelinated and myelinated axons.",
+      "details": [
+        "In continuous propagation, local current brings successive nearby regions of unmyelinated axolemma to threshold.",
+        "In saltatory propagation, current spreads beneath myelinated internodes and action potentials regenerate at nodes. The signal does not teleport across an empty gap.",
+        "Myelin limits current loss across the covered membrane. Larger axon diameter also lowers resistance to current flow within the axon.",
+        "In the course's broad fiber comparison, large myelinated A fibers conduct fastest, smaller myelinated B fibers are intermediate, and small unmyelinated C fibers are slowest. Speeds are examples, not universal constants.",
+        "The membrane immediately behind an advancing impulse is refractory, favoring progression into excitable membrane ahead during normal physiological propagation.",
+        "Damage to myelin can impair the spread of current needed to bring the next node to threshold, slowing or interrupting signaling."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l1",
+          "pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "ch12-l3",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            24,
+            25,
+            26,
+            27,
+            28
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where are action potentials regenerated in saltatory propagation?",
+          "back": "At nodes between myelinated internodes; local current spreads beneath the insulating myelin to reach the next node."
+        },
+        {
+          "front": "How does increasing axon diameter affect propagation?",
+          "back": "It reduces resistance to current flow through the axoplasm and tends to increase propagation speed."
+        },
+        {
+          "front": "What determines the normal forward progression of an impulse?",
+          "back": "Local current excites ready membrane ahead, while membrane just activated behind the impulse is refractory."
+        }
+      ],
+      "questions": [
+        {
+          "id": "prop-01",
+          "type": "single",
+          "prompt": "A schematic shows active impulses only at gaps between insulated axonal segments. What should the animation show between those gaps?",
+          "options": [
+            "No electrical change anywhere under the myelin",
+            "Local current spreading beneath the myelin toward the next node",
+            "A new synapse at every internode",
+            "Neurotransmitter diffusing along the entire axon"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Current must spread under the myelin to depolarize the next node.",
+            "Saltatory propagation combines internodal current spread with nodal regeneration.",
+            "Nodes and internodes are parts of one axon, not a chain of synapses.",
+            "Axonal propagation is electrical; transmitter diffusion occurs across chemical synaptic clefts."
+          ],
+          "hint": "Separate passive current spread from active regeneration.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                25,
+                26,
+                27
+              ]
+            },
+            {
+              "id": "ch12-l1",
+              "pages": [
+                5
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prop-02",
+          "type": "multiple",
+          "prompt": "Select all statements that explain faster conduction in a large myelinated axon.",
+          "options": [
+            "Myelin reduces ion movement across covered membrane",
+            "Each impulse grows larger at every node",
+            "Greater diameter reduces internal resistance to current flow",
+            "Active regeneration is concentrated at nodes instead of every adjacent patch"
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "Insulating internodes help current reach more distant excitable regions.",
+            "Impulse size is regenerated, not progressively amplified along the axon.",
+            "A wider axon offers lower resistance through its cytosol.",
+            "Fewer separated sites must undergo the full channel cycle per unit distance."
+          ],
+          "hint": "Look for insulation, diameter, and regeneration sites.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                25,
+                28
+              ]
+            },
+            {
+              "id": "ch12-l3",
+              "pages": [
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prop-03",
+          "type": "sequence",
+          "prompt": "Order the course's broad fiber groups from fastest to slowest conduction.",
+          "options": [
+            "Type C: small and unmyelinated",
+            "Type A: large and myelinated",
+            "Type B: smaller and myelinated"
+          ],
+          "answer": [
+            1,
+            2,
+            0
+          ],
+          "explanations": [
+            "The supplied comparison ranks A above B above C based on diameter and myelination."
+          ],
+          "hint": "Combine axon diameter with whether myelin is present.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                28
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prop-04",
+          "type": "recall",
+          "prompt": "Why does current spreading from an active region not normally immediately restart an action potential in the region just behind it?",
+          "model": "The region behind the advancing impulse has just fired and remains refractory, with Na+ channels temporarily unavailable. The region ahead has excitable channels that can respond when local current brings it to threshold, so physiological propagation continues forward.",
+          "explanations": [
+            "Local current can spread in multiple directions, but the membrane's state determines where a new impulse can start."
+          ],
+          "hint": "Distinguish the direction of current spread from the availability of excitable channels.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                24,
+                25
+              ]
+            }
+          ]
+        },
+        {
+          "id": "prop-05",
+          "type": "single",
+          "prompt": "In a model unmyelinated axon, a long segment can no longer open its voltage-gated Na+ channels. What does the propagation mechanism predict?",
+          "options": [
+            "The impulse switches automatically to saltatory conduction",
+            "The pump generates replacement action potentials in the blocked segment",
+            "Propagation can fail because the next membrane regions cannot regenerate an impulse",
+            "Every later impulse becomes larger to compensate"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Saltatory conduction requires the appropriate myelinated structure and nodes.",
+            "The pump maintains ion gradients rather than replacing the rapid Na+ channel response.",
+            "Continuous propagation depends on successive regions reaching threshold and opening Na+ channels.",
+            "All-or-none action potentials do not grow to compensate for an inexcitable segment."
+          ],
+          "hint": "Ask what must happen at each successive membrane region.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                24,
+                25
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chemical-synapses",
+      "chapter": 12,
+      "title": "Chemical synapses",
+      "summary": "Connect presynaptic electrical activity to transmitter release, receptor activation, and signal termination.",
+      "details": [
+        "At a chemical synapse, a presynaptic terminal releases transmitter across a cleft to receptors on a postsynaptic cell. An electrical synapse instead couples cells through gap junctions.",
+        "In the cholinergic example, terminal depolarization opens voltage-gated Ca2+ channels. Ca2+ entry triggers vesicle exocytosis and ACh release.",
+        "ACh crosses the cleft and binds postsynaptic receptors. In the illustrated excitatory synapse, cation channels produce a net depolarization; another impulse occurs only if threshold is reached at an excitable region.",
+        "AChE breaks ACh into acetate and choline. Choline is taken back up and used to synthesize more ACh, limiting the duration of the original signal.",
+        "Ionotropic receptors directly control channels. Metabotropic signaling uses intermediates such as G proteins and second messengers and can alter channels as well as other cellular activities.",
+        "A transmitter's effect depends on the receptor and target cell. Do not assume the same chemical always excites or always inhibits every target.",
+        "Axodendritic, axosomatic, and axoaxonic identify the postsynaptic contact site: dendrite, soma, or axon, respectively."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l3",
+          "pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            28,
+            29,
+            30,
+            31,
+            32,
+            36
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What directly triggers vesicle release in the illustrated cholinergic terminal?",
+          "back": "Ca2+ entry through voltage-gated calcium channels opened by terminal depolarization."
+        },
+        {
+          "front": "How is the ACh signal terminated and partly recycled?",
+          "back": "AChE hydrolyzes ACh into acetate and choline. The terminal recaptures choline for ACh synthesis."
+        },
+        {
+          "front": "Is a transmitter's effect fixed by its chemical name?",
+          "back": "No. Receptor properties and target-cell signaling determine the effect; the same transmitter can have different effects at different synapses."
+        }
+      ],
+      "questions": [
+        {
+          "id": "synapse-01",
+          "type": "sequence",
+          "prompt": "Order the early events at the illustrated excitatory cholinergic synapse.",
+          "options": [
+            "ACh binds postsynaptic receptors",
+            "Ca2+ enters through terminal voltage-gated channels",
+            "A postsynaptic graded depolarization develops",
+            "An action potential depolarizes the presynaptic terminal",
+            "Vesicles release ACh into the cleft"
+          ],
+          "answer": [
+            3,
+            1,
+            4,
+            0,
+            2
+          ],
+          "explanations": [
+            "Terminal depolarization opens calcium channels; calcium triggers release; transmitter then binds receptors and changes postsynaptic ion flow."
+          ],
+          "hint": "Electrical arrival precedes calcium entry and chemical release.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                30,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synapse-02",
+          "type": "single",
+          "prompt": "Presynaptic action potentials still arrive, but Ca2+ entry into the terminal is strongly reduced. Which result follows most directly?",
+          "options": [
+            "More ACh vesicles fuse because calcium normally prevents fusion",
+            "The postsynaptic cell must fire at the same rate as before",
+            "Less transmitter is released by exocytosis",
+            "ACh is converted into K+ in the cleft"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "In this mechanism calcium promotes vesicle release.",
+            "An arriving presynaptic impulse does not guarantee a postsynaptic impulse.",
+            "Reduced calcium entry weakens the trigger for exocytosis.",
+            "ACh is a transmitter molecule and is not converted into potassium ions."
+          ],
+          "hint": "Identify calcium's role in the terminal.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                30,
+                31,
+                32
+              ]
+            },
+            {
+              "id": "ch12-l3",
+              "pages": [
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synapse-03",
+          "type": "multiple",
+          "prompt": "Select all correct statements about the illustrated ACh signal and its termination.",
+          "options": [
+            "AChE breaks ACh into acetate and choline",
+            "Choline can be recaptured for ACh synthesis",
+            "ACh must remain permanently attached to its receptor",
+            "Postsynaptic depolarization need not reach action-potential threshold"
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ],
+          "explanations": [
+            "Hydrolysis by AChE terminates ACh's action.",
+            "Choline is a recycled component of newly synthesized ACh.",
+            "The transmitter-receptor interaction is temporary, and ACh is removed.",
+            "The postsynaptic response is graded and may remain subthreshold."
+          ],
+          "hint": "The signal must be both transmitted and brought to an end.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                30,
+                31
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synapse-04",
+          "type": "recall",
+          "prompt": "Compare direct ionotropic signaling with a G-protein-mediated metabotropic pathway. Can the indirect pathway affect ion channels?",
+          "model": "An ionotropic receptor is directly associated with an ion channel, so transmitter binding changes channel behavior. A metabotropic receptor acts through signaling intermediates such as G proteins and second messengers. That indirect pathway can change enzyme activity, metabolism, or ion-channel activity; it is not limited to metabolism alone.",
+          "explanations": [
+            "The distinction is the signaling route, not an absolute split between ions and metabolism."
+          ],
+          "hint": "The indirect-effects diagram includes a branch that opens channels.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synapse-05",
+          "type": "single",
+          "prompt": "The same neurotransmitter depolarizes one target and inhibits another. What best explains this?",
+          "options": [
+            "The targets have different receptor properties or signaling mechanisms",
+            "The transmitter must have changed into a different element",
+            "Every chemical synapse is necessarily excitatory",
+            "The inhibitory target must lack a membrane"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Receptor and target-cell properties determine the response to transmitter binding.",
+            "Different effects do not require a change in the transmitter's chemical identity.",
+            "Chemical synapses can have excitatory or inhibitory effects.",
+            "Membrane receptors and signaling mechanisms operate in both kinds of response."
+          ],
+          "hint": "Look downstream of transmitter release.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                32,
+                36
+              ]
+            }
+          ]
+        },
+        {
+          "id": "synapse-06",
+          "type": "single",
+          "prompt": "A terminal synapses on another neuron's axon and changes that axon's transmitter release. Which contact type is present?",
+          "options": [
+            "Axodendritic",
+            "Axoaxonic",
+            "Axosomatic",
+            "A gap junction by definition"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Axodendritic contacts end on dendrites.",
+            "Axon-to-axon contacts are axoaxonic and can regulate release.",
+            "Axosomatic contacts end on the soma.",
+            "An axonal contact can be a chemical synapse; it is not necessarily a gap junction."
+          ],
+          "hint": "Name the two structures making contact.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                29,
+                39
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "synaptic-integration",
+      "chapter": 12,
+      "title": "Synaptic integration and modulation",
+      "summary": "Predict firing from the combined effects of excitatory and inhibitory input and changes in presynaptic release.",
+      "details": [
+        "An EPSP is an excitatory graded postsynaptic depolarization. In the course's hyperpolarizing IPSP example, inhibition moves the voltage farther from threshold.",
+        "Temporal summation combines successive inputs at the same synapse before the earlier effect has faded. Spatial summation combines effects from different synaptic locations active together.",
+        "EPSPs and IPSPs can both sum. Their combined influence at the initial segment determines whether threshold is reached; a single excitatory input does not always cause firing.",
+        "Facilitation of a postsynaptic neuron means its voltage is closer to threshold, so less additional excitation is needed.",
+        "Presynaptic inhibition and facilitation change transmitter release from a terminal. In the supplied examples, reduced Ca2+ entry lowers release, while increased or prolonged Ca2+ entry raises release.",
+        "The GABA-inhibition and serotonin-facilitation diagrams are specific examples. Their effects should not be generalized to every receptor or synapse."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch12-l3",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            36,
+            37,
+            38,
+            39
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Temporal versus spatial summation?",
+          "back": "Temporal: repeated inputs from the same source overlap in time. Spatial: inputs from different locations combine."
+        },
+        {
+          "front": "What does a hyperpolarizing IPSP do to threshold distance?",
+          "back": "It increases the depolarization needed to reach threshold, reducing the chance of an action potential."
+        },
+        {
+          "front": "How can an axoaxonic input reduce a terminal's effect on its target?",
+          "back": "It can reduce presynaptic Ca2+ entry, causing less transmitter release and a smaller effect on the postsynaptic membrane."
+        }
+      ],
+      "questions": [
+        {
+          "id": "integration-01",
+          "type": "single",
+          "prompt": "One synapse is activated repeatedly, and each new EPSP arrives before the previous one fades. Which process is occurring?",
+          "options": [
+            "Spatial summation only",
+            "Temporal summation",
+            "Saltatory propagation",
+            "Wallerian degeneration"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Spatial summation requires contributions from different locations.",
+            "Successive inputs at one synapse overlap in time.",
+            "Saltatory propagation describes impulse regeneration along myelinated axons.",
+            "Wallerian degeneration is distal axonal breakdown after interruption."
+          ],
+          "hint": "The location stays the same; the timing changes.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                37,
+                38
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integration-02",
+          "type": "single",
+          "prompt": "In a simplified additive model, the initial segment starts at -70 mV, threshold is -55 mV, two inputs contribute +9 mV each, and an inhibitory input contributes -5 mV. What is the result?",
+          "options": [
+            "-52 mV and an action potential",
+            "-65 mV and an action potential",
+            "-47 mV and no action potential",
+            "-57 mV and no action potential"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "-52 mV omits the inhibitory contribution.",
+            "Adding all three changes gives +13 mV, not +5 mV; -65 mV would also remain below the stated threshold.",
+            "The changes do not sum to +23 mV, and -47 mV would exceed the stated threshold.",
+            "-70 + 9 + 9 - 5 = -57 mV, which remains more negative than -55 mV."
+          ],
+          "hint": "Add all voltage contributions before comparing with threshold.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                37,
+                38,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integration-03",
+          "type": "multiple",
+          "prompt": "Which statements about postsynaptic integration are correct?",
+          "options": [
+            "Different synapses can contribute simultaneously to spatial summation",
+            "Every EPSP must independently trigger an action potential",
+            "EPSPs and IPSPs can oppose each other in the combined response",
+            "A neuron closer to threshold can need less additional depolarization to fire"
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "Spatial summation combines activity at different locations.",
+            "Individual EPSPs often remain subthreshold.",
+            "Excitatory and inhibitory effects contribute to the net voltage response.",
+            "This increased readiness to fire is postsynaptic facilitation."
+          ],
+          "hint": "Integration concerns the net effect rather than any one input in isolation.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                37,
+                38,
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integration-04",
+          "type": "sequence",
+          "prompt": "Order the consequences in the supplied example of presynaptic inhibition, assuming an action potential still reaches the terminal.",
+          "options": [
+            "Less Ca2+ enters the terminal during depolarization",
+            "The postsynaptic effect is reduced",
+            "An inhibitory axoaxonic input reduces calcium-channel opening",
+            "Fewer transmitter vesicles release their contents"
+          ],
+          "answer": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "explanations": [
+            "Reduced calcium-channel opening leads to less calcium entry, less transmitter release, and a smaller effect at the target."
+          ],
+          "hint": "Begin with the change at the terminal, then follow the release mechanism.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                39
+              ]
+            }
+          ]
+        },
+        {
+          "id": "integration-05",
+          "type": "recall",
+          "prompt": "Distinguish presynaptic facilitation from facilitation of the postsynaptic neuron.",
+          "model": "Presynaptic facilitation increases transmitter output from the terminal; the illustrated mechanism increases or prolongs Ca2+ entry. Postsynaptic facilitation brings the receiving neuron's membrane closer to threshold, so a smaller additional depolarization can trigger firing. They describe changes at different sites.",
+          "explanations": [
+            "The shared word facilitation does not imply that the same cellular compartment changes in both cases."
+          ],
+          "hint": "Ask whether the change is in transmitter release or in the receiving neuron's readiness to fire.",
+          "sources": [
+            {
+              "id": "ch12-l3",
+              "pages": [
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                37,
+                39
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spinal-cord-anatomy",
+      "chapter": 13,
+      "title": "Spinal cord anatomy",
+      "summary": "Locate the adult cord, its enlargements and inferior structures, and the origins of spinal nerves.",
+      "details": [
+        "The adult spinal cord extends from the brain to approximately vertebral levels L1-L2; it does not occupy the full length of the adult vertebral canal.",
+        "The course diagrams organize the cord into cervical, thoracic, lumbar, and sacral regions. Thirty-one spinal nerve pairs are conventionally counted as 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 1 coccygeal.",
+        "The cervical enlargement serves upper-limb demands, and the lumbosacral enlargement serves lower-limb demands. These enlargements contain additional neural machinery for limb sensation and movement.",
+        "The conus medullaris is the tapering inferior end of the cord. The cauda equina is the collection of long descending roots below that end; the filum terminale is an anchoring strand, not another spinal nerve.",
+        "Spinal cord segment levels and vertebral levels differ in the adult because the vertebral column grows longer than the cord.",
+        "A shallow posterior median sulcus and a deeper anterior median fissure help orient a cord cross section. The central canal is the small CSF-containing passage within the cord."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l1",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            47,
+            48,
+            49,
+            50
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Where does the adult spinal cord usually end?",
+          "back": "At about the L1-L2 vertebral level, in the tapering conus medullaris."
+        },
+        {
+          "front": "Conus medullaris, cauda equina, and filum terminale: which is which?",
+          "back": "Conus: tapered cord ending. Cauda equina: descending spinal roots below it. Filum terminale: slender connective-tissue support strand."
+        },
+        {
+          "front": "How are 31 spinal nerve pairs distributed?",
+          "back": "8 cervical, 12 thoracic, 5 lumbar, 5 sacral, and 1 coccygeal pair."
+        }
+      ],
+      "questions": [
+        {
+          "id": "cord-01",
+          "type": "single",
+          "prompt": "An adult anatomical model shows the cord ending near L1-L2 while nerve roots continue inferiorly. Is that arrangement consistent with the sources?",
+          "options": [
+            "No; the cord itself must continue to the coccyx",
+            "No; all spinal roots must exit at the same vertebral level as their cord segment",
+            "Yes; long inferior roots continue below the cord's tapered end",
+            "Yes; the structures below L1-L2 are additional brains"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The adult cord is shorter than the vertebral canal.",
+            "Cord segments and vertebral exit levels no longer align throughout the adult spine.",
+            "The lower roots descend beyond the conus as part of the cauda equina.",
+            "Those structures are roots and supporting tissues, not additional brains."
+          ],
+          "hint": "Distinguish cord tissue from the roots leaving it.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                47,
+                49,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cord-02",
+          "type": "multiple",
+          "prompt": "Select all correct inferior-cord relationships.",
+          "options": [
+            "The conus medullaris is the cord's tapered end",
+            "The cauda equina is a single solid continuation of spinal cord tissue",
+            "The filum terminale contributes to longitudinal anchoring",
+            "Lower spinal roots can descend before reaching their exit levels"
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "The conus is the narrowing inferior tip of the cord.",
+            "The cauda equina contains multiple elongated roots, not a solid cord extension.",
+            "The filum contributes to the inferior supporting attachment.",
+            "The adult relationship between cord and vertebral column requires this descending course."
+          ],
+          "hint": "Identify each structure as cord, roots, or connective tissue.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cord-03",
+          "type": "single",
+          "prompt": "Which set correctly totals the spinal nerve pairs shown in the course diagrams?",
+          "options": [
+            "8 cervical + 12 thoracic + 5 lumbar + 5 sacral + 1 coccygeal",
+            "7 cervical + 12 thoracic + 5 lumbar + 5 sacral + 1 coccygeal",
+            "8 cervical + 12 thoracic + 4 lumbar + 4 sacral + 1 coccygeal",
+            "12 cervical + 8 thoracic + 5 lumbar + 5 sacral + 2 coccygeal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "These regional counts total 31 pairs.",
+            "There are eight cervical nerve pairs despite only seven cervical vertebrae.",
+            "The lumbar and sacral regions each contribute five pairs in this count.",
+            "The cervical, thoracic, and coccygeal counts do not match the diagrams."
+          ],
+          "hint": "Do not substitute the count of cervical vertebrae for cervical nerves.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                48,
+                50
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cord-04",
+          "type": "sequence",
+          "prompt": "Arrange the four named spinal cord regions from superior to inferior.",
+          "options": [
+            "Lumbar",
+            "Cervical",
+            "Sacral",
+            "Thoracic"
+          ],
+          "answer": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "explanations": [
+            "The course sequence is cervical, thoracic, lumbar, then sacral. These are cord regions, not a claim that adult segments align with same-numbered vertebrae."
+          ],
+          "hint": "Start at the neck and move downward.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                47,
+                48
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cord-05",
+          "type": "recall",
+          "prompt": "Why are there cervical and lumbosacral enlargements rather than a uniform cord diameter?",
+          "model": "The segments supplying the upper and lower limbs require substantial sensory processing and motor control. Additional gray matter and associated neural connections enlarge the cervical and lumbosacral regions serving those limbs.",
+          "explanations": [
+            "Regional anatomy reflects the amount of neural control required by the structures supplied."
+          ],
+          "hint": "Relate the enlarged regions to upper- and lower-limb innervation.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                49
+              ]
+            },
+            {
+              "id": "ch13-l1",
+              "pages": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spinal-meninges",
+      "chapter": 13,
+      "title": "Spinal meninges and protection",
+      "summary": "Map the protective layers, CSF space, and stabilizing attachments around the spinal cord.",
+      "details": [
+        "From outermost to innermost, the spinal meninges are dura mater, arachnoid mater, and pia mater. Pia is closely attached to the neural surface.",
+        "The spinal epidural space lies outside the dura and contains connective tissue, vessels, and fat. The subarachnoid space lies between arachnoid and pia and contains CSF.",
+        "The subdural space is normally a potential separation rather than a large open CSF reservoir.",
+        "CSF cushions the cord and supports exchange of dissolved substances. It surrounds the cord in the subarachnoid space and also occupies the central canal.",
+        "Denticulate ligaments extend laterally from pia toward dura and help limit sideways displacement. Inferior anchoring involving the filum terminale and coccygeal ligament contributes to longitudinal stability.",
+        "The spinal meninges continue with cranial meninges at the foramen magnum and with connective tissues around exiting spinal roots and nerves."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l1",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            49,
+            50,
+            51
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Name the meninges from superficial to deep.",
+          "back": "Dura mater, arachnoid mater, pia mater."
+        },
+        {
+          "front": "Where is the CSF-filled space around the spinal cord?",
+          "back": "The subarachnoid space, between the arachnoid and pia mater."
+        },
+        {
+          "front": "What do denticulate ligaments stabilize?",
+          "back": "They tether the cord laterally from pia toward dura and limit side-to-side movement."
+        }
+      ],
+      "questions": [
+        {
+          "id": "meninges-01",
+          "type": "sequence",
+          "prompt": "Order these structures from outside the spinal dura toward the cord surface. The potential subdural separation is omitted.",
+          "options": [
+            "Arachnoid mater",
+            "Pia mater",
+            "Epidural space",
+            "Subarachnoid space",
+            "Dura mater"
+          ],
+          "answer": [
+            2,
+            4,
+            0,
+            3,
+            1
+          ],
+          "explanations": [
+            "The epidural space is outside dura; arachnoid lies deeper, followed by the CSF-filled subarachnoid space and pia attached to the cord."
+          ],
+          "hint": "CSF surrounds the cord inside the arachnoid boundary.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                50,
+                51
+              ]
+            }
+          ]
+        },
+        {
+          "id": "meninges-02",
+          "type": "single",
+          "prompt": "A diagram places the main CSF space surrounding the spinal cord between arachnoid and pia. What should it be labeled?",
+          "options": [
+            "Subarachnoid space",
+            "Epidural space",
+            "Endoneurium",
+            "Anterior white column"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The space between arachnoid and pia contains the surrounding CSF.",
+            "The epidural space lies outside the dura.",
+            "Endoneurium is connective tissue around peripheral nerve fibers.",
+            "A white column is within the cord and contains axonal tracts."
+          ],
+          "hint": "The prefix identifies the space just deep to the arachnoid.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                51
+              ]
+            }
+          ]
+        },
+        {
+          "id": "meninges-03",
+          "type": "single",
+          "prompt": "Which attachment in a cord model most directly limits lateral displacement?",
+          "options": [
+            "The central canal",
+            "Denticulate ligaments",
+            "The posterior median sulcus",
+            "Nissl bodies"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The central canal contains fluid and is not a lateral tether.",
+            "Denticulate ligaments extend from pia toward dura along the sides of the cord.",
+            "The sulcus is a surface groove, not an attachment.",
+            "Nissl bodies are intracellular protein-synthesis structures."
+          ],
+          "hint": "Look for paired lateral supports.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3,
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                51
+              ]
+            }
+          ]
+        },
+        {
+          "id": "meninges-04",
+          "type": "multiple",
+          "prompt": "Select all accurate statements about spinal protective layers and spaces.",
+          "options": [
+            "The epidural space lies between arachnoid and pia",
+            "The pia closely follows the cord surface",
+            "The spinal epidural space includes fat and blood vessels",
+            "The subdural space is normally the large CSF reservoir around the cord"
+          ],
+          "answer": [
+            1,
+            2
+          ],
+          "explanations": [
+            "That interval is the subarachnoid space; epidural is outside dura.",
+            "Pia is firmly associated with the neural surface.",
+            "These structures occupy the space between dura and the vertebral canal wall.",
+            "The surrounding CSF reservoir is subarachnoid; subdural is normally a potential separation."
+          ],
+          "hint": "Keep epidural, subdural, and subarachnoid distinct.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                50,
+                51
+              ]
+            },
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3,
+                4
+              ]
+            }
+          ]
+        },
+        {
+          "id": "meninges-05",
+          "type": "recall",
+          "prompt": "Explain how fluid cushioning and connective-tissue anchoring provide different kinds of protection to the spinal cord.",
+          "model": "CSF in the subarachnoid space cushions the cord and reduces damaging contact with surrounding structures. Meningeal attachments stabilize its position: denticulate ligaments limit lateral movement, while superior and inferior attachments, including the filum/coccygeal support, limit longitudinal displacement.",
+          "explanations": [
+            "Cushioning reduces mechanical impact; anchoring controls excessive displacement."
+          ],
+          "hint": "Compare a fluid-filled space with a physical tether.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                50,
+                51
+              ]
+            },
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3,
+                4
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spinal-gray-white-roots",
+      "chapter": 13,
+      "title": "Gray matter, white matter, and roots",
+      "summary": "Use a spinal cross section to connect sensory entry, local processing, motor exit, and long-distance tracts.",
+      "details": [
+        "The central H-shaped gray matter contains neuronal cell bodies, dendrites, synapses, and supporting cells. Surrounding white matter contains many axons, with myelin contributing its pale appearance.",
+        "Posterior horns contain sensory processing nuclei; anterior horns contain somatic motor nuclei. Prominent lateral horns in thoracic and upper lumbar regions contain visceral motor nuclei.",
+        "Posterior (dorsal) roots bring sensory axons into the cord. Their sensory cell bodies lie in spinal/dorsal root ganglia outside the CNS. Anterior (ventral) roots carry motor axons out.",
+        "After sensory and motor roots join, the spinal nerve is mixed. Do not transfer the sensory-only versus motor-only root distinction to the nerve's mixed rami.",
+        "A nucleus is a cluster of neuronal cell bodies within the CNS; a ganglion is such a cluster in the PNS. A tract is an axon bundle within the CNS, whereas a peripheral nerve is outside it.",
+        "Posterior, lateral, and anterior white columns contain tracts. Ascending tracts convey sensory information toward the brain; descending tracts convey commands toward spinal processing and motor circuits."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l1",
+          "pages": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "ch13-l2",
+          "pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            49,
+            50,
+            52,
+            53
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Which root brings sensory input in, and which carries motor output out?",
+          "back": "Posterior/dorsal root: sensory input. Anterior/ventral root: motor output."
+        },
+        {
+          "front": "Nucleus versus ganglion?",
+          "back": "Both are collections of neuronal cell bodies: a nucleus is in the CNS, and a ganglion is in the PNS."
+        },
+        {
+          "front": "What is the division of labor between spinal gray and white matter?",
+          "back": "Gray matter supports local processing and motor neuron organization; white-matter tracts relay information between levels and between the cord and brain."
+        }
+      ],
+      "questions": [
+        {
+          "id": "roots-01",
+          "type": "single",
+          "prompt": "Which route carries sensory information from a spinal ganglion into the spinal cord?",
+          "options": [
+            "Anterior root",
+            "Anterior median fissure",
+            "Descending motor tract",
+            "Posterior root"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "Anterior roots carry motor output away from the cord.",
+            "The fissure is a surface landmark, not a sensory pathway.",
+            "Descending tracts carry commands within the CNS.",
+            "Sensory axons enter through the posterior root, associated with the spinal ganglion."
+          ],
+          "hint": "Dorsal and posterior are equivalent directions here.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                2,
+                3,
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                49
+              ]
+            }
+          ]
+        },
+        {
+          "id": "roots-02",
+          "type": "multiple",
+          "prompt": "Select all correct horn-function pairings in the course's spinal cross-section model.",
+          "options": [
+            "Posterior horn: sensory processing nuclei",
+            "Anterior horn: somatic motor nuclei",
+            "Anterior horn: cell bodies of all incoming primary sensory neurons",
+            "Lateral horn in thoracic/upper lumbar cord: visceral motor nuclei"
+          ],
+          "answer": [
+            0,
+            1,
+            3
+          ],
+          "explanations": [
+            "Posterior gray matter receives and processes sensory information.",
+            "Anterior horn motor neurons supply skeletal muscle.",
+            "Primary sensory somas are in spinal ganglia outside the cord.",
+            "These lateral gray-matter regions contain visceral motor neurons."
+          ],
+          "hint": "Separate the sensory ganglion from sensory processing inside the cord.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                52,
+                53
+              ]
+            }
+          ]
+        },
+        {
+          "id": "roots-03",
+          "type": "single",
+          "prompt": "A cluster of neuronal cell bodies is identified within spinal gray matter. Which term applies?",
+          "options": [
+            "Ganglion",
+            "Nucleus",
+            "Peripheral nerve",
+            "White-matter tract"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Ganglion refers to a cell-body cluster outside the CNS.",
+            "Nucleus is the term for a neuronal cell-body cluster in the CNS.",
+            "A peripheral nerve is a bundle of axons in the PNS.",
+            "A tract is an axonal bundle rather than a cluster of somas."
+          ],
+          "hint": "Both the tissue location and the cellular component matter.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                4
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                52
+              ]
+            }
+          ]
+        },
+        {
+          "id": "roots-04",
+          "type": "single",
+          "prompt": "An axon bundle in spinal white matter carries sensory information toward the brain. How should it be classified?",
+          "options": [
+            "Ascending tract",
+            "Descending tract",
+            "Anterior root",
+            "Peripheral ganglion"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Ascending tracts carry information rostrally toward the brain.",
+            "Descending tracts travel from higher centers toward the spinal cord.",
+            "An anterior root carries motor axons out of the cord.",
+            "A ganglion contains somas in the PNS, not a CNS axonal pathway."
+          ],
+          "hint": "Identify both its location and its direction.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                52
+              ]
+            }
+          ]
+        },
+        {
+          "id": "roots-05",
+          "type": "recall",
+          "prompt": "In an idealized preparation, compare the direct effects of interrupting only a posterior root versus only an anterior root at one spinal level.",
+          "model": "Interrupting a posterior root disrupts incoming sensory signals through that root while leaving the anterior motor route structurally intact. Interrupting an anterior root disrupts motor output through that root while leaving the posterior sensory route structurally intact. A spinal nerve beyond their union contains both fiber types, so interrupting it affects both routes.",
+          "explanations": [
+            "This prediction follows from root composition; it does not imply that every behavior remains normal when a reflex loses its sensory input."
+          ],
+          "hint": "Trace the afferent and efferent limbs separately before considering the mixed nerve.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                49,
+                50,
+                52
+              ]
+            },
+            {
+              "id": "ch13-l1",
+              "pages": [
+                3,
+                4,
+                5
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "peripheral-nerves",
+      "chapter": 13,
+      "title": "Peripheral nerves and dermatomes",
+      "summary": "Distinguish a whole nerve from one neuron, then trace how fibers reach body regions.",
+      "details": [
+        "A peripheral nerve bundles many axons with supporting cells, blood vessels, and connective tissues. Epineurium surrounds the whole nerve, perineurium encloses a fascicle, and endoneurium surrounds individual axons.",
+        "Posterior and anterior roots combine into a mixed spinal nerve. Its posterior and anterior rami contain sensory and motor fibers; a posterior ramus is not a sensory-only posterior root.",
+        "Posterior rami supply the back; anterior rami supply the ventrolateral body and limbs. Rami communicantes connect spinal nerves with sympathetic pathways.",
+        "A dermatome is a skin region associated with a spinal sensory level. Adjacent dermatomes overlap, so a single-root injury need not produce a sharply bounded area of complete sensory loss.",
+        "The distribution of a named peripheral nerve can contain fibers from several spinal levels after plexus mixing; it is not identical to a single dermatome."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l1",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            54,
+            55,
+            56,
+            57
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Name the nerve coverings from outermost to innermost.",
+          "back": "Epineurium around the nerve → perineurium around a fascicle → endoneurium around individual axons."
+        },
+        {
+          "front": "Are both spinal rami mixed?",
+          "back": "Yes. Both posterior and anterior rami contain sensory and motor axons after the roots join."
+        },
+        {
+          "front": "Why is a dermatome not the same as a peripheral nerve territory?",
+          "back": "A dermatome maps a spinal sensory level. A peripheral nerve can combine fibers from multiple levels through a plexus."
+        }
+      ],
+      "questions": [
+        {
+          "id": "peripheral-nerves-1",
+          "type": "single",
+          "prompt": "A dissector opens the connective-tissue sheath around one bundle of axons within a larger nerve. Which layer is opened?",
+          "options": [
+            "Epineurium",
+            "Perineurium",
+            "Endoneurium",
+            "Pia mater"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Epineurium encloses the entire peripheral nerve.",
+            "Perineurium encloses a fascicle, a bundle within the nerve.",
+            "Endoneurium surrounds individual axons rather than a fascicle.",
+            "Pia is a CNS meninx, not the fascicle sheath."
+          ],
+          "hint": "Match the layer to the organizational level.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "id": "peripheral-nerves-2",
+          "type": "sequence",
+          "prompt": "Order peripheral nerve coverings from the whole-nerve boundary inward.",
+          "options": [
+            "Endoneurium",
+            "Epineurium",
+            "Perineurium"
+          ],
+          "answer": [
+            1,
+            2,
+            0
+          ],
+          "explanations": [
+            "The whole nerve is enclosed by epineurium; fascicles by perineurium; individual axons by endoneurium."
+          ],
+          "hint": "Whole nerve → bundle → individual fiber.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "id": "peripheral-nerves-3",
+          "type": "multiple",
+          "prompt": "Which statements distinguish roots, rami, and peripheral nerves correctly?",
+          "options": [
+            "A posterior root carries sensory axons.",
+            "A posterior ramus is purely sensory.",
+            "An anterior ramus contains sensory and motor axons.",
+            "A spinal nerve is mixed after the roots join."
+          ],
+          "answer": [
+            0,
+            2,
+            3
+          ],
+          "explanations": [
+            "The posterior root is the sensory entry route.",
+            "A ramus branches from a mixed spinal nerve and is not sensory-only.",
+            "Anterior rami are mixed branches.",
+            "Union of sensory and motor roots produces a mixed nerve."
+          ],
+          "hint": "Do not apply the root rule to the rami.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "id": "peripheral-nerves-4",
+          "type": "single",
+          "prompt": "Why might a single spinal sensory-root lesion fail to eliminate every sensation from a sharply outlined skin patch?",
+          "options": [
+            "All sensory axons travel in ventral roots.",
+            "Adjacent dermatome territories overlap.",
+            "Dermatomes describe only muscle supply.",
+            "Each dermatome is supplied by every spinal nerve."
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Primary sensory input enters by posterior roots.",
+            "Overlap allows neighboring levels to contribute sensory input.",
+            "Dermatomes refer to skin territories.",
+            "Dermatomes are level-associated regions, not universal supply maps."
+          ],
+          "hint": "Consider neighboring sensory fields.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        },
+        {
+          "id": "peripheral-nerves-5",
+          "type": "recall",
+          "prompt": "Explain how the nerve coverings resemble skeletal muscle coverings without confusing axons with muscle fibers.",
+          "model": "Epineurium surrounds a whole nerve, like epimysium surrounds a whole muscle. Perineurium and perimysium enclose fascicles. Endoneurium surrounds individual axons, whereas endomysium surrounds individual muscle fibers. The organization is analogous, but the enclosed structures differ.",
+          "explanations": [],
+          "hint": "Compare the three organizational levels.",
+          "sources": [
+            {
+              "id": "ch13-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                54,
+                55,
+                56,
+                57
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nerve-plexuses",
+      "chapter": 13,
+      "title": "Plexuses and major peripheral nerves",
+      "summary": "Connect spinal nerve networks to the structures they supply.",
+      "details": [
+        "Anterior rami combine and redistribute axons in cervical, brachial, lumbar, and sacral plexuses. Most thoracic anterior rami continue in segmental patterns rather than entering a limb plexus.",
+        "The course maps label cervical contributions C1–C5, brachial C5–T1, lumbar T12–L4, and sacral L4–S4. These are the source's overview ranges, not a claim that every named branch uses every level.",
+        "The phrenic nerve receives C3–C5 fibers and supplies the diaphragm. The brachial plexus supplies the pectoral girdle and upper limb.",
+        "Major brachial branches include axillary, musculocutaneous, radial, median, and ulnar nerves. Musculocutaneous supplies major anterior-arm flexors; radial supplies many extensors; median and ulnar supply distinct forearm/hand muscles and skin territories.",
+        "The femoral nerve supplies quadriceps and other anterior-thigh structures; the obturator supplies important thigh adductors. Both are lumbar plexus branches.",
+        "The sacral plexus gives rise to gluteal, sciatic, and pudendal nerves. The sciatic divides into tibial and common fibular components. Pudendal targets include perineal structures."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l2",
+          "pages": [
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Which nerve links C3–C5 to breathing?",
+          "back": "The phrenic nerve supplies the diaphragm."
+        },
+        {
+          "front": "Femoral versus obturator: which movement groups do they serve?",
+          "back": "Femoral supplies quadriceps and other anterior-thigh structures; obturator supplies important adductors."
+        },
+        {
+          "front": "Which major nerve from the sacral plexus divides into tibial and common fibular components?",
+          "back": "The sciatic nerve."
+        }
+      ],
+      "questions": [
+        {
+          "id": "nerve-plexuses-1",
+          "type": "single",
+          "prompt": "A course diagram highlights a C3–C5 nerve descending to the diaphragm. Which label belongs there?",
+          "options": [
+            "Ulnar",
+            "Phrenic",
+            "Obturator",
+            "Sciatic"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Ulnar is an upper-limb branch.",
+            "Phrenic fibers from C3–C5 supply the diaphragm.",
+            "Obturator primarily serves medial-thigh structures.",
+            "Sciatic supplies lower-limb pathways."
+          ],
+          "hint": "Connect the spinal levels to the breathing muscle.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nerve-plexuses-2",
+          "type": "multiple",
+          "prompt": "Select the correct nerve-target pairings in the supplied plexus tables.",
+          "options": [
+            "Femoral — quadriceps",
+            "Obturator — thigh adductors",
+            "Musculocutaneous — major anterior-arm flexors",
+            "Phrenic — intrinsic hand muscles"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "explanations": [
+            "The femoral nerve supplies quadriceps.",
+            "Obturator supplies major adductor muscles.",
+            "Musculocutaneous supplies biceps, brachialis, and coracobrachialis.",
+            "Phrenic supplies the diaphragm, not intrinsic hand muscles."
+          ],
+          "hint": "Use function and body region together.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nerve-plexuses-3",
+          "type": "single",
+          "prompt": "In a simplified lesion model, motor output to many arm and forearm extensors is disrupted. Which listed branch most closely matches that distribution?",
+          "options": [
+            "Radial nerve",
+            "Phrenic nerve",
+            "Obturator nerve",
+            "Pudendal nerve"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Radial supplies many upper-limb extensors.",
+            "Phrenic targets the diaphragm.",
+            "Obturator serves medial-thigh muscles.",
+            "Pudendal serves perineal structures."
+          ],
+          "hint": "Find the upper-limb nerve associated with extension.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nerve-plexuses-4",
+          "type": "single",
+          "prompt": "Which plexus-to-region pairing matches the course overview?",
+          "options": [
+            "Brachial — lower limb",
+            "Lumbar — diaphragm",
+            "Sacral — pelvic and lower-limb targets",
+            "Cervical — intrinsic foot muscles"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Brachial supplies the upper limb and pectoral girdle.",
+            "The diaphragm is supplied by phrenic fibers associated with the cervical plexus.",
+            "Sacral branches supply important pelvic and lower-limb structures.",
+            "Intrinsic foot supply comes through lower-limb nerve pathways."
+          ],
+          "hint": "Use the regional names to orient the map.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nerve-plexuses-5",
+          "type": "recall",
+          "prompt": "Why can injury to one named peripheral nerve affect fibers that originated at several spinal levels?",
+          "model": "At a plexus, fibers from multiple anterior rami mix and redistribute into peripheral nerves. A named nerve can therefore carry axons from several spinal levels, even though it supplies a recognizable peripheral territory.",
+          "explanations": [],
+          "hint": "Think about what a plexus redistributes.",
+          "sources": [
+            {
+              "id": "ch13-l2",
+              "pages": [
+                2,
+                3,
+                4,
+                5
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "neuronal-circuits",
+      "chapter": 13,
+      "title": "Neuronal pools and circuit patterns",
+      "summary": "Read a neural wiring diagram by following where information branches, joins, and loops.",
+      "details": [
+        "A neuronal pool is a functional group of interconnected neurons. Pools can include excitatory and inhibitory cells and can be localized or distributed.",
+        "Divergence distributes one input to multiple destinations. Convergence brings inputs from several sources to a common postsynaptic target.",
+        "Serial processing passes information through successive stages. Parallel processing works on related information along simultaneous pathways.",
+        "Reverberating circuits send collateral feedback to earlier elements, allowing activity to continue until inhibition or fatigue interrupts the cycle.",
+        "The handout labels five patterns despite a sentence saying 'Four Patterns'. Use the five illustrated categories: divergence, convergence, serial, parallel, and reverberating."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l3",
+          "pages": [
+            1
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            64,
+            65
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "Divergence versus convergence?",
+          "back": "Divergence is one input spreading to many targets; convergence is many inputs arriving at a common target."
+        },
+        {
+          "front": "How does parallel processing differ from serial processing?",
+          "back": "Parallel pathways operate simultaneously; serial processing relays information through successive stages."
+        },
+        {
+          "front": "What sustains reverberation?",
+          "back": "Feedback collaterals reactivate earlier circuit elements until inhibition or fatigue ends the loop."
+        }
+      ],
+      "questions": [
+        {
+          "id": "neuronal-circuits-1",
+          "type": "single",
+          "prompt": "A sensory axon branches to activate several different neuronal pools. Which pattern is shown?",
+          "options": [
+            "Convergence",
+            "Divergence",
+            "Reverberation",
+            "A single serial chain"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Convergence combines multiple inputs onto a shared target.",
+            "Divergence spreads one input to several destinations.",
+            "Reverberation requires feedback toward earlier circuit elements.",
+            "One serial chain lacks the described branching distribution."
+          ],
+          "hint": "Count the input and output branches.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                64,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuronal-circuits-2",
+          "type": "single",
+          "prompt": "Several independent presynaptic neurons synapse on one postsynaptic neuron. What is the circuit pattern?",
+          "options": [
+            "Divergence",
+            "Convergence",
+            "Saltatory conduction",
+            "A nerve plexus"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Divergence sends an input to several targets.",
+            "Convergence combines several sources on a shared target.",
+            "Saltatory conduction describes impulse propagation along myelinated axons.",
+            "A plexus redistributes peripheral nerve fibers rather than naming this synaptic pattern."
+          ],
+          "hint": "Many sources meet at one target.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                64,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuronal-circuits-3",
+          "type": "multiple",
+          "prompt": "Which descriptions match the named circuit patterns?",
+          "options": [
+            "Serial — sequential processing stages",
+            "Parallel — simultaneous processing paths",
+            "Reverberating — feedback reactivates earlier elements",
+            "Convergent — one source branches to many targets"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "explanations": [
+            "Serial processing uses successive stages.",
+            "Parallel processing permits concurrent responses.",
+            "Feedback loops can prolong circuit activity.",
+            "One-to-many branching is divergence, not convergence."
+          ],
+          "hint": "Distinguish branching from feedback.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                64,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuronal-circuits-4",
+          "type": "single",
+          "prompt": "Activity continues briefly after the initiating stimulus ends because collaterals repeatedly excite earlier neurons. Which pattern explains this?",
+          "options": [
+            "Reverberation",
+            "Simple convergence alone",
+            "Loss of all synapses",
+            "Continuous conduction alone"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Reverberation sustains activity through feedback.",
+            "Convergence combines sources but does not itself specify a feedback loop.",
+            "Loss of all synapses would not sustain this circuit.",
+            "Continuous conduction describes axonal propagation, not feedback between neurons."
+          ],
+          "hint": "Look for a circuit loop.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                64,
+                65
+              ]
+            }
+          ]
+        },
+        {
+          "id": "neuronal-circuits-5",
+          "type": "recall",
+          "prompt": "Explain how divergence and parallel processing can help coordinate several responses to one stimulus.",
+          "model": "Divergence distributes the incoming information to multiple neuronal pools. Those pools can then process it in parallel, producing coordinated sensory and motor responses at similar times. The branching arrangement and simultaneous processing describe related but distinct features.",
+          "explanations": [],
+          "hint": "Separate distribution from timing.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                64,
+                65
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reflex-arc-classification",
+      "chapter": 13,
+      "title": "Reflex arcs and classification",
+      "summary": "Trace the five functional steps and describe a reflex using more than one classification.",
+      "details": [
+        "A reflex is a rapid automatic response to a stimulus. Its arc includes receptor activation, sensory input, CNS processing, motor output, and an effector response.",
+        "Spinal sensory input enters through posterior roots; motor output exits through anterior roots. Axon collaterals can also relay information to the brain.",
+        "A monosynaptic arc has one sensory-to-motor synapse in its central pathway. Polysynaptic arcs include one or more interneurons.",
+        "Classifications describe different dimensions: innate/acquired concerns development, somatic/visceral concerns the effector, spinal/cranial concerns integration site, and mono-/polysynaptic concerns circuit complexity.",
+        "Innate does not mean completely unmodifiable. The textbook notes that higher centers and experience can modify or suppress many reflexes, qualifying the handout's absolute wording.",
+        "Reflex testing evaluates the integrity of components of a neural pathway; one altered response is not by itself a complete diagnosis."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l3",
+          "pages": [
+            1,
+            2,
+            3
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            65,
+            66,
+            67,
+            68,
+            69,
+            72
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What are the five steps in a reflex arc?",
+          "back": "Receptor activation → sensory neuron → CNS processing → motor neuron → effector response."
+        },
+        {
+          "front": "What does monosynaptic count?",
+          "back": "The single central synapse between sensory and motor neurons in the simplest arc."
+        },
+        {
+          "front": "Can a reflex be both innate and somatic?",
+          "back": "Yes. Innate describes development; somatic describes output to skeletal muscle. The categories are independent."
+        }
+      ],
+      "questions": [
+        {
+          "id": "reflex-arc-classification-1",
+          "type": "sequence",
+          "prompt": "Arrange the five functional stages of a spinal reflex arc.",
+          "options": [
+            "Effector responds",
+            "CNS processes the input",
+            "Sensory neuron carries information inward",
+            "Motor neuron carries output",
+            "A receptor is activated"
+          ],
+          "answer": [
+            4,
+            2,
+            1,
+            3,
+            0
+          ],
+          "explanations": [
+            "A receptor initiates sensory input, followed by central processing, motor output, and response."
+          ],
+          "hint": "Start with detection and end with action.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reflex-arc-classification-2",
+          "type": "single",
+          "prompt": "A reflex uses one central synapse directly from the sensory neuron to the motor neuron. Which term describes its complexity?",
+          "options": [
+            "Polysynaptic",
+            "Monosynaptic",
+            "Autonomic",
+            "Acquired"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Polysynaptic pathways contain multiple central synapses.",
+            "Monosynaptic means one central sensory-to-motor synapse.",
+            "Autonomic describes effector type.",
+            "Acquired describes development through learning."
+          ],
+          "hint": "Match the classification to synapse count.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reflex-arc-classification-3",
+          "type": "multiple",
+          "prompt": "A skeletal-muscle reflex is inborn and processed in the spinal cord. Which classifications can all apply?",
+          "options": [
+            "Innate",
+            "Somatic",
+            "Spinal",
+            "Necessarily visceral"
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "explanations": [
+            "Inborn describes innate development.",
+            "Skeletal muscle is the somatic effector.",
+            "The stated processing site is spinal.",
+            "Visceral output acts on smooth/cardiac muscle and glands, not this skeletal-muscle target."
+          ],
+          "hint": "Each adjective answers a different question.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reflex-arc-classification-4",
+          "type": "single",
+          "prompt": "Which claim best reconciles the reflex handout with the textbook's discussion of higher-center control?",
+          "options": [
+            "Innate reflexes can never be influenced.",
+            "Spinal reflexes require a conscious command every time.",
+            "Many innate reflexes can be modified or suppressed by higher centers.",
+            "All acquired behaviors are monosynaptic."
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The textbook explicitly discusses modification and suppression.",
+            "A spinal reflex can occur without waiting for a conscious command.",
+            "Automatic spinal circuitry can still be influenced by descending inputs.",
+            "Learning does not imply a one-synapse circuit."
+          ],
+          "hint": "Automatic does not mean isolated from the brain.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "reflex-arc-classification-5",
+          "type": "recall",
+          "prompt": "Why can a spinal reflex begin before conscious awareness while the brain still receives information about the stimulus?",
+          "model": "Sensory input can activate local spinal circuitry that drives motor output without waiting for conscious processing. Sensory axon collaterals and ascending pathways can simultaneously relay information to the brain, and descending pathways can modulate the reflex.",
+          "explanations": [],
+          "hint": "Consider local processing and parallel ascending information.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66,
+                67,
+                68,
+                69,
+                72
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stretch-withdrawal-reflexes",
+      "chapter": 13,
+      "title": "Stretch, withdrawal, and crossed reflexes",
+      "summary": "Predict which muscles activate, which are inhibited, and which side responds.",
+      "details": [
+        "Muscle spindles contain intrafusal fibers that monitor muscle length. Stretch increases sensory activity and can excite motor neurons to extrafusal fibers of the same muscle, opposing the stretch.",
+        "Gamma motor neurons adjust intrafusal fiber tension and preserve spindle sensitivity as muscle length changes; extrafusal fibers produce the main muscle force.",
+        "Golgi tendon organs monitor tension. In the textbook's tendon-reflex example, increased tension activates inhibitory pathways that reduce drive to the contracting muscle.",
+        "A flexor withdrawal reflex moves a limb away from a painful stimulus. Reciprocal inhibition reduces antagonist activity so the agonists can move the limb effectively.",
+        "During crossed extension accompanying withdrawal, the opposite limb can extend to support weight. Ipsilateral means same side; contralateral means opposite side. The combined response involves both sides.",
+        "Descending brain inputs can facilitate or inhibit spinal reflex pathways. Reflex behavior therefore reflects both the local circuit and its current modulation."
+      ],
+      "emphasis": null,
+      "sources": [
+        {
+          "id": "ch13-l3",
+          "pages": [
+            2,
+            3
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            69,
+            70,
+            71,
+            72
+          ]
+        }
+      ],
+      "cards": [
+        {
+          "front": "What does a muscle spindle monitor, and what are its specialized fibers called?",
+          "back": "Muscle length and its changes; the spindle contains intrafusal fibers."
+        },
+        {
+          "front": "What is reciprocal inhibition?",
+          "back": "Activation of an agonist is coordinated with inhibition of its antagonist."
+        },
+        {
+          "front": "Why extend the opposite leg during withdrawal?",
+          "back": "Contralateral extensor activity supports body weight while the stimulated limb withdraws."
+        }
+      ],
+      "questions": [
+        {
+          "id": "stretch-withdrawal-reflexes-1",
+          "type": "single",
+          "prompt": "A patellar tendon tap briefly stretches quadriceps. Which receptor starts the familiar stretch reflex?",
+          "options": [
+            "Muscle spindle",
+            "Golgi tendon organ only",
+            "Cutaneous pain receptor only",
+            "Motor axon terminal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Spindles detect the resulting muscle stretch.",
+            "The Golgi tendon organ is associated with tension monitoring and the separate tendon-reflex example.",
+            "The patellar stretch response does not require pain.",
+            "The motor terminal is an output site, not the initiating stretch receptor."
+          ],
+          "hint": "The tendon tap changes muscle length.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stretch-withdrawal-reflexes-2",
+          "type": "multiple",
+          "prompt": "Select all correct muscle-spindle relationships.",
+          "options": [
+            "Intrafusal fibers are part of the spindle.",
+            "Gamma motor neurons adjust spindle sensitivity.",
+            "Extrafusal fibers provide the main contractile force.",
+            "Gamma motor neurons are the spindle's primary sensory afferents."
+          ],
+          "answer": [
+            0,
+            1,
+            2
+          ],
+          "explanations": [
+            "Intrafusal fibers are specialized spindle components.",
+            "Gamma efferents adjust the tension of intrafusal regions.",
+            "Extrafusal fibers are the main force-producing muscle fibers.",
+            "Gamma neurons are motor, not sensory."
+          ],
+          "hint": "Separate the sensor from the main force-producing fibers.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stretch-withdrawal-reflexes-3",
+          "type": "single",
+          "prompt": "During withdrawal of a hand, flexors are activated while antagonistic extensors are inhibited. What is this coordination called?",
+          "options": [
+            "Reciprocal inhibition",
+            "Saltatory conduction",
+            "Spatial convergence only",
+            "Wallerian degeneration"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Reciprocal inhibition reduces antagonist opposition.",
+            "Saltatory conduction is node-to-node action-potential regeneration.",
+            "Convergence describes circuit inputs, not this specific antagonist coordination.",
+            "Wallerian degeneration is distal axonal breakdown after injury."
+          ],
+          "hint": "What prevents the antagonists from resisting withdrawal?",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stretch-withdrawal-reflexes-4",
+          "type": "single",
+          "prompt": "The left foot encounters a painful stimulus and withdraws. What is the contralateral component of the associated crossed extensor response?",
+          "options": [
+            "Left-leg flexion",
+            "Right-leg extension to support weight",
+            "Loss of all right-leg motor activity",
+            "Contraction of both legs' flexors only"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Left-leg withdrawal is the ipsilateral component.",
+            "Extension on the opposite side supports balance during withdrawal.",
+            "The opposite limb must generate support, not lose all activity.",
+            "Flexing both legs would not supply the described support."
+          ],
+          "hint": "Contralateral means opposite to the stimulus.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        },
+        {
+          "id": "stretch-withdrawal-reflexes-5",
+          "type": "recall",
+          "prompt": "Compare spindle-mediated stretch reflexes with the textbook's Golgi tendon reflex example.",
+          "model": "A muscle spindle monitors muscle length; stretch can drive contraction of the same muscle to oppose lengthening. A Golgi tendon organ monitors tension, and in the textbook's tendon-reflex example inhibitory interneurons reduce motor drive to that muscle. The receptors and central effects differ.",
+          "explanations": [],
+          "hint": "Contrast the measured variable and the motor outcome.",
+          "sources": [
+            {
+              "id": "ch13-l3",
+              "pages": [
+                2,
+                3
+              ]
+            },
+            {
+              "id": "textbook",
+              "pages": [
+                69,
+                70,
+                71,
+                72
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sourceNotes": [
+    "Seven PDFs (108 pages total) and three untimestamped text attachments were supplied. No audio recording files were supplied. References are 1-based PDF pages, not printed slide or textbook page numbers.",
+    "All lessons, flashcards, and practice questions are original paraphrases. Raw PDFs, transcripts, and personal lecture anecdotes are excluded from the public site.",
+    "The first text attachment is already a structured secondary summary. Instructor-emphasis labels attribute that summary cautiously; they are not verified audio quotations or guarantees of exam coverage.",
+    "Transcripts contain garbled anatomical terms. Scientific wording follows corroborated PDF material, not uncertain phonetic transcriptions.",
+    "Threshold values differ: some handout annotations use −55 mV, while embedded figures use −60 mV. Numerical practice states its threshold; the animation uses approximately −55 mV.",
+    "The Na+/K+ pump moves 3 Na+ out and 2 K+ in per ATP. It maintains gradients over time; it does not directly cause the rapid repolarization phase. Simplified transcript wording is qualified in the lessons.",
+    "The Chapter 13 lecture 3 handout says four circuit patterns but illustrates five. The five shown patterns agree with the textbook.",
+    "The handout's statement that innate reflexes cannot change is too absolute relative to the textbook's discussion of modification and descending control. Contralateral means the opposite side; the combined withdrawal/crossed-extension response involves both sides.",
+    "The textbook excerpt is an older edition. Clinical treatment recommendations and vaccine eligibility in sidebars are not used as current health advice. Coverage is educational and not a diagnostic tool.",
+    "Question coverage follows the supplied Chapters 12–13 topics. No official Exam 3 blueprint or confirmed list of excluded topics was supplied."
+  ]
+}
