@@ -59,6 +59,12 @@
       "title": "Supplied transcript 3",
       "pages": null,
       "note": "Third supplied Pasted text.txt. Untimestamped transcription with garbled terminology; academic passages review neurons, ionic gradients, and threshold. No audio was supplied."
+    },
+    {
+      "id": "lecture-20261110",
+      "title": "BIO 233 lecture transcript — November 10, 2026",
+      "pages": null,
+      "note": "User-supplied automatic transcript. Used to select additional practice topics; anatomical wording checked against the supplied textbook and handouts. Section labels are descriptive, not verified audio timestamps."
     }
   ],
   "topics": [
@@ -266,6 +272,72 @@
                 3,
                 4
               ]
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-proprioception",
+          "type": "single",
+          "prompt": "With your eyes closed, you can still sense the position of your elbow. Which receptor group supplies this information?",
+          "options": [
+            "Proprioceptors in muscles and joints",
+            "Interoceptors monitoring stomach distension",
+            "Photoreceptors in the retina",
+            "Motor end plates"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Proprioceptors monitor skeletal-muscle and joint position and movement.",
+            "Visceral distension is internal-organ information.",
+            "The task does not depend on seeing the elbow.",
+            "Motor end plates receive motor output rather than sensing position."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                7
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Proprioception"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-motor-chain",
+          "type": "single",
+          "prompt": "Compare the usual somatic motor pathway to skeletal muscle with an autonomic motor pathway to a sweat gland. Which statement is correct?",
+          "options": [
+            "Both require a synapse in a dorsal root ganglion",
+            "The somatic pathway uses a motor neuron from the CNS to muscle; the autonomic pathway relays in an autonomic ganglion",
+            "The autonomic pathway always uses just one neuron",
+            "Somatic motor cell bodies lie in white rami"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Dorsal root ganglia contain sensory somas, not this motor relay.",
+            "The autonomic pathway uses preganglionic and postganglionic neurons; somatic motor axons reach skeletal muscle directly.",
+            "The usual autonomic route has two motor neurons.",
+            "Somatic motor somas lie in the CNS."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                7
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Somatic versus visceral motor output"
             }
           ]
         }
@@ -2768,6 +2840,39 @@
               ]
             }
           ]
+        },
+        {
+          "id": "lecture-20261110-motor-map",
+          "type": "single",
+          "prompt": "What does the organized arrangement of somatic motor nuclei within an anterior horn allow?",
+          "options": [
+            "All motor neurons to control every muscle equally",
+            "Different neuron groups to control different muscle regions and flexor/extensor groups",
+            "Sensory cell bodies to move from ganglia into white matter",
+            "Every motor command to bypass peripheral nerves"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Motor neurons have specific targets.",
+            "Motor nuclei are spatially organized, including separate groups for different regions and functions.",
+            "This organization does not relocate sensory somas.",
+            "Output still reaches targets through peripheral pathways."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                52
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Organization within somatic motor nuclei"
+            }
+          ]
         }
       ]
     },
@@ -2990,6 +3095,180 @@
                 56,
                 57
               ]
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-ramus-territory",
+          "type": "single",
+          "prompt": "Which branch carries sensory input from, and motor output to, the deep back muscles and overlying skin?",
+          "options": [
+            "Anterior root only",
+            "Posterior ramus",
+            "Posterior root only",
+            "White ramus communicans only"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The anterior root carries motor output, not both directions.",
+            "The posterior ramus is a mixed branch serving the back.",
+            "The posterior root is sensory, not a mixed peripheral branch.",
+            "White rami connect spinal nerves with sympathetic pathways."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                56,
+                57
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Distribution of spinal nerve rami"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-white-gray",
+          "type": "multiple",
+          "prompt": "Select the correct statements about sympathetic motor fibers in the rami communicantes.",
+          "options": [
+            "White rami carry myelinated preganglionic motor fibers toward sympathetic ganglia",
+            "Gray rami return unmyelinated postganglionic fibers to spinal nerves",
+            "White rami are the same structure as dorsal roots",
+            "Gray rami carry somatic motor axons to skeletal-muscle end plates"
+          ],
+          "answer": [
+            0,
+            1
+          ],
+          "explanations": [
+            "Myelin gives white rami their lighter appearance.",
+            "These returning fibers can reach body-wall and limb effectors through spinal nerve branches.",
+            "Dorsal roots are sensory entry routes into the cord.",
+            "Gray rami carry sympathetic output to targets such as glands and smooth muscle."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                56,
+                57
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "White and gray rami"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-preganglionic",
+          "type": "single",
+          "prompt": "A sympathetic axon passes through a sympathetic chain ganglion without synapsing and continues toward an abdominal ganglion. What is it still called?",
+          "options": [
+            "Postganglionic, because it passed a ganglion",
+            "Preganglionic, because its ganglionic synapse has not yet occurred",
+            "Somatic motor, because it did not synapse in the chain",
+            "A dorsal root ganglion cell body"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "Passing through a ganglion does not by itself make an axon postganglionic.",
+            "The designation depends on the neuron's position relative to the autonomic relay synapse.",
+            "The pathway remains autonomic.",
+            "An axon is not a cell body."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                7,
+                56,
+                57
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Sympathetic routes to abdominopelvic viscera"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-sweat-route",
+          "type": "sequence",
+          "prompt": "Order the motor pathway to a body-wall sweat gland in the illustrated thoracic sympathetic route. Start with the preganglionic soma.",
+          "options": [
+            "Gray ramus returns postganglionic axon to spinal nerve and ramus",
+            "Preganglionic soma in spinal visceral motor nucleus",
+            "Axon leaves through ventral root and spinal nerve",
+            "Postganglionic axon reaches sweat gland",
+            "White ramus leads to a sympathetic ganglion, where the relay synapse occurs"
+          ],
+          "answer": [
+            1,
+            2,
+            4,
+            0,
+            3
+          ],
+          "explanations": [
+            "Preganglionic output exits the cord, enters a sympathetic ganglion through a white ramus, then postganglionic output returns through a gray ramus to reach body-wall effectors."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                56,
+                57
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Sympathetic motor pathway to body wall"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-visceral-input",
+          "type": "single",
+          "prompt": "In the lecture's illustrated thoracic visceral sensory route, which structure carries the final incoming sensory axon into the spinal cord?",
+          "options": [
+            "Gray ramus directly into the anterior horn",
+            "Anterior root",
+            "Posterior root",
+            "Somatic motor neuron"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Gray rami distribute postganglionic sympathetic output; this is not the final sensory entry route.",
+            "Anterior roots carry motor output.",
+            "Visceral sensory fibers, like somatic sensory fibers, enter by a posterior root.",
+            "A motor neuron carries output rather than this incoming signal."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                56,
+                57
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Visceral sensory pathway"
             }
           ]
         }
@@ -3247,6 +3526,105 @@
                 62,
                 63
               ]
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-median-ulnar",
+          "type": "single",
+          "prompt": "Which two major brachial-plexus nerves contribute motor supply to forearm or finger flexors, rather than supplying all of these flexors through one nerve?",
+          "options": [
+            "Median and ulnar",
+            "Phrenic and radial",
+            "Obturator and sciatic",
+            "Superior and inferior gluteal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Median and ulnar nerves supply different parts of the flexor and hand-muscle distribution.",
+            "Phrenic supplies the diaphragm; radial predominantly serves upper-limb extensor groups.",
+            "These are lower-limb nerves.",
+            "These supply gluteal-region muscles."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                60
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Major upper-limb nerve targets"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-gluteal",
+          "type": "single",
+          "prompt": "Which pairing correctly distinguishes the gluteal nerves?",
+          "options": [
+            "Superior gluteal — gluteus maximus; inferior gluteal — gluteus medius",
+            "Superior gluteal — gluteus medius/minimus; inferior gluteal — gluteus maximus",
+            "Both gluteal nerves — diaphragm",
+            "Inferior gluteal — forearm extensors"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "This reverses the principal pairings.",
+            "Superior gluteal supplies medius and minimus (also tensor fasciae latae); inferior gluteal supplies maximus.",
+            "Diaphragm supply is phrenic.",
+            "Forearm extensors are associated with the radial nerve."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                62
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Gluteal nerve targets"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-sciatic",
+          "type": "single",
+          "prompt": "The lecture highlights semitendinosus and semimembranosus as hamstring targets. Which major nerve supplies these muscles?",
+          "options": [
+            "Median",
+            "Phrenic",
+            "Sciatic",
+            "Obturator"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "Median is an upper-limb nerve.",
+            "Phrenic supplies the diaphragm.",
+            "These hamstrings receive motor supply through the sciatic nerve's tibial division.",
+            "Obturator primarily supplies medial-thigh adductors."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                62
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Sciatic nerve and hamstrings"
             }
           ]
         }
@@ -3716,6 +4094,74 @@
               ]
             }
           ]
+        },
+        {
+          "id": "lecture-20261110-acquired",
+          "type": "single",
+          "prompt": "A practiced goalkeeper's rapid learned response improves with training. In the lecture's innate-versus-acquired comparison, which description fits best?",
+          "options": [
+            "Acquired response developed through practice",
+            "Innate response present fully formed at birth",
+            "Necessarily a one-synapse spinal reflex",
+            "Proof that all innate reflexes are unmodifiable"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The example illustrates a learned motor response; it need not be a simple spinal reflex.",
+            "The skill depends on learning.",
+            "Fast performance does not establish monosynaptic wiring.",
+            "Higher centers can influence innate reflexes; the absolute claim is incorrect."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                68,
+                69
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Innate versus acquired responses"
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-receptor-stage",
+          "type": "single",
+          "prompt": "Why are the receptor and sensory-neuron stages listed separately in a reflex arc even when the receptor is a specialized ending of that neuron?",
+          "options": [
+            "They perform distinct jobs: detecting the stimulus and carrying the signal toward the CNS",
+            "Every receptor must be a separate neuron",
+            "The receptor carries motor output",
+            "The sensory neuron must wait for a conscious decision"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The functional stages differ even when they are parts of the same cell.",
+            "A receptor can be a specialized sensory ending.",
+            "The receptor detects input rather than issuing motor output.",
+            "A spinal reflex does not require a conscious command."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                65,
+                66
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Five functional components of a reflex"
+            }
+          ]
         }
       ]
     },
@@ -3947,6 +4393,41 @@
                 71,
                 72
               ]
+            }
+          ]
+        },
+        {
+          "id": "lecture-20261110-multisegment",
+          "type": "single",
+          "prompt": "Why can interneuron branches spread withdrawal-reflex activity to several spinal segments?",
+          "options": [
+            "To coordinate several muscles in moving away from the stimulus",
+            "To turn all spinal nerves into sensory-only nerves",
+            "To require conscious approval before withdrawal",
+            "To prevent sensory information from reaching the brain"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "A protective movement can recruit muscles supplied from more than one segment.",
+            "Spinal nerves remain mixed.",
+            "Local spinal coordination can occur without waiting for conscious processing.",
+            "Ascending information can accompany the local response."
+          ],
+          "hint": "Trace the structures and distinguish the function of each part.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                66,
+                71,
+                72
+              ]
+            },
+            {
+              "id": "lecture-20261110",
+              "location": "Distribution of withdrawal-reflex activity"
             }
           ]
         }
