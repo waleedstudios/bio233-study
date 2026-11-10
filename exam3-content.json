@@ -44,21 +44,21 @@
     },
     {
       "id": "transcript-1",
-      "title": "Supplied summary 1",
+      "title": "BIO 233 lecture transcript — October 29, 2026",
       "pages": null,
-      "note": "First supplied Pasted text.txt, beginning with headings and a structured nervous-system summary. Untimestamped, secondary notes; not verified against audio. Used only for cautiously attributed emphasis."
+      "note": "User-supplied structured transcript/summary for the October 29 lecture. Covers glia, gated channels, graded potentials, action potentials, propagation, and myelin. Scientific wording is checked against the supplied slides and textbook."
     },
     {
       "id": "transcript-2",
-      "title": "Supplied transcript 2",
+      "title": "BIO 233 lecture transcript — November 5, 2026",
       "pages": null,
-      "note": "Second supplied Pasted text.txt. Untimestamped transcription with garbled terminology; academic passages cover synaptic integration and spinal anatomy. No audio was supplied."
+      "note": "User-supplied automatic transcript for the November 5 lecture. Covers propagation, chemical synapses, summation, spinal-cord anatomy, roots, nerve coverings, and dermatomes. Garbled anatomy terms are corrected only when corroborated by slides or textbook."
     },
     {
       "id": "transcript-3",
-      "title": "Supplied transcript 3",
+      "title": "BIO 233 lecture transcript — November 3, 2026",
       "pages": null,
-      "note": "Third supplied Pasted text.txt. Untimestamped transcription with garbled terminology; academic passages review neurons, ionic gradients, and threshold. No audio was supplied."
+      "note": "User-supplied automatic transcript for the November 3 lecture. Covers neuron classifications, glia, resting membrane potential, ion gradients, gated channels, graded potentials, and threshold. Also available in the synchronized Descript player."
     },
     {
       "id": "lecture-20261110",
@@ -372,6 +372,10 @@
             6,
             7
           ]
+        },
+        {
+          "id": "transcript-3",
+          "location": "Neuron structure, multipolar/unipolar/bipolar classifications, and afferent/efferent review"
         }
       ],
       "cards": [
@@ -592,6 +596,14 @@
             12,
             13
           ]
+        },
+        {
+          "id": "transcript-1",
+          "location": "Astrocytes, ependymal cells, oligodendrocytes, Schwann cells, myelin, and repair"
+        },
+        {
+          "id": "transcript-3",
+          "location": "Glia review and CNS-versus-PNS myelin"
         }
       ],
       "cards": [
@@ -1031,6 +1043,14 @@
             21,
             24
           ]
+        },
+        {
+          "id": "transcript-1",
+          "location": "Chemically, mechanically, and voltage-gated channels; graded potentials and threshold"
+        },
+        {
+          "id": "transcript-3",
+          "location": "Gated channels, graded-potential decay, and threshold review"
         }
       ],
       "cards": [
@@ -1712,6 +1732,10 @@
             32,
             36
           ]
+        },
+        {
+          "id": "transcript-2",
+          "location": "ACh release, Ca2+ entry, receptor effects, signal termination, and direct-versus-indirect signaling"
         }
       ],
       "cards": [
@@ -1965,6 +1989,10 @@
             38,
             39
           ]
+        },
+        {
+          "id": "transcript-2",
+          "location": "Temporal summation, spatial summation, threshold, and postsynaptic integration"
         }
       ],
       "cards": [
@@ -2187,6 +2215,10 @@
             49,
             50
           ]
+        },
+        {
+          "id": "transcript-2",
+          "location": "Spinal-cord regions, conus medullaris, cauda equina, and sectional anatomy"
         }
       ],
       "cards": [
@@ -2648,6 +2680,10 @@
             52,
             53
           ]
+        },
+        {
+          "id": "transcript-2",
+          "location": "Posterior and anterior roots, spinal gray matter, white matter, and spinal nerves"
         }
       ],
       "cards": [
@@ -2904,6 +2940,10 @@
             56,
             57
           ]
+        },
+        {
+          "id": "transcript-2",
+          "location": "Endoneurium, perineurium, epineurium, mixed spinal nerves, and dermatomes"
         }
       ],
       "cards": [
@@ -4435,10 +4475,10 @@
     }
   ],
   "sourceNotes": [
-    "Seven PDFs (108 pages total) and three untimestamped text attachments were supplied. No audio recording files were supplied. References are 1-based PDF pages, not printed slide or textbook page numbers.",
-    "All lessons, flashcards, and practice questions are original paraphrases. Raw PDFs, transcripts, and personal lecture anecdotes are excluded from the public site.",
-    "The first text attachment is already a structured secondary summary. Instructor-emphasis labels attribute that summary cautiously; they are not verified audio quotations or guarantees of exam coverage.",
-    "Transcripts contain garbled anatomical terms. Scientific wording follows corroborated PDF material, not uncertain phonetic transcriptions.",
+    "The Chapters 12–13 bank uses the supplied textbook excerpt, all six Chapter 12–13 lecture handouts, and all four supplied lecture transcripts dated October 29, November 3, November 5, and November 10, 2026. References use 1-based PDF pages, not printed slide or textbook page numbers.",
+    "All lessons, flashcards, and practice questions are original paraphrases. The public site hosts authorized audio players, but it does not republish the textbook, handout PDFs, or full raw transcript text.",
+    "Lecture transcripts are used for instructor emphasis and question selection, then checked against the lecture slides and textbook before anatomical wording is published. Transcript references are not guarantees of official exam coverage.",
+    "Automatic transcripts contain garbled anatomical terms. Scientific wording follows corroborated PDF material, not uncertain phonetic transcriptions.",
     "Threshold values differ: some handout annotations use −55 mV, while embedded figures use −60 mV. Numerical practice states its threshold; the animation uses approximately −55 mV.",
     "The Na+/K+ pump moves 3 Na+ out and 2 K+ in per ATP. It maintains gradients over time; it does not directly cause the rapid repolarization phase. Simplified transcript wording is qualified in the lessons.",
     "The Chapter 13 lecture 3 handout says four circuit patterns but illustrates five. The five shown patterns agree with the textbook.",
