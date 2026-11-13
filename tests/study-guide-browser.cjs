@@ -27,10 +27,10 @@ const {chromium}=require('playwright');
  for(const topic of course.topics){await page.goto(base+'#topic/'+topic.id);await page.locator('#complete-lesson').waitFor();assert.equal(await page.locator('#slide-number').inputValue(),String(topic.slides[0]));}
  await page.goto(base+'#topic/deck-neurons');await page.locator('#complete-lesson').waitFor();await page.locator('#complete-lesson').click();await page.getByRole('button',{name:'✓ Section marked read'}).waitFor();
  await page.goto(base+'#practice');await page.locator('#practice-form').waitFor();
- assert.equal(await page.locator('#practice-priority option').count(),7);
+ assert.equal(await page.locator('#practice-priority,#practice-count').count(),0);
  // Correct-answer paths for every objective question type; recall separately self-assessed.
  for(const kind of ['single','multiple','sequence','recall']){
-  await page.goto(base+'#practice');await page.locator('#practice-form').waitFor();await page.selectOption('#practice-type',kind);await page.fill('#practice-count','1');await page.locator('#practice-form button[type=submit]').click();await page.locator('#question-action').waitFor();
+  await page.goto(base+'#practice');await page.locator('#practice-form').waitFor();await page.selectOption('#practice-type',kind);await page.locator('#practice-form button[type=submit]').click();if(await page.locator('dialog[open]').count())await page.locator('dialog button[value=confirm]').click();await page.locator('#question-action').waitFor();
   const session=await page.evaluate(()=>JSON.parse(localStorage.getItem('bio233-studio-deck-20261113')).session);
   const q=course.topics.flatMap(t=>t.questions).find(q=>q.id===session.ids[0]);assert(q);
   if(kind==='recall'){
@@ -45,7 +45,7 @@ const {chromium}=require('playwright');
   }else{for(const a of q.answer)await page.locator(`[data-option="${a}"]`).click();await page.locator('#question-action').click();}
   await page.locator('#feedback-area .feedback').waitFor();assert.equal(await page.locator('#feedback-area .wrong').count(),0,kind);
   assert(await page.locator('#feedback-area a[href^="#slides/"]').count()>0);
-  await page.locator('#question-action').click();await page.getByText('SESSION RESULTS',{exact:true}).waitFor();
+  await page.locator('#leave-quiz').click();
  }
  // Timed selector must exclude written recall.
  await page.goto(base+'#practice/exam');await page.locator('#practice-form').waitFor();assert.equal(await page.locator('#practice-type option[value="recall"]').count(),0);
@@ -55,7 +55,7 @@ const {chromium}=require('playwright');
   const r=await page.request.get(base+path);assert.equal(r.status(),200,path);
  }
  await page.goto(base+'#sources');await page.locator('#lecture-audio').waitFor();assert(await page.locator('audio[data-public-audio]').count()>=3);
- await page.goto(base+'#lab');await page.locator('#lab-stage svg').waitFor();
+ await page.goto(base+'#lab');await page.locator('#atlas-panel svg').waitFor();
  await page.setViewportSize({width:390,height:844});await page.goto(base+'#slides/73');await page.locator('#slide-number').waitFor();await page.locator('#slide-image').evaluate(img=>img.decode());
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'Horizontal overflow on mobile');
  await page.screenshot({path:'qa/slide-mobile.png',fullPage:true});

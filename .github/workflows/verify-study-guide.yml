@@ -6,10 +6,14 @@ on:
       - index.html
       - studio.js
       - study-guide*
+      - real-anatomy*
+      - anatomy-atlas*
       - exam3-content.json
       - assets/ch12-13/**
+      - assets/anatomy/**
       - downloads/BIO233_Ch12-13_*
       - tests/*study-guide*
+      - tests/anatomy-browser.py
       - .github/workflows/verify-study-guide.yml
 permissions:
   contents: read
@@ -24,7 +28,9 @@ jobs:
           python tests/validate-study-guide.py
           node --input-type=module --check < studio.js
           node --input-type=module --check < study-guide.js
-      - name: Verify published pages and exact download bytes
+          node --check real-anatomy.mjs
+          node --check anatomy-atlas.mjs
+      - name: Verify published pages and exact asset bytes
         env:
           SITE_URL: https://waleedstudios.github.io/bio233-study/
         run: |
@@ -43,6 +49,8 @@ jobs:
                   published=json.loads(get('study-guide-version.json?verify='+os.environ['GITHUB_SHA']))
                   assert published['version']==version['version']
                   assert published['counts']==version['counts']
+                  assert published.get('featuresVersion')==version.get('featuresVersion')
+                  assert hashlib.sha256(get('studio.js')).hexdigest()==hashlib.sha256(Path('studio.js').read_bytes()).hexdigest()
                   break
               except Exception as exc:
                   if attempt==29:raise
@@ -50,8 +58,14 @@ jobs:
                   time.sleep(10)
           index=get('index.html').decode()
           assert 'data-route="guide"' in index and 'data-route="assistance"' in index
-          report={'status':'PASS','version':version['version'],'counts':version['counts'],'verified':[]}
-          for path in ['downloads/BIO233_Ch12-13_Study_Guide.pptx','downloads/BIO233_Ch12-13_Study_Guide.pdf','downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf','study-guide-data.json','exam3-content.json']:
+          assert 'real-anatomy.css' in index
+          js=get('studio.js').decode()
+          assert 'practice-count' not in js and 'practice-priority' not in js
+          assert 'ids:shuffle(pool).map' in js
+          report={'status':'PASS','version':version['version'],'featuresVersion':version.get('featuresVersion'),'counts':version['counts'],'verified':[]}
+          paths=['downloads/BIO233_Ch12-13_Study_Guide.pptx','downloads/BIO233_Ch12-13_Study_Guide.pdf','downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf','study-guide-data.json','exam3-content.json','index.html','studio.js','real-anatomy.mjs','real-anatomy.css','anatomy-atlas.mjs','anatomy-atlas.json']
+          paths += [str(p) for p in sorted(Path('assets/anatomy').glob('*.webp'))]
+          for path in paths:
               content=get(path)
               assert hashlib.sha256(content).hexdigest()==hashlib.sha256(Path(path).read_bytes()).hexdigest(),path
               report['verified'].append({'path':path,'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()})

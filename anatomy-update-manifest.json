@@ -1,0 +1,173 @@
+{
+  "version": "anatomy-20261113",
+  "files": [
+    {
+      "path": "index.html",
+      "before": "bf930400eaebeeed439234603baef42c3217f1da7033f4d29c730e6b54f20a54",
+      "after": "24f8dfc4c4266de66168a80b45faeed0ce34ac58fbf936bd3ba743767b38c6ad",
+      "bytes": 3141
+    },
+    {
+      "path": "studio.js",
+      "before": "ccedc1bf5e3660f398308f457106065e0101dbf9eefcb7b7666173ea8a983fc9",
+      "after": "4998cba42da3c519b82a60fd478a3cf9f0c74392dd37f004f3337c5399ebe7b7",
+      "bytes": 46070
+    },
+    {
+      "path": "real-anatomy.mjs",
+      "before": null,
+      "after": "8ae4a88d52df962c76a3c25277255833126eee0c8679ae72007b43aeea87bd9e",
+      "bytes": 12178
+    },
+    {
+      "path": "real-anatomy.css",
+      "before": null,
+      "after": "968bb4df35562f2280ee8f5e27d4a34324a89929305c9061928e67889a72e455",
+      "bytes": 3688
+    },
+    {
+      "path": "anatomy-atlas.mjs",
+      "before": null,
+      "after": "e96f3aeb31009afc6ab80d36d22a06ab7fff72233a7c96cfb3e44858b3bd5015",
+      "bytes": 12101
+    },
+    {
+      "path": "anatomy-atlas.json",
+      "before": null,
+      "after": "31f06e8d2c821f65b91e573fdf1e9f81a8484abbb51edaf358bddf3bb89f1e20",
+      "bytes": 12881
+    },
+    {
+      "path": "exam3-content.json",
+      "before": "f5bccf5322b0a43b431c1089e009a12341c12a5c6919f377653a1a3ccfc064a3",
+      "after": "38c79c85344a7e35b235bcff8c9933e803dce5abc2f91c0b0bf349d4620d0d3d",
+      "bytes": 668519
+    },
+    {
+      "path": "study-guide-version.json",
+      "before": "bebd4a8d4c2a699cbf2e18a781850c9bf011faae567a76b68f5855d9c2713af1",
+      "after": "3d88d51316da384f7ed6903eba7b48a3942a5951b482eff11a21d295b75bbf72",
+      "bytes": 844
+    },
+    {
+      "path": "tests/validate-study-guide.py",
+      "before": "2254279e72442675a72842ea53fa68ea4021b80d8fa9ad19c753e51fc862d600",
+      "after": "1f7756551b4ec66e4a02abe8e0d78c97b6f8852aba901ee8cb49e00e8485b792",
+      "bytes": 2615
+    },
+    {
+      "path": "tests/anatomy-browser.py",
+      "before": null,
+      "after": "402379dff41da8d21692a4e2639ba51bdf86e5c3939e22c37515b23fd62efd7e",
+      "bytes": 6956
+    },
+    {
+      "path": "tests/study-guide-browser.cjs",
+      "before": "cc45f7e9084940f2adaf691dd59befbf62484ae653cb5c6dd2e6505a9dca3c57",
+      "after": "9efa1eef6258391ea0aae38b586e1983c3cd0b9bb7a65e9e1df8011a4ba2edb5",
+      "bytes": 7036
+    },
+    {
+      "path": "assets/anatomy/action-potential.webp",
+      "before": null,
+      "after": "a6a66b008b0b09f23b4386cb0d4557bd69d43c6359c59dbc49bebfc197fa2650",
+      "bytes": 97786
+    },
+    {
+      "path": "assets/anatomy/cord-histology-labeled.webp",
+      "before": null,
+      "after": "27f2e5568833763c99977539f1f4cd6a160a8b79607bf3d79b414e7659cee183",
+      "bytes": 136364
+    },
+    {
+      "path": "assets/anatomy/cord-histology.webp",
+      "before": null,
+      "after": "d4a2442b6f0cfa0a298fe9687785b034e72bbbed4fb41a821e414884db407534",
+      "bytes": 51842
+    },
+    {
+      "path": "assets/anatomy/cord-overview-labeled.webp",
+      "before": null,
+      "after": "f9ea05d90f000a60e973db1aeb54da4f19ee1c82e6cd77011fe4f8711975b3e7",
+      "bytes": 107128
+    },
+    {
+      "path": "assets/anatomy/cord-overview.webp",
+      "before": null,
+      "after": "befe946af1a27b812b271a94e0e390e195505a8fff6fb65c2dd2a511aae2ebf1",
+      "bytes": 44968
+    },
+    {
+      "path": "assets/anatomy/cord-section-labeled.webp",
+      "before": null,
+      "after": "95994ea59742324b75c8ca7a1d3d6cfb79d3d12912f7491b5eedf747e7f5a070",
+      "bytes": 130020
+    },
+    {
+      "path": "assets/anatomy/cord-section.webp",
+      "before": null,
+      "after": "31c21753ded8000e2ee877eabab5649b1764de641e042a021ae76352ceb95b7c",
+      "bytes": 23046
+    },
+    {
+      "path": "assets/anatomy/cord-specimen-labeled.webp",
+      "before": null,
+      "after": "25ee08892264d29421522849e0971d3fdd66031f60a6fb1da2b7c6df342d5bab",
+      "bytes": 66844
+    },
+    {
+      "path": "assets/anatomy/cord-specimen.webp",
+      "before": null,
+      "after": "57522e071311fb1b29ffd849cb514d0ba5d6ccc62278b8c68ebd867e59f324c3",
+      "bytes": 35718
+    },
+    {
+      "path": "assets/anatomy/crossed-reflex.webp",
+      "before": null,
+      "after": "8d1d4d274aa6fa4bb646c4192c34c6be237d91a2d7cd4c3469c77dd4938109cb",
+      "bytes": 154590
+    },
+    {
+      "path": "assets/anatomy/meninges.webp",
+      "before": null,
+      "after": "abd106fac1a95644aa9198d21e9ec2b0c6a39565c9b8f869eb9e762376a8f118",
+      "bytes": 26420
+    },
+    {
+      "path": "assets/anatomy/myelin.webp",
+      "before": null,
+      "after": "8cc448b5906c966f69e608dc6e20015edbdd67229731bca1e31f8661f1de2747",
+      "bytes": 14018
+    },
+    {
+      "path": "assets/anatomy/neuron.webp",
+      "before": null,
+      "after": "9a4ea2066b87c1b3632bb958c4c5bfc4da1e15ac86532b08a0943900548cbef4",
+      "bytes": 41220
+    },
+    {
+      "path": "assets/anatomy/reflex-arc.webp",
+      "before": null,
+      "after": "b6e290e3aec8eef8e416eee28598756a572e10cf6847d38f1b7de4c32bcd0a4e",
+      "bytes": 121454
+    },
+    {
+      "path": "assets/anatomy/stretch-reflex.webp",
+      "before": null,
+      "after": "750ed81d88f96112a8427f4b59b02c970c1f34d248538ad8b9fea80e7106749f",
+      "bytes": 106094
+    },
+    {
+      "path": "assets/anatomy/synapse.webp",
+      "before": null,
+      "after": "a1228f402e374420e4408fd7d592dced4cdc545f3723c35d4941653af14f0f9d",
+      "bytes": 38244
+    },
+    {
+      "path": "assets/anatomy/withdrawal-reflex.webp",
+      "before": null,
+      "after": "2f54bffb32b8ed4dfc79d24b1a71e45a8d0bbe908b53f5c1d06b55998afc6762",
+      "bytes": 92694
+    }
+  ]
+}
