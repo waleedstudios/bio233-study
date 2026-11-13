@@ -1,0 +1,75 @@
+name: Prepare Chapters 12-13 Study Guide
+on:
+  push:
+    branches: [study-guide-deck-20261113]
+    paths: [.github/workflows/import-study-guide.yml]
+permissions:
+  contents: write
+concurrency:
+  group: study-guide-import
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: study-guide-deck-20261113
+          fetch-depth: 0
+      - name: Fetch and verify reviewed update bundle
+        env:
+          BUNDLE_URL: https://at.adobe.com/W8jWdbHt6qQFFLQp
+        run: |
+          curl --fail --location --retry 3 "$BUNDLE_URL" -o "$RUNNER_TEMP/study-update.zip"
+          echo "6111c002794cf09a634692497ea1b7e5529f309f105fe7637540126db349051d  $RUNNER_TEMP/study-update.zip" | sha256sum --check
+          python - <<'PY'
+          import os,zipfile
+          from pathlib import Path
+          out=Path(os.environ['RUNNER_TEMP'])/'study-update'
+          with zipfile.ZipFile(Path(os.environ['RUNNER_TEMP'])/'study-update.zip') as z:
+              assert sum(i.file_size for i in z.infolist()) < 250_000_000
+              for i in z.infolist():
+                  p=Path(i.filename)
+                  assert not p.is_absolute() and '..' not in p.parts
+                  assert (i.external_attr >> 16) & 0o170000 != 0o120000
+              z.extractall(out)
+          PY
+      - name: Apply targeted update and validate content
+        run: |
+          python "$RUNNER_TEMP/study-update/patch_site.py" "$GITHUB_WORKSPACE"
+          python tests/validate-study-guide.py
+          node --input-type=module --check < studio.js
+          node --input-type=module --check < study-guide.js
+      - name: Install browser test runner
+        run: |
+          npm install --prefix "$RUNNER_TEMP/pw" playwright@1.51.1
+          "$RUNNER_TEMP/pw/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Test the complete deck and study flows
+        env:
+          NODE_PATH: ${{ runner.temp }}/pw/node_modules
+        run: |
+          python -m http.server 8765 > "$RUNNER_TEMP/study-http.log" 2>&1 &
+          node tests/study-guide-browser.cjs
+      - name: Commit verified update to review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html studio.js exam3-content.json study-guide.js study-guide.css study-guide-data.json study-guide-version.json assets/ch12-13 downloads/BIO233_Ch12-13_Study_Guide.pptx downloads/BIO233_Ch12-13_Study_Guide.pdf downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf tests/validate-study-guide.py tests/study-guide-browser.cjs
+          git diff --cached --stat
+          git commit -m "Publish 117-slide study guide, Study Assistance Sheet, 351 questions and 376 flashcards"
+          git push origin HEAD:study-guide-deck-20261113
+      - name: Preserve browser verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-guide-verification
+          path: |
+            qa/
+            index.html
+            studio.js
+            studio.css
+            study-engine.mjs
+            anatomy.mjs
+            study-guide-version.json
+          retention-days: 7
