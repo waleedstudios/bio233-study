@@ -1,0 +1,23 @@
+{
+  "version": "deck-20261113",
+  "counts": {
+    "slides": 117,
+    "topics": 30,
+    "questions": 351,
+    "cards": 376,
+    "types": {
+      "recall": 157,
+      "single": 165,
+      "multiple": 15,
+      "sequence": 14
+    }
+  },
+  "legacySha256": {
+    "exam1.html": "854e249cce674108a9c38d5ed6f503240007ffbc7ca9d45afffa985645ad3a3d",
+    "lab.html": "dc0801eaa1fe5a07dc05f02f772bdc0666851d4a64065e2b9076ac750f7e95ca",
+    "exam2-lab.html": "c88fdb771d88d016b452192af06fbdeb85873e18276083ce5e683fb49f0cf4aa",
+    "modern.html": "4c6424bb534711d505e774f273ba5cf25a9534a6109163af4d81e32eb55111f8",
+    "study-engine.mjs": "fa5231c3d80155483eb50032d3510544b92cd7fe97e7f69624ef42179a19d769",
+    "anatomy.mjs": "3dfd6d2a7be99797bcb73c8a4b0028403c2529b3486740d92707cf12df6054eb"
+  }
+}
