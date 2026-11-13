@@ -22,10 +22,10 @@ jobs:
           python-version: '3.12'
       - name: Fetch and verify reviewed update
         env:
-          BUNDLE_URL: https://at.adobe.com/wM1jWl9hCcDMB2F7
+          BUNDLE_URL: https://at.adobe.com/Ax70hFQ6dnLtCS2n
         run: |
           curl --fail --location --retry 3 "$BUNDLE_URL" -o "$RUNNER_TEMP/anatomy-update.zip"
-          echo "79a3a30dfa5b349b74bbdbb2997d50b3a746fa6f670c6bcdfb1dc1a4305fb68a  $RUNNER_TEMP/anatomy-update.zip" | sha256sum --check
+          echo "19e6d2879101b028b7db18b5f9e172ac031f19ac4cab7cf29ca7093191e72d95  $RUNNER_TEMP/anatomy-update.zip" | sha256sum --check
           python - <<'PY'
           import zipfile,os
           from pathlib import Path
