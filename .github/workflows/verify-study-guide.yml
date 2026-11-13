@@ -1,0 +1,67 @@
+name: Verify Study Guide Publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - studio.js
+      - study-guide*
+      - exam3-content.json
+      - assets/ch12-13/**
+      - downloads/BIO233_Ch12-13_*
+      - tests/*study-guide*
+      - .github/workflows/verify-study-guide.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate content and script syntax
+        run: |
+          python tests/validate-study-guide.py
+          node --input-type=module --check < studio.js
+          node --input-type=module --check < study-guide.js
+      - name: Verify published pages and exact download bytes
+        env:
+          SITE_URL: https://waleedstudios.github.io/bio233-study/
+        run: |
+          python - <<'PY'
+          import os,json,time,hashlib,urllib.request
+          from pathlib import Path
+          base=os.environ['SITE_URL']
+          version=json.loads(Path('study-guide-version.json').read_text())
+          def get(path):
+              request=urllib.request.Request(base+path,headers={'Cache-Control':'no-cache','User-Agent':'BIO233-Publication-Verification'})
+              with urllib.request.urlopen(request,timeout=40) as response:
+                  assert response.status==200
+                  return response.read()
+          for attempt in range(30):
+              try:
+                  published=json.loads(get('study-guide-version.json?verify='+os.environ['GITHUB_SHA']))
+                  assert published['version']==version['version']
+                  assert published['counts']==version['counts']
+                  break
+              except Exception as exc:
+                  if attempt==29:raise
+                  print('Waiting for GitHub Pages publication:',type(exc).__name__,flush=True)
+                  time.sleep(10)
+          index=get('index.html').decode()
+          assert 'data-route="guide"' in index and 'data-route="assistance"' in index
+          report={'status':'PASS','version':version['version'],'counts':version['counts'],'verified':[]}
+          for path in ['downloads/BIO233_Ch12-13_Study_Guide.pptx','downloads/BIO233_Ch12-13_Study_Guide.pdf','downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf','study-guide-data.json','exam3-content.json']:
+              content=get(path)
+              assert hashlib.sha256(content).hexdigest()==hashlib.sha256(Path(path).read_bytes()).hexdigest(),path
+              report['verified'].append({'path':path,'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()})
+          for path in ['assets/ch12-13/slides/slide-001.webp','assets/ch12-13/slides/slide-028.webp','assets/ch12-13/slides/slide-073.webp','assets/ch12-13/slides/slide-117.webp','exam1.html','lab.html','exam2-lab.html']:
+              assert len(get(path))>100
+          Path('publication-report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: study-guide-publication-report
+          path: publication-report.json
+          retention-days: 14

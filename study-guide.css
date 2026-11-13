@@ -1,0 +1,31 @@
+/* Additive styles: retain the existing Studio theme, sidebar and legacy pages. */
+.guide-banner { margin: 0 0 28px; border: 1px solid var(--line); border-left: 5px solid #087e89; }
+.guide-banner h2 { margin: 8px 0; }
+.guide-downloads { margin: 0 0 24px; flex-wrap: wrap; gap: 10px; }
+.guide-start { display: grid; grid-template-columns: minmax(240px, 1.05fr) 1fr; gap: 28px; align-items: center; }
+.guide-start img { width: 100%; height: auto; border-radius: 12px; }
+.guide-slide-title { font-size: clamp(1.4rem, 2.5vw, 2.4rem); line-height: 1.2; margin: 10px 0; }
+.guide-toolbar { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+.guide-toolbar .row { gap: 8px; flex-wrap: wrap; }
+.guide-toolbar input { width: 76px; padding: 10px; min-width: 60px; }
+.guide-slide-stage { background: #f4f7fa; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+.guide-slide-stage img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: contain; }
+.fullscreen-controls { display: none; }
+.guide-slide-stage:fullscreen { width: 100vw; height: 100vh; background: #101724; border: 0; border-radius: 0; display: flex; flex-direction: column; justify-content: center; }
+.guide-slide-stage:fullscreen img { height: calc(100vh - 58px); width: 100vw; }
+.guide-slide-stage:fullscreen .fullscreen-controls { display: flex; gap: 16px; justify-content: center; align-items: center; height: 58px; color: white; }
+.guide-detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(235px, 320px); gap: 22px; margin-top: 24px; }
+.guide-side { display: flex; flex-direction: column; gap: 14px; align-self: start; }
+.guide-side h2, .guide-side p { margin: 0; }
+.guide-side select { width: 100%; }
+.slide-text p { line-height: 1.65; overflow-wrap: anywhere; }
+.source-caution { border-left: 4px solid #c49339; margin-top: 20px; }
+.source-caution p { line-height: 1.6; }
+.source-ref a { text-decoration: underline; }
+.assistance-preview { display: block; width: 100%; height: min(760px, 82vh); border: 1px solid var(--line); border-radius: 14px; margin: 22px 0; background: white; }
+.assistance-rules p { line-height: 1.65; }
+.topic-tile.compact { padding: 20px; }
+.question-source-link { margin: 14px 0; }
+@media(max-width:900px){.guide-start,.guide-detail-grid{grid-template-columns:1fr;}.guide-side{display:grid;grid-template-columns:1fr 1fr;}.guide-side h2,.guide-side p,.guide-side label,.guide-side select{grid-column:1/-1;}}
+@media(max-width:600px){.guide-toolbar{display:block;}.guide-toolbar>.row{margin-bottom:10px;}.guide-toolbar .row button,.guide-toolbar .row a{padding:10px 11px;}.guide-side{display:flex;}.guide-downloads{display:flex;flex-direction:column;align-items:stretch;}.guide-start{padding:16px;}.guide-slide-stage{border-radius:8px;}.assistance-preview{height:65vh;}}
+@media print {.sidebar,.topbar,.guide-toolbar,.guide-downloads,.guide-side,footer{display:none!important;}.workspace{margin:0!important;}.guide-slide-stage{break-inside:avoid;}}
