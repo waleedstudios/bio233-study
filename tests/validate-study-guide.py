@@ -18,7 +18,7 @@ for t in c['topics']:
    if q['type']=='single':assert len(q['answer'])==1 and len(q['explanations'])==len(q['options'])
    if q['type']=='sequence':assert sorted(q['answer'])==list(range(len(q['options'])))
  card_count+=len(t['cards'])
-assert len(ids)==len(set(ids))==c['counts']['questions']==351
+assert len(ids)==len(set(ids))==c['counts']['questions']==390
 assert card_count==c['counts']['cards']==376
 assert len(c['topics'])==30
 for s in d['slides']:
@@ -34,4 +34,4 @@ for name in ['index.html','studio.js','study-guide.js','study-guide.css','study-
 for path,sha in v['legacySha256'].items():assert hashlib.sha256((R/path).read_bytes()).hexdigest()==sha,path
 index=(R/'index.html').read_text();assert 'data-route="guide"' in index and 'data-route="assistance"' in index
 js=(R/'studio.js').read_text();assert "bio233-studio-deck-20261113" in js and 'visual-neuron-' not in js
-print('PASS: 117 slides; 30 sections; 351 valid source-linked questions; 376 flashcards; complete conceptual-slide coverage; legacy hashes unchanged.')
+print('PASS: 117 slides; 30 sections; 390 valid source-linked questions; 376 flashcards; complete conceptual-slide coverage; legacy hashes unchanged.')

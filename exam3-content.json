@@ -78,6 +78,12 @@
       "title": "BIO 233 lecture transcript — November 10, 2026",
       "pages": null,
       "note": "User-supplied automatic transcript. Used to select additional practice topics; anatomical wording checked against the supplied textbook and handouts. Section labels are descriptive, not verified audio timestamps."
+    },
+    {
+      "id": "course-atlas",
+      "title": "Original anatomical figures and specimen images from the supplied course sources",
+      "pages": null,
+      "note": "Extracted without generating or repainting anatomy. Each identification question gives its original figure/page and review-deck slide. Illustrations, photographs and micrographs are explicitly distinguished."
     }
   ],
   "topics": [
@@ -1612,6 +1618,366 @@
           "slide": 12,
           "priority": "core",
           "sheetSection": "Organization + cells"
+        },
+        {
+          "id": "source-label-neuron-01",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "neuron",
+          "part": 0,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Branched receptive processes. The supplied chapter describes graded input on dendrites and the cell body."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-02",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "neuron",
+          "part": 1,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The soma supports the cell and contains the nucleus. Perikaryon refers to the cytoplasm around the nucleus."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-03",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "neuron",
+          "part": 2,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The large round structure inside the soma contains genetic material. It is not the whole cell body."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-04",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "neuron",
+          "part": 3,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The tapered region where the axon arises from the cell body; distinguish it from the initial segment just beyond it."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-05",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 5.",
+          "figureId": "neuron",
+          "part": 4,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            4
+          ],
+          "explanations": [
+            "The beginning of the axon next to the hillock; the course emphasizes action-potential initiation near this region."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-06",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 6.",
+          "figureId": "neuron",
+          "part": 5,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The long process carries propagated action potentials toward its terminals."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-07",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 7.",
+          "figureId": "neuron",
+          "part": 6,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon collateral"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "A side branch along the axon allows one neuron to contact additional targets."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-08",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 8.",
+          "figureId": "neuron",
+          "part": 7,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Telodendria"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "Fine terminal branches of the axon. Distinguish the branches from the knobs at their ends."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-09",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 9.",
+          "figureId": "neuron",
+          "part": 8,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Axon terminal"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The expanded end of a branch communicates at a synapse. Chemical terminals release neurotransmitter."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-neuron-10",
+          "type": "label",
+          "prompt": "Neuron anatomy: identify the structure at the red endpoint of pointer 10.",
+          "figureId": "neuron",
+          "part": 9,
+          "options": [
+            "Dendrites",
+            "Cell body (soma)",
+            "Nucleus",
+            "Axon hillock",
+            "Initial segment",
+            "Postsynaptic cell"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The purple receiving cell is separate from the blue presynaptic neuron."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                9
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393."
+            }
+          ],
+          "slide": 9,
+          "priority": "core"
         }
       ],
       "slides": [
@@ -2634,6 +3000,142 @@
           "slide": 18,
           "priority": "core",
           "sheetSection": "Glia + myelin"
+        },
+        {
+          "id": "source-label-myelin-01",
+          "type": "label",
+          "prompt": "Myelinated axon: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "myelin",
+          "part": 0,
+          "options": [
+            "Myelin sheath",
+            "Node of Ranvier",
+            "Initial segment",
+            "Cell body (soma)"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The insulating wrapping around an axon. In saltatory propagation, action potentials are regenerated at the exposed nodes."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                15
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 415, Figure 12–14b (axon illustration); Chapter 12 lecture 3, PDF p. 1."
+            }
+          ],
+          "slide": 15,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-myelin-02",
+          "type": "label",
+          "prompt": "Myelinated axon: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "myelin",
+          "part": 1,
+          "options": [
+            "Myelin sheath",
+            "Node of Ranvier",
+            "Initial segment",
+            "Cell body (soma)"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "An exposed gap between neighboring myelinated internodes."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                15
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 415, Figure 12–14b (axon illustration); Chapter 12 lecture 3, PDF p. 1."
+            }
+          ],
+          "slide": 15,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-myelin-03",
+          "type": "label",
+          "prompt": "Myelinated axon: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "myelin",
+          "part": 2,
+          "options": [
+            "Myelin sheath",
+            "Node of Ranvier",
+            "Initial segment",
+            "Cell body (soma)"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The unmyelinated initial region before the first myelin segment."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                15
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 415, Figure 12–14b (axon illustration); Chapter 12 lecture 3, PDF p. 1."
+            }
+          ],
+          "slide": 15,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-myelin-04",
+          "type": "label",
+          "prompt": "Myelinated axon: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "myelin",
+          "part": 3,
+          "options": [
+            "Myelin sheath",
+            "Node of Ranvier",
+            "Initial segment",
+            "Cell body (soma)"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The soma contains the nucleus and supports the neuron’s metabolic activity."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                15
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 415, Figure 12–14b (axon illustration); Chapter 12 lecture 3, PDF p. 1."
+            }
+          ],
+          "slide": 15,
+          "priority": "core"
         }
       ],
       "slides": [
@@ -5510,6 +6012,142 @@
           "slide": 41,
           "priority": "core",
           "sheetSection": "Synapses + summation"
+        },
+        {
+          "id": "source-label-synapse-01",
+          "type": "label",
+          "prompt": "Chemical synapse: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "synapse",
+          "part": 0,
+          "options": [
+            "Synaptic vesicles",
+            "Mitochondrion",
+            "Synaptic cleft",
+            "Presynaptic axon terminal"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Small round vesicles store neurotransmitter inside the presynaptic terminal."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                38
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 3, PDF p. 1, Figure 12–15; textbook p. 417."
+            }
+          ],
+          "slide": 38,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-synapse-02",
+          "type": "label",
+          "prompt": "Chemical synapse: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "synapse",
+          "part": 1,
+          "options": [
+            "Synaptic vesicles",
+            "Mitochondrion",
+            "Synaptic cleft",
+            "Presynaptic axon terminal"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The elongated organelle with folded inner membranes supports the terminal’s energy needs."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                38
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 3, PDF p. 1, Figure 12–15; textbook p. 417."
+            }
+          ],
+          "slide": 38,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-synapse-03",
+          "type": "label",
+          "prompt": "Chemical synapse: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "synapse",
+          "part": 2,
+          "options": [
+            "Synaptic vesicles",
+            "Mitochondrion",
+            "Synaptic cleft",
+            "Presynaptic axon terminal"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The narrow gap separating the presynaptic and postsynaptic membranes."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                38
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 3, PDF p. 1, Figure 12–15; textbook p. 417."
+            }
+          ],
+          "slide": 38,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-synapse-04",
+          "type": "label",
+          "prompt": "Chemical synapse: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "synapse",
+          "part": 3,
+          "options": [
+            "Synaptic vesicles",
+            "Mitochondrion",
+            "Synaptic cleft",
+            "Presynaptic axon terminal"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The expanded ending of the sending neuron contains vesicles and releases neurotransmitter."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                38
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Chapter 12 lecture 3, PDF p. 1, Figure 12–15; textbook p. 417."
+            }
+          ],
+          "slide": 38,
+          "priority": "core"
         }
       ],
       "slides": [
@@ -7236,6 +7874,181 @@
           "slide": 54,
           "priority": "lecture",
           "sheetSection": "Cord anatomy"
+        },
+        {
+          "id": "source-label-spinal-01",
+          "type": "label",
+          "prompt": "Spinal cord overview: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "spinal",
+          "part": 0,
+          "options": [
+            "Cervical enlargement",
+            "Lumbosacral enlargement",
+            "Conus medullaris",
+            "Cauda equina",
+            "Filum terminale"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The upper enlargement supplies the upper-limb region through associated spinal nerves."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                53
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3."
+            }
+          ],
+          "slide": 53,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-spinal-02",
+          "type": "label",
+          "prompt": "Spinal cord overview: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "spinal",
+          "part": 1,
+          "options": [
+            "Cervical enlargement",
+            "Lumbosacral enlargement",
+            "Conus medullaris",
+            "Cauda equina",
+            "Filum terminale"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The lower enlargement gives rise to nerves associated with the lower limbs. The course also uses “lumbar enlargement.”"
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                53
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3."
+            }
+          ],
+          "slide": 53,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-spinal-03",
+          "type": "label",
+          "prompt": "Spinal cord overview: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "spinal",
+          "part": 2,
+          "options": [
+            "Cervical enlargement",
+            "Lumbosacral enlargement",
+            "Conus medullaris",
+            "Cauda equina",
+            "Filum terminale"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The tapered inferior end of the spinal cord proper; in the adult it is near vertebral levels L1–L2."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                53
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3."
+            }
+          ],
+          "slide": 53,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-spinal-04",
+          "type": "label",
+          "prompt": "Spinal cord overview: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "spinal",
+          "part": 3,
+          "options": [
+            "Cervical enlargement",
+            "Lumbosacral enlargement",
+            "Conus medullaris",
+            "Cauda equina",
+            "Filum terminale"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The bundle of descending nerve roots below the conus, not a continuation of solid spinal cord."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                53
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3."
+            }
+          ],
+          "slide": 53,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-spinal-05",
+          "type": "label",
+          "prompt": "Spinal cord overview: identify the structure at the red endpoint of pointer 5.",
+          "figureId": "spinal",
+          "part": 4,
+          "options": [
+            "Cervical enlargement",
+            "Lumbosacral enlargement",
+            "Conus medullaris",
+            "Cauda equina",
+            "Filum terminale"
+          ],
+          "answer": [
+            4
+          ],
+          "explanations": [
+            "The slender supporting extension descending from the conus toward the coccygeal attachment."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                53
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3."
+            }
+          ],
+          "slide": 53,
+          "priority": "core"
         }
       ],
       "slides": [
@@ -8175,6 +8988,574 @@
           "slide": 60,
           "priority": "lecture",
           "sheetSection": "Roots, rami + plexuses"
+        },
+        {
+          "id": "source-label-section-01",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "section",
+          "part": 0,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "Posterior projections of gray matter contain sensory processing nuclei in the course diagram. Posterior is at the top."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-02",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "section",
+          "part": 1,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The lateral projection of gray matter contains visceral motor nuclei at the levels illustrated in the source."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-03",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "section",
+          "part": 2,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The broad anterior gray horn contains somatic motor neuron cell bodies."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-04",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "section",
+          "part": 3,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The small central opening contains cerebrospinal fluid."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-05",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 5.",
+          "figureId": "section",
+          "part": 4,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            4
+          ],
+          "explanations": [
+            "White matter between the posterior horns and the posterior median sulcus."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-06",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 6.",
+          "figureId": "section",
+          "part": 5,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Lateral white column"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "White matter lateral to the gray horns, containing longitudinal axon tracts."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-07",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 7.",
+          "figureId": "section",
+          "part": 6,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Anterior white column"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "White matter anterior to the gray horns, alongside the anterior median fissure."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-08",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 8.",
+          "figureId": "section",
+          "part": 7,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Posterior median sulcus"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The shallow posterior midline groove. Posterior is the upper edge in this source figure."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-09",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 9.",
+          "figureId": "section",
+          "part": 8,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Anterior median fissure"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The deeper anterior midline cleft, shown at the bottom of the figure."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-10",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 10.",
+          "figureId": "section",
+          "part": 9,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Posterior (dorsal) root"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "Sensory fibers travel toward the spinal cord through the posterior root."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-11",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 11.",
+          "figureId": "section",
+          "part": 10,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Dorsal root ganglion"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "The swelling on the sensory root contains sensory neuron cell bodies in the PNS."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-section-12",
+          "type": "label",
+          "prompt": "Spinal cord cross-section: identify the structure at the red endpoint of pointer 12.",
+          "figureId": "section",
+          "part": 11,
+          "options": [
+            "Posterior gray horn",
+            "Lateral gray horn",
+            "Anterior gray horn",
+            "Central canal",
+            "Posterior white column",
+            "Anterior (ventral) root"
+          ],
+          "answer": [
+            5
+          ],
+          "explanations": [
+            "Motor axons leave the cord through the ventral root. This root has no dorsal-root-type sensory ganglion."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-histology-01",
+          "type": "label",
+          "prompt": "Cord histology: identify the structure at the red endpoint of pointer 1.",
+          "figureId": "histology",
+          "part": 0,
+          "options": [
+            "Gray matter",
+            "White matter",
+            "Central canal",
+            "Anterior median fissure"
+          ],
+          "answer": [
+            0
+          ],
+          "explanations": [
+            "The darker butterfly-shaped central tissue includes gray horns and neuronal cell bodies."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5b: transverse spinal-cord micrograph. Posterior is at the top."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-histology-02",
+          "type": "label",
+          "prompt": "Cord histology: identify the structure at the red endpoint of pointer 2.",
+          "figureId": "histology",
+          "part": 1,
+          "options": [
+            "Gray matter",
+            "White matter",
+            "Central canal",
+            "Anterior median fissure"
+          ],
+          "answer": [
+            1
+          ],
+          "explanations": [
+            "The paler outer tissue surrounds the central gray matter and contains many axons."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5b: transverse spinal-cord micrograph. Posterior is at the top."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-histology-03",
+          "type": "label",
+          "prompt": "Cord histology: identify the structure at the red endpoint of pointer 3.",
+          "figureId": "histology",
+          "part": 2,
+          "options": [
+            "Gray matter",
+            "White matter",
+            "Central canal",
+            "Anterior median fissure"
+          ],
+          "answer": [
+            2
+          ],
+          "explanations": [
+            "The tiny opening near the center of the gray commissure."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5b: transverse spinal-cord micrograph. Posterior is at the top."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
+        },
+        {
+          "id": "source-label-histology-04",
+          "type": "label",
+          "prompt": "Cord histology: identify the structure at the red endpoint of pointer 4.",
+          "figureId": "histology",
+          "part": 3,
+          "options": [
+            "Gray matter",
+            "White matter",
+            "Central canal",
+            "Anterior median fissure"
+          ],
+          "answer": [
+            3
+          ],
+          "explanations": [
+            "The deep cleft on the anterior, lower side of this section."
+          ],
+          "hint": "Follow the pointer to its small red endpoint. Use the location and surrounding anatomy rather than the number bubble.",
+          "sources": [
+            {
+              "id": "review-deck",
+              "pages": [
+                58
+              ]
+            },
+            {
+              "id": "course-atlas",
+              "location": "Textbook p. 441, Figure 13–5b: transverse spinal-cord micrograph. Posterior is at the top."
+            }
+          ],
+          "slide": 58,
+          "priority": "core"
         }
       ],
       "slides": [
@@ -14216,13 +15597,14 @@
   "counts": {
     "slides": 117,
     "topics": 30,
-    "questions": 351,
+    "questions": 390,
     "cards": 376,
     "types": {
       "recall": 157,
       "single": 165,
       "multiple": 15,
-      "sequence": 14
+      "sequence": 14,
+      "label": 39
     }
   }
 }

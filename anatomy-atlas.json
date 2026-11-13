@@ -1,0 +1,421 @@
+{
+  "version": "anatomy-20261113",
+  "figures": {
+    "neuron": {
+      "id": "neuron",
+      "title": "Neuron anatomy",
+      "width": 934,
+      "height": 435,
+      "image": "assets/anatomy/neuron.webp",
+      "chapter": 12,
+      "topic": "deck-neurons",
+      "slide": 9,
+      "source": "Chapter 12 lecture 1, PDF p. 2, Figure 12–2b; textbook p. 393.",
+      "kind": "Anatomical illustration",
+      "reference": null,
+      "parts": [
+        {
+          "name": "Dendrites",
+          "x": 70,
+          "y": 104,
+          "bx": 40,
+          "by": 20,
+          "text": "Branched receptive processes. The supplied chapter describes graded input on dendrites and the cell body."
+        },
+        {
+          "name": "Cell body (soma)",
+          "x": 198,
+          "y": 253,
+          "bx": 307,
+          "by": 343,
+          "text": "The soma supports the cell and contains the nucleus. Perikaryon refers to the cytoplasm around the nucleus."
+        },
+        {
+          "name": "Nucleus",
+          "x": 159,
+          "y": 198,
+          "bx": 59,
+          "by": 326,
+          "text": "The large round structure inside the soma contains genetic material. It is not the whole cell body."
+        },
+        {
+          "name": "Axon hillock",
+          "x": 255,
+          "y": 207,
+          "bx": 331,
+          "by": 97,
+          "text": "The tapered region where the axon arises from the cell body; distinguish it from the initial segment just beyond it."
+        },
+        {
+          "name": "Initial segment",
+          "x": 312,
+          "y": 215,
+          "bx": 365,
+          "by": 310,
+          "text": "The beginning of the axon next to the hillock; the course emphasizes action-potential initiation near this region."
+        },
+        {
+          "name": "Axon",
+          "x": 480,
+          "y": 208,
+          "bx": 485,
+          "by": 102,
+          "text": "The long process carries propagated action potentials toward its terminals."
+        },
+        {
+          "name": "Axon collateral",
+          "x": 551,
+          "y": 177,
+          "bx": 642,
+          "by": 92,
+          "text": "A side branch along the axon allows one neuron to contact additional targets."
+        },
+        {
+          "name": "Telodendria",
+          "x": 781,
+          "y": 239,
+          "bx": 710,
+          "by": 355,
+          "text": "Fine terminal branches of the axon. Distinguish the branches from the knobs at their ends."
+        },
+        {
+          "name": "Axon terminal",
+          "x": 779,
+          "y": 296,
+          "bx": 852,
+          "by": 395,
+          "text": "The expanded end of a branch communicates at a synapse. Chemical terminals release neurotransmitter."
+        },
+        {
+          "name": "Postsynaptic cell",
+          "x": 890,
+          "y": 298,
+          "bx": 889,
+          "by": 99,
+          "text": "The purple receiving cell is separate from the blue presynaptic neuron."
+        }
+      ]
+    },
+    "myelin": {
+      "id": "myelin",
+      "title": "Myelinated axon",
+      "width": 413,
+      "height": 189,
+      "image": "assets/anatomy/myelin.webp",
+      "chapter": 12,
+      "topic": "deck-glia",
+      "slide": 15,
+      "source": "Textbook p. 415, Figure 12–14b (axon illustration); Chapter 12 lecture 3, PDF p. 1.",
+      "kind": "Anatomical illustration",
+      "reference": null,
+      "parts": [
+        {
+          "name": "Myelin sheath",
+          "x": 229,
+          "y": 94,
+          "bx": 235,
+          "by": 26,
+          "text": "The insulating wrapping around an axon. In saltatory propagation, action potentials are regenerated at the exposed nodes."
+        },
+        {
+          "name": "Node of Ranvier",
+          "x": 208,
+          "y": 97,
+          "bx": 207,
+          "by": 161,
+          "text": "An exposed gap between neighboring myelinated internodes."
+        },
+        {
+          "name": "Initial segment",
+          "x": 153,
+          "y": 98,
+          "bx": 152,
+          "by": 160,
+          "text": "The unmyelinated initial region before the first myelin segment."
+        },
+        {
+          "name": "Cell body (soma)",
+          "x": 85,
+          "y": 89,
+          "bx": 53,
+          "by": 20,
+          "text": "The soma contains the nucleus and supports the neuron’s metabolic activity."
+        }
+      ]
+    },
+    "spinal": {
+      "id": "spinal",
+      "title": "Spinal cord overview",
+      "width": 299,
+      "height": 719,
+      "image": "assets/anatomy/cord-overview.webp",
+      "chapter": 13,
+      "topic": "deck-cord-gross",
+      "slide": 53,
+      "source": "Textbook p. 436, Figure 13–2a; Chapter 13 lecture 1, PDF pp. 1–3.",
+      "kind": "Anatomical illustration",
+      "reference": null,
+      "parts": [
+        {
+          "name": "Cervical enlargement",
+          "x": 145,
+          "y": 158,
+          "bx": 244,
+          "by": 127,
+          "text": "The upper enlargement supplies the upper-limb region through associated spinal nerves."
+        },
+        {
+          "name": "Lumbosacral enlargement",
+          "x": 145,
+          "y": 365,
+          "bx": 241,
+          "by": 333,
+          "text": "The lower enlargement gives rise to nerves associated with the lower limbs. The course also uses “lumbar enlargement.”"
+        },
+        {
+          "name": "Conus medullaris",
+          "x": 145,
+          "y": 399,
+          "bx": 242,
+          "by": 423,
+          "text": "The tapered inferior end of the spinal cord proper; in the adult it is near vertebral levels L1–L2."
+        },
+        {
+          "name": "Cauda equina",
+          "x": 140,
+          "y": 474,
+          "bx": 245,
+          "by": 478,
+          "text": "The bundle of descending nerve roots below the conus, not a continuation of solid spinal cord."
+        },
+        {
+          "name": "Filum terminale",
+          "x": 148,
+          "y": 622,
+          "bx": 240,
+          "by": 654,
+          "text": "The slender supporting extension descending from the conus toward the coccygeal attachment."
+        }
+      ]
+    },
+    "section": {
+      "id": "section",
+      "title": "Spinal cord cross-section",
+      "width": 563,
+      "height": 252,
+      "image": "assets/anatomy/cord-section.webp",
+      "chapter": 13,
+      "topic": "deck-cord-section",
+      "slide": 58,
+      "source": "Textbook p. 441, Figure 13–5a; Chapter 13 lecture 1, PDF pp. 4–5.",
+      "kind": "Anatomical illustration",
+      "reference": "assets/anatomy/cord-section-labeled.webp",
+      "parts": [
+        {
+          "name": "Posterior gray horn",
+          "x": 213,
+          "y": 78,
+          "bx": 185,
+          "by": -15,
+          "text": "Posterior projections of gray matter contain sensory processing nuclei in the course diagram. Posterior is at the top."
+        },
+        {
+          "name": "Lateral gray horn",
+          "x": 205,
+          "y": 110,
+          "bx": 97,
+          "by": 51,
+          "text": "The lateral projection of gray matter contains visceral motor nuclei at the levels illustrated in the source."
+        },
+        {
+          "name": "Anterior gray horn",
+          "x": 228,
+          "y": 151,
+          "bx": 168,
+          "by": 248,
+          "text": "The broad anterior gray horn contains somatic motor neuron cell bodies."
+        },
+        {
+          "name": "Central canal",
+          "x": 285,
+          "y": 111,
+          "bx": 340,
+          "by": -14,
+          "text": "The small central opening contains cerebrospinal fluid."
+        },
+        {
+          "name": "Posterior white column",
+          "x": 259,
+          "y": 25,
+          "bx": 262,
+          "by": -17,
+          "text": "White matter between the posterior horns and the posterior median sulcus."
+        },
+        {
+          "name": "Lateral white column",
+          "x": 175,
+          "y": 116,
+          "bx": 127,
+          "by": 157,
+          "text": "White matter lateral to the gray horns, containing longitudinal axon tracts."
+        },
+        {
+          "name": "Anterior white column",
+          "x": 252,
+          "y": 181,
+          "bx": 241,
+          "by": 254,
+          "text": "White matter anterior to the gray horns, alongside the anterior median fissure."
+        },
+        {
+          "name": "Posterior median sulcus",
+          "x": 285,
+          "y": 33,
+          "bx": 429,
+          "by": -12,
+          "text": "The shallow posterior midline groove. Posterior is the upper edge in this source figure."
+        },
+        {
+          "name": "Anterior median fissure",
+          "x": 285,
+          "y": 191,
+          "bx": 355,
+          "by": 253,
+          "text": "The deeper anterior midline cleft, shown at the bottom of the figure."
+        },
+        {
+          "name": "Posterior (dorsal) root",
+          "x": 109,
+          "y": 41,
+          "bx": 70,
+          "by": -14,
+          "text": "Sensory fibers travel toward the spinal cord through the posterior root."
+        },
+        {
+          "name": "Dorsal root ganglion",
+          "x": 43,
+          "y": 108,
+          "bx": -18,
+          "by": 92,
+          "text": "The swelling on the sensory root contains sensory neuron cell bodies in the PNS."
+        },
+        {
+          "name": "Anterior (ventral) root",
+          "x": 137,
+          "y": 222,
+          "bx": 71,
+          "by": 250,
+          "text": "Motor axons leave the cord through the ventral root. This root has no dorsal-root-type sensory ganglion."
+        }
+      ]
+    },
+    "histology": {
+      "id": "histology",
+      "title": "Cord histology",
+      "width": 465,
+      "height": 299,
+      "image": "assets/anatomy/cord-histology.webp",
+      "chapter": 13,
+      "topic": "deck-cord-section",
+      "slide": 58,
+      "source": "Textbook p. 441, Figure 13–5b: transverse spinal-cord micrograph. Posterior is at the top.",
+      "kind": "Histological micrograph",
+      "reference": "assets/anatomy/cord-histology-labeled.webp",
+      "parts": [
+        {
+          "name": "Gray matter",
+          "x": 168,
+          "y": 111,
+          "bx": 80,
+          "by": 18,
+          "text": "The darker butterfly-shaped central tissue includes gray horns and neuronal cell bodies."
+        },
+        {
+          "name": "White matter",
+          "x": 140,
+          "y": 90,
+          "bx": 30,
+          "by": 56,
+          "text": "The paler outer tissue surrounds the central gray matter and contains many axons."
+        },
+        {
+          "name": "Central canal",
+          "x": 237,
+          "y": 125,
+          "bx": 287,
+          "by": 8,
+          "text": "The tiny opening near the center of the gray commissure."
+        },
+        {
+          "name": "Anterior median fissure",
+          "x": 235,
+          "y": 179,
+          "bx": 336,
+          "by": 272,
+          "text": "The deep cleft on the anterior, lower side of this section."
+        }
+      ]
+    },
+    "synapse": {
+      "id": "synapse",
+      "title": "Chemical synapse",
+      "width": 595,
+      "height": 459,
+      "image": "assets/anatomy/synapse.webp",
+      "chapter": 12,
+      "topic": "deck-synapses",
+      "slide": 38,
+      "source": "Chapter 12 lecture 3, PDF p. 1, Figure 12–15; textbook p. 417.",
+      "kind": "Anatomical illustration",
+      "reference": null,
+      "parts": [
+        {
+          "name": "Synaptic vesicles",
+          "x": 348,
+          "y": 281,
+          "bx": 434,
+          "by": 207,
+          "text": "Small round vesicles store neurotransmitter inside the presynaptic terminal."
+        },
+        {
+          "name": "Mitochondrion",
+          "x": 367,
+          "y": 209,
+          "bx": 453,
+          "by": 108,
+          "text": "The elongated organelle with folded inner membranes supports the terminal’s energy needs."
+        },
+        {
+          "name": "Synaptic cleft",
+          "x": 390,
+          "y": 337,
+          "bx": 435,
+          "by": 392,
+          "text": "The narrow gap separating the presynaptic and postsynaptic membranes."
+        },
+        {
+          "name": "Presynaptic axon terminal",
+          "x": 454,
+          "y": 302,
+          "bx": 534,
+          "by": 238,
+          "text": "The expanded ending of the sending neuron contains vesicles and releases neurotransmitter."
+        }
+      ]
+    },
+    "specimen": {
+      "id": "specimen",
+      "title": "Dissected spinal cord",
+      "width": 249,
+      "height": 383,
+      "image": "assets/anatomy/cord-specimen.webp",
+      "chapter": 13,
+      "topic": "deck-meninges",
+      "slide": 56,
+      "source": "Chapter 13 lecture 1, PDF p. 4, Figure 13–4; textbook p. 439: anterior view of a dissected cervical spinal cord.",
+      "kind": "Specimen photograph",
+      "reference": "assets/anatomy/cord-specimen-labeled.webp",
+      "parts": []
+    }
+  }
+}

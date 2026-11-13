@@ -1,0 +1,30 @@
+/* Source imagery has its own white viewing surface so tissue colors are never theme-inverted. */
+.anatomy-cover{margin:0;position:relative;background:#fff;border-radius:18px;padding:12px;overflow:hidden}
+.anatomy-cover svg{display:block;width:100%;height:auto;max-height:310px}
+.anatomy-cover figcaption{font-size:10px;line-height:1.4;color:#586478;text-align:center;margin:3px 0 0}
+.hero-art .anatomy-cover{width:100%;box-shadow:0 12px 34px #36305a12}.hero-note{display:none}
+.chapter-illustration .anatomy-cover{width:100%;height:100%;padding:18px 15px 8px;border-radius:0}
+.chapter-illustration .anatomy-cover svg{height:130px;max-height:140px;width:100%}
+.anatomy-cover-cord img{height:135px;width:100%;object-fit:contain;display:block}
+.chapter-number{z-index:1}.chapter-illustration{background:white}
+.source-signal{stroke:#efb447;stroke-width:7;stroke-linecap:round;stroke-dasharray:0 100;opacity:0}
+.source-signal.signal-running{stroke-dasharray:3 97;opacity:.9;animation:anatomy-signal 4s linear infinite}
+@keyframes anatomy-signal{0%{stroke-dashoffset:4;opacity:0}15%{opacity:.95}90%{opacity:.95}100%{stroke-dashoffset:-100;opacity:0}}
+.anatomy-motion{font-size:12px;margin-top:10px;padding:7px 12px;min-height:34px}
+.anatomy-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 20px}.anatomy-tabs button[aria-pressed=true]{background:var(--purple-light,#eee8ff);border-color:var(--purple,#8060d0);color:var(--purple,#6340c3)}
+.atlas-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(260px,1fr);gap:24px;align-items:start;margin-top:18px}
+.anatomy-image{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;min-width:0;display:flex;align-items:center;justify-content:center}
+.anatomy-image svg{width:100%;height:auto;max-height:610px;display:block}
+.anatomy-image.anatomy-portrait svg{height:610px;max-height:70vh;width:100%}
+.atlas-readout{min-width:0}.atlas-readout h3{margin:18px 0 8px}.atlas-readout p{line-height:1.7}.atlas-readout select{width:100%;margin-bottom:12px;min-height:44px}
+.atlas-readout .button{margin-top:18px}.atlas-readout .row{gap:8px;margin-top:18px;flex-wrap:wrap}
+.atlas-choices{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}.atlas-choices button{text-align:left;line-height:1.4;padding:10px 14px;min-height:42px}
+.anatomy-reference{margin-top:22px}.anatomy-reference img{display:block;width:auto;max-width:100%;height:auto;max-height:840px;background:white;object-fit:contain;margin:16px auto;border:1px solid var(--line);border-radius:10px}
+.anatomy-reference details{margin:12px 0}.source-animation{background:white;border:1px solid var(--line);border-radius:14px;padding:12px;margin:18px 0}
+.source-animation svg{width:100%;height:auto;display:block}.question-shell .anatomy-image{max-width:920px;margin:18px auto}.question-shell .anatomy-image svg{max-height:450px}
+.question-shell:has(.anatomy-image){max-width:1100px}
+.full-bank-notice{padding:14px 18px;margin:18px 0;border-radius:12px;background:var(--purple-light,#f1edff);line-height:1.6}
+.reduce-motion .source-signal{animation:none!important;opacity:0!important}
+@media(prefers-reduced-motion:reduce){.source-signal{animation:none!important;opacity:0!important}}
+@media(max-width:1000px){.atlas-layout{grid-template-columns:1fr}.anatomy-image svg{max-height:500px}.anatomy-image.anatomy-portrait svg{height:500px}.atlas-choices{display:grid;grid-template-columns:1fr 1fr}.source-animation{padding:4px}}
+@media(max-width:520px){.atlas-choices{grid-template-columns:1fr}.anatomy-tabs button{font-size:12px;padding:10px}.anatomy-image{border-radius:9px}.hero-art .anatomy-cover{padding:5px}.anatomy-cover figcaption{font-size:9px}}

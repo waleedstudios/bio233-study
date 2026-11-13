@@ -3,13 +3,14 @@
   "counts": {
     "slides": 117,
     "topics": 30,
-    "questions": 351,
+    "questions": 390,
     "cards": 376,
     "types": {
       "recall": 157,
       "single": 165,
       "multiple": 15,
-      "sequence": 14
+      "sequence": 14,
+      "label": 39
     }
   },
   "legacySha256": {
@@ -19,5 +20,6 @@
     "modern.html": "4c6424bb534711d505e774f273ba5cf25a9534a6109163af4d81e32eb55111f8",
     "study-engine.mjs": "fa5231c3d80155483eb50032d3510544b92cd7fe97e7f69624ef42179a19d769",
     "anatomy.mjs": "3dfd6d2a7be99797bcb73c8a4b0028403c2529b3486740d92707cf12df6054eb"
-  }
+  },
+  "featuresVersion": "anatomy-20261113"
 }
