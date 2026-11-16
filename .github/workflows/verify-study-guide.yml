@@ -15,6 +15,9 @@ on:
       - tests/*study-guide*
       - tests/anatomy-browser.py
       - .github/workflows/verify-study-guide.yml
+concurrency:
+  group: study-guide-publication-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -35,42 +38,82 @@ jobs:
           SITE_URL: https://waleedstudios.github.io/bio233-study/
         run: |
           python - <<'PY'
-          import os,json,time,hashlib,urllib.request
+          import hashlib
+          import json
+          import os
+          import time
+          import urllib.request
           from pathlib import Path
-          base=os.environ['SITE_URL']
-          version=json.loads(Path('study-guide-version.json').read_text())
-          def get(path):
-              request=urllib.request.Request(base+path,headers={'Cache-Control':'no-cache','User-Agent':'BIO233-Publication-Verification'})
-              with urllib.request.urlopen(request,timeout=40) as response:
-                  assert response.status==200
+
+          base = os.environ['SITE_URL']
+          revision = os.environ['GITHUB_SHA']
+          version_path = 'study-guide-version.json'
+          version = json.loads(Path(version_path).read_text())
+          paths = [
+              'downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf',
+              'index.html', 'studio.js',
+              'downloads/BIO233_Ch12-13_Study_Guide.pptx',
+              'downloads/BIO233_Ch12-13_Study_Guide.pdf',
+              'study-guide-data.json', 'exam3-content.json',
+              'real-anatomy.mjs', 'real-anatomy.css',
+              'anatomy-atlas.mjs', 'anatomy-atlas.json',
+          ]
+          paths += [p.as_posix() for p in sorted(Path('assets/anatomy').glob('*.webp'))]
+          expected = {path: hashlib.sha256(Path(path).read_bytes()).hexdigest() for path in paths}
+
+          def get(path, attempt):
+              request = urllib.request.Request(
+                  f'{base}{path}?verify={revision}-{attempt}',
+                  headers={'Cache-Control': 'no-cache', 'User-Agent': 'BIO233-Publication-Verification'},
+              )
+              with urllib.request.urlopen(request, timeout=20) as response:
                   return response.read()
-          for attempt in range(30):
+
+          class PublicationMismatch(Exception):
+              pass
+
+          deadline = time.monotonic() + 300
+          attempt = 0
+          while True:
+              attempt += 1
+              pending = version_path
               try:
-                  published=json.loads(get('study-guide-version.json?verify='+os.environ['GITHUB_SHA']))
-                  assert published['version']==version['version']
-                  assert published['counts']==version['counts']
-                  assert published.get('featuresVersion')==version.get('featuresVersion')
-                  assert hashlib.sha256(get('studio.js')).hexdigest()==hashlib.sha256(Path('studio.js').read_bytes()).hexdigest()
+                  published = json.loads(get(version_path, attempt))
+                  if any(published.get(key) != version.get(key) for key in ('version', 'counts', 'featuresVersion')):
+                      raise PublicationMismatch('the published version metadata differs')
+
+                  verified = []
+                  pages = {}
+                  for pending in paths:
+                      content = get(pending, attempt)
+                      digest = hashlib.sha256(content).hexdigest()
+                      if digest != expected[pending]:
+                          raise PublicationMismatch('the published file differs from this commit')
+                      verified.append({'path': pending, 'bytes': len(content), 'sha256': digest})
+                      if pending in ('index.html', 'studio.js'):
+                          pages[pending] = content.decode()
                   break
-              except Exception as exc:
-                  if attempt==29:raise
-                  print('Waiting for GitHub Pages publication:',type(exc).__name__,flush=True)
+              except (PublicationMismatch, OSError, json.JSONDecodeError) as exc:
+                  if time.monotonic() >= deadline:
+                      raise RuntimeError(f'GitHub Pages did not publish the expected {pending}: {exc}') from exc
+                  print(f'Waiting for GitHub Pages ({pending}): {exc}', flush=True)
                   time.sleep(10)
-          index=get('index.html').decode()
+
+          index = pages['index.html']
           assert 'data-route="guide"' in index and 'data-route="assistance"' in index
           assert 'real-anatomy.css' in index
-          js=get('studio.js').decode()
+          js = pages['studio.js']
           assert 'practice-count' not in js and 'practice-priority' not in js
           assert 'ids:shuffle(pool).map' in js
-          report={'status':'PASS','version':version['version'],'featuresVersion':version.get('featuresVersion'),'counts':version['counts'],'verified':[]}
-          paths=['downloads/BIO233_Ch12-13_Study_Guide.pptx','downloads/BIO233_Ch12-13_Study_Guide.pdf','downloads/BIO233_Ch12-13_Study_Assistance_Sheet.pdf','study-guide-data.json','exam3-content.json','index.html','studio.js','real-anatomy.mjs','real-anatomy.css','anatomy-atlas.mjs','anatomy-atlas.json']
-          paths += [str(p) for p in sorted(Path('assets/anatomy').glob('*.webp'))]
-          for path in paths:
-              content=get(path)
-              assert hashlib.sha256(content).hexdigest()==hashlib.sha256(Path(path).read_bytes()).hexdigest(),path
-              report['verified'].append({'path':path,'bytes':len(content),'sha256':hashlib.sha256(content).hexdigest()})
-          for path in ['assets/ch12-13/slides/slide-001.webp','assets/ch12-13/slides/slide-028.webp','assets/ch12-13/slides/slide-073.webp','assets/ch12-13/slides/slide-117.webp','exam1.html','lab.html','exam2-lab.html']:
-              assert len(get(path))>100
+          for path in ['assets/ch12-13/slides/slide-001.webp', 'assets/ch12-13/slides/slide-028.webp',
+                       'assets/ch12-13/slides/slide-073.webp', 'assets/ch12-13/slides/slide-117.webp',
+                       'exam1.html', 'lab.html', 'exam2-lab.html']:
+              assert len(get(path, attempt)) > 100, path
+          report = {
+              'status': 'PASS', 'version': version['version'],
+              'featuresVersion': version.get('featuresVersion'),
+              'counts': version['counts'], 'verified': verified,
+          }
           Path('publication-report.json').write_text(json.dumps(report,indent=2))
           print(json.dumps(report,indent=2))
           PY
