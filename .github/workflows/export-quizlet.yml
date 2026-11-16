@@ -1,0 +1,108 @@
+name: Export BIO233 Quizlet Sets
+on:
+  push:
+    branches: [quizlet-export-20261116]
+    paths: [.github/workflows/export-quizlet.yml]
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: quizlet-export-20261116
+      - name: Build Quizlet import files
+        run: |
+          mkdir -p quizlet-export
+          python - <<'PY'
+          import csv, json, re
+          from pathlib import Path
+
+          data=json.loads(Path('exam3-content.json').read_text())
+
+          def clean(value):
+              value=str(value or '').replace('\t',' ').replace('\r',' ').replace('\n',' ')
+              return re.sub(r'\s+',' ',value).strip()
+
+          cards=[]
+          questions=[]
+          for topic in data['topics']:
+              chapter=topic['chapter']
+              for card in topic.get('cards',[]):
+                  slide=card.get('slide')
+                  prefix=f"Ch {chapter}"
+                  if slide: prefix+=f" • Slide {slide}"
+                  cards.append({
+                      'chapter':chapter,
+                      'term':f"[{prefix}] {clean(card['front'])}",
+                      'definition':clean(card['back'])
+                  })
+              for q in topic.get('questions',[]):
+                  qtype=q.get('type')
+                  if qtype=='recall':
+                      answer=clean(q.get('model',''))
+                  else:
+                      options=q.get('options',[])
+                      answer='; '.join(clean(options[i]) for i in q.get('answer',[]) if 0<=i<len(options))
+                  if not answer: continue
+                  slide=q.get('slide')
+                  prefix=f"Ch {chapter}"
+                  if slide: prefix+=f" • Slide {slide}"
+                  questions.append({
+                      'chapter':chapter,
+                      'term':f"[{prefix} • Practice] {clean(q['prompt'])}",
+                      'definition':answer
+                  })
+
+          supplemental=[
+            (12,'Chemically gated channel','A ligand binds to a receptor/channel and opens or closes it. Examples: acetylcholine at a neuromuscular junction or cholinergic synapse.'),
+            (12,'Voltage-gated channel','A change in membrane potential changes the channel state. Voltage-gated Na+ and K+ channels generate axonal action potentials; voltage-gated Ca2+ channels trigger neurotransmitter release at axon terminals.'),
+            (12,'Mechanically gated channel','Physical deformation opens the channel, as in receptors for touch, pressure, vibration, and stretch.'),
+            (12,'Leak channel','A nongated channel that is open at rest. Na+ and K+ leak channels help establish resting membrane conditions.'),
+            (12,'Myelinated axon','Myelin limits ion movement across the internodal membrane, so active regeneration occurs mainly at nodes of Ranvier.'),
+            (12,'Node-to-node saltatory conduction','Local current travels beneath myelin and depolarizes the next node to threshold; the action potential is regenerated at that node.'),
+            (12,'Why saltatory conduction is faster and more efficient','Fewer membrane regions require active action-potential regeneration, and proportionately fewer ions cross the membrane and later need restoration.'),
+            (12,'Two major conduction-speed factors','Myelination and larger axon diameter increase conduction speed. Axon or neuron length alone is not the main speed factor emphasized in lecture.'),
+            (12,'Continuous conduction in an unmyelinated axon','Local current from one active region depolarizes the next adjacent region of excitable membrane.'),
+            (12,'Unmyelinated chain reaction','The next region reaches threshold, opens voltage-gated Na+ channels, and generates another action potential.'),
+            (12,'Why an action potential does not fade','The action potential is regenerated at each new axonal region, unlike a graded potential that decreases with distance.'),
+            (12,'Continuous-conduction analogy','Each person in a line repeats the complete message to the next person. The message stays intact, but each relay takes time.')
+          ]
+          cards.extend({'chapter':ch,'term':f'[Ch {ch} • Study Assistance] {term}','definition':definition} for ch,term,definition in supplemental)
+
+          def dedupe(rows):
+              seen=set(); out=[]
+              for row in rows:
+                  key=(row['term'].casefold(),row['definition'].casefold())
+                  if key not in seen:
+                      seen.add(key); out.append(row)
+              return out
+
+          cards=dedupe(cards)
+          questions=dedupe(questions)
+
+          def write_tsv(name,rows):
+              path=Path('quizlet-export')/name
+              with path.open('w',encoding='utf-8',newline='') as f:
+                  writer=csv.writer(f,delimiter='\t',lineterminator='\n',quoting=csv.QUOTE_MINIMAL)
+                  for row in rows: writer.writerow([row['term'],row['definition']])
+              return len(rows)
+
+          counts={}
+          counts['all_flashcards']=write_tsv('BIO233_Ch12-13_All_Flashcards_Quizlet_Import.txt',cards)
+          counts['ch12_flashcards']=write_tsv('BIO233_Ch12_Flashcards_Quizlet_Import.txt',[r for r in cards if r['chapter']==12])
+          counts['ch13_flashcards']=write_tsv('BIO233_Ch13_Flashcards_Quizlet_Import.txt',[r for r in cards if r['chapter']==13])
+          counts['all_questions']=write_tsv('BIO233_Ch12-13_Practice_Questions_Quizlet_Import.txt',questions)
+
+          readme=f'''BIO 233 QUIZLET IMPORT FILES\n\nRecommended set:\n- BIO233_Ch12-13_All_Flashcards_Quizlet_Import.txt ({counts['all_flashcards']} cards)\n\nOptional smaller sets:\n- Chapter 12: {counts['ch12_flashcards']} cards\n- Chapter 13: {counts['ch13_flashcards']} cards\n- Practice-question review: {counts['all_questions']} question/answer cards\n\nQUIZLET IMPORT\n1. On the Quizlet website, choose Create > Flashcard set > Import.\n2. Open one TXT file and copy all text.\n3. Paste it into Quizlet.\n4. Choose TAB between term and definition, and NEW LINE between cards.\n5. Review visibility before creating; published Quizlet sets are public by default.\n\nSource: the current BIO233 Chapters 12-13 website bank, plus the requested concise gated-channel and conduction clarifications.\n'''
+          Path('quizlet-export/README.txt').write_text(readme,encoding='utf-8')
+          Path('quizlet-export/counts.json').write_text(json.dumps(counts,indent=2),encoding='utf-8')
+          print(json.dumps(counts,indent=2))
+          PY
+          (cd quizlet-export && zip -9 BIO233_Quizlet_Import_Pack.zip *.txt counts.json)
+      - uses: actions/upload-artifact@v4
+        with:
+          name: BIO233-Quizlet-Import-Pack
+          path: quizlet-export/
+          retention-days: 7
