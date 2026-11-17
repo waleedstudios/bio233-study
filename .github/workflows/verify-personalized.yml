@@ -1,0 +1,72 @@
+name: Verify Personal Study and Recording Publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - personal*
+      - diagnostic*
+      - lecture-*
+      - assets/recordings/**
+      - transcripts/**
+      - tests/personalized*
+      - tests/diagnostic*
+      - .github/workflows/verify-personalized.yml
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate diagnostic and transcript scopes
+        run: |
+          node tests/diagnostic-engine.test.mjs
+          python tests/validate-study-guide.py
+          python tests/validate-exam4.py
+          node --check personal-study.mjs
+          node --check lecture-library.mjs
+      - name: Verify exact published files and original sheet
+        env:
+          SITE_URL: https://waleedstudios.github.io/bio233-study/
+        run: |
+          python - <<'PY'
+          import os,json,time,hashlib,urllib.request,concurrent.futures
+          from pathlib import Path
+          base=os.environ['SITE_URL'];tag=os.environ['GITHUB_SHA']
+          def sha(raw):return hashlib.sha256(raw).hexdigest()
+          def get(path):
+              request=urllib.request.Request(base+path+'?verify='+tag,headers={'Cache-Control':'no-cache','User-Agent':'BIO233-Personal-Study-Publication-Check'})
+              with urllib.request.urlopen(request,timeout=90) as response:
+                  assert response.status==200
+                  return response.read()
+          for attempt in range(36):
+              try:
+                  assert sha(get('personal-study.mjs'))==sha(Path('personal-study.mjs').read_bytes())
+                  assert sha(get('exam4-version.json'))==sha(Path('exam4-version.json').read_bytes())
+                  assert b'personal-study.html' in get('index.html')
+                  break
+              except Exception as exc:
+                  if attempt==35:raise
+                  print('Waiting for current Pages build:',type(exc).__name__,flush=True)
+                  time.sleep(10)
+          m=json.loads(Path('personalized-update-manifest.json').read_text())
+          paths=[f['path'] for f in m['files'] if not f['path'].startswith(('docs/','tests/'))]+list(m['protected'])
+          def verify(path):
+              raw=get(path);digest=sha(raw)
+              assert digest==sha(Path(path).read_bytes()),path
+              return {'path':path,'bytes':len(raw),'sha256':digest}
+          with concurrent.futures.ThreadPoolExecutor(max_workers=5) as pool:results=list(pool.map(verify,dict.fromkeys(paths)))
+          for path,expected in m['protected'].items():assert sha(Path(path).read_bytes())==expected,path
+          lecture=json.loads(Path('lecture-20261117.json').read_text())
+          assert lecture['boundary']['firstReviewParagraph']==291
+          assert len([p for p in lecture['paragraphs'] if p['exam']==3])==61
+          report={'status':'PASS','verifiedPublicFiles':len(results),'originalSharedSheetUnchanged':True,'recordingDurationSeconds':lecture['durationSeconds'],'chapter12_13ClosingReviewSeparate':True,'files':results}
+          Path('personalized-publication-report.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps({k:v for k,v in report.items() if k!='files'},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: personalized-publication-report
+          path: personalized-publication-report.json
+          retention-days: 14
