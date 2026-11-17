@@ -58,8 +58,8 @@
     {
       "path": "exam4.js",
       "before": "550de54ee19c945f17e868ff4e01d7de789e16eef30a60fee03fc31056151a5d",
-      "sha256": "e125ed0f6aec9d970dd93cc11951320d2de01b25b85ec0d9fd7b578df9366a96",
-      "bytes": 35271
+      "sha256": "63091af6d8fe37a7cda715e18d482546722f38018477945650404911d8849ec6",
+      "bytes": 35395
     },
     {
       "path": "index.html",
@@ -150,6 +150,12 @@
       "before": null,
       "sha256": "c63222c7fa855eb45859ea20cc354babe7b170c3ffc6ec30d6e81e08b4c2a378",
       "bytes": 8814
+    },
+    {
+      "path": "tests/personalized-compatibility.py",
+      "before": null,
+      "sha256": "8d262f763e99eb7de08e25054ab65fb41a2197ad5fd56803108eca54ffaf5fd2",
+      "bytes": 3721
     }
   ],
   "protected": {
