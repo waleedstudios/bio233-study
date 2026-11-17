@@ -1,0 +1,85 @@
+name: Prepare Private Study Sheet and Lecture Update
+on:
+  push:
+    branches: [personalized-sheet-lecture-20261117]
+    paths: [.github/workflows/import-personalized.yml]
+permissions:
+  contents: write
+concurrency:
+  group: bio233-personalized-import
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: personalized-sheet-lecture-20261117
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply hash-verified targeted update
+        env:
+          BUNDLE_URL: https://at.adobe.com/tlB7KTy5qD1sVd7m
+        run: |
+          curl --fail --location --retry 3 "$BUNDLE_URL" -o "$RUNNER_TEMP/update.zip"
+          echo "10387bd622534e6a133771e69ccae98947fa518e45e2511d587832a1005e9251  $RUNNER_TEMP/update.zip" | sha256sum --check
+          python - <<'PY'
+          import os,zipfile
+          from pathlib import Path
+          with zipfile.ZipFile(Path(os.environ['RUNNER_TEMP'])/'update.zip') as z:
+              assert sum(i.file_size for i in z.infolist())<60_000_000
+              for i in z.infolist():
+                  p=Path(i.filename)
+                  assert not p.is_absolute() and '..' not in p.parts
+                  assert (i.external_attr>>16)&0o170000!=0o120000
+              z.extractall(Path(os.environ['RUNNER_TEMP'])/'personalized')
+          PY
+          python "$RUNNER_TEMP/personalized/apply_personalized.py" "$GITHUB_WORKSPACE"
+      - name: Validate source scopes, original content and diagnostic sampling
+        run: |
+          python tests/validate-study-guide.py
+          python tests/validate-exam4.py
+          node tests/diagnostic-engine.test.mjs
+          node --check diagnostic-engine.mjs
+          node --check personal-study.mjs
+          node --check lecture-library.mjs
+          node --input-type=module --check < exam4.js
+          node --input-type=module --check < studio.js
+          node --input-type=module --check < study-guide.js
+      - name: Install browser and PDF verification dependencies
+        run: |
+          pip install playwright==1.51.0 PyMuPDF==1.25.3
+          python -m playwright install --with-deps chromium
+      - name: Test private diagnostic and single-page sheets
+        run: |
+          python -m http.server 8765 > "$RUNNER_TEMP/personalized-http.log" 2>&1 &
+          python tests/personalized-browser.py
+      - name: Test updated Exam 4 and recording partition
+        run: python tests/exam4-browser.py
+      - name: Commit only verified changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          python - <<'PY'
+          import json,subprocess,hashlib
+          from pathlib import Path
+          m=json.load(open('personalized-update-manifest.json'))
+          for p,h in m['protected'].items():assert hashlib.sha256(Path(p).read_bytes()).hexdigest()==h,p
+          subprocess.run(['git','add','--','personalized-update-manifest.json']+[f['path'] for f in m['files']],check=True)
+          PY
+          git diff --cached --stat
+          git commit -m "Add private 100-question diagnostic, personalized one-sided sheets and partitioned Chapter 14 recording"
+          git push origin HEAD:personalized-sheet-lecture-20261117
+      - name: Preserve synthetic verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: personalized-and-lecture-verification
+          path: |
+            qa-personal/
+            qa-exam4/
+            exam4-version.json
+          retention-days: 7
