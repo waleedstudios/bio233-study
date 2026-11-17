@@ -36,3 +36,12 @@ Retain IDs for unchanged questions. Give materially replaced questions new IDs s
 `python tests/exam4-browser.py` runs against `http://127.0.0.1:8765/` by default; set `EXAM4_BASE` to another test origin. It checks all current MCQ grading paths, full-bank shuffling, order preservation, test mode, lesson routes, flashcards, assets, progress export/import, mobile overflow and older progress preservation. Update test counts when changing the bank.
 
 The publication verifier checks served asset bytes against current repository files. The import manifest records the original import and is historical provenance, not a replacement for current file checks.
+
+## November 17 lecture update
+One full recording is in assets/recordings/ch14-lecture-exam3-review-20261117.mp3. Source audio: Henry Ford College 3.m4a; source transcript: Pasted text(4).txt. Duration 4759.722667 seconds (source metadata). The MP3 is an uncut mono compression for playback.
+
+The exact text boundary starts at paragraph 291 ("When can somebody not receive or conduct an impulse..."). Paragraphs 291–351 belong to the closing Chapters 12–13 review; NEVER ingest them into new Exam 4 additions. Paragraph indices are not timestamps. Raw wording is preserved in two text files; organized summaries and cautions are in lecture-20261117.json.
+
+Four embryology questions and the cranial brainstem-attachment-group question are excluded from new active practice in response to oral scope guidance. One detailed foramen question is held as reference pending the promised handout. IDs remain for historical saved sessions. Fourteen new Chapter 14 questions have PDF/book and main-lecture paragraph references. Active: 171 questions/cards; total including reference-only: 177.
+
+The private Chapters 12–13 diagnostic uses personal-study.html and bio233-personal-diagnostic-v1. It has its own sampling rule (100, 50 per chapter). Do not transfer that limit to regular Exam 3/4 practice. Original general sheet bytes and all previous progress keys are unchanged.

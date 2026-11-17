@@ -1,9 +1,30 @@
 {
-  "version": "exam4-initial-20261117",
+  "version": "exam4-lecture-20261117",
   "title": "Chapters 14–16",
-  "status": "Initial slides + textbook edition",
-  "recordings": [],
-  "transcripts": [],
+  "status": "Slides, textbook and one mixed-content lecture; later recordings and the cranial-nerve handout remain pending.",
+  "recordings": [
+    {
+      "id": "lecture-20261117",
+      "title": "Chapter 14 lecture with a separate Chapters 12–13 closing review",
+      "path": "assets/recordings/ch14-lecture-exam3-review-20261117.mp3",
+      "durationSeconds": 4759.722667,
+      "includesSeparateExam3Review": true
+    }
+  ],
+  "transcripts": [
+    {
+      "id": "lecture-20261117",
+      "path": "lecture-20261117.json",
+      "exam4Paragraphs": [
+        10,
+        290
+      ],
+      "excludedClosingReviewParagraphs": [
+        291,
+        351
+      ]
+    }
+  ],
   "chapters": [
     {
       "id": 14,
@@ -275,7 +296,9 @@
               ]
             }
           ],
-          "scope": "lecture"
+          "scope": "lecture",
+          "examExcluded": true,
+          "exclusionReason": "Instructor explicitly said developmental components would not be asked (transcript paragraph 11)."
         },
         {
           "id": "e4-brain-development-02",
@@ -307,7 +330,9 @@
               ]
             }
           ],
-          "scope": "lecture"
+          "scope": "lecture",
+          "examExcluded": true,
+          "exclusionReason": "Instructor explicitly said developmental components would not be asked (transcript paragraph 11)."
         },
         {
           "id": "e4-brain-development-03",
@@ -339,7 +364,9 @@
               ]
             }
           ],
-          "scope": "lecture"
+          "scope": "lecture",
+          "examExcluded": true,
+          "exclusionReason": "Instructor explicitly said developmental components would not be asked (transcript paragraph 11)."
         },
         {
           "id": "e4-brain-development-04",
@@ -371,10 +398,13 @@
               ]
             }
           ],
-          "scope": "lecture"
+          "scope": "lecture",
+          "examExcluded": true,
+          "exclusionReason": "Instructor explicitly said developmental components would not be asked (transcript paragraph 11)."
         }
       ],
-      "figure": "ch14-l1-p3"
+      "figure": "ch14-l1-p3",
+      "lectureNote": "Reference only: the instructor explicitly excludes the developmental components in transcript paragraph 11. The source material remains available; these four questions are omitted from active practice and flashcards."
     },
     {
       "id": "ventricles",
@@ -562,6 +592,40 @@
               "pages": [
                 5,
                 8
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-02",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "ventricles",
+          "prompt": "The instructor uses “mesencephalic aqueduct” and “cerebral aqueduct” for which passage?",
+          "options": [
+            "The midbrain passage connecting the third and fourth ventricles",
+            "A passage from either lateral ventricle directly to the subarachnoid space",
+            "A venous sinus within the falx cerebri",
+            "A channel within the pituitary gland"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "These are alternate names for the aqueduct of the midbrain connecting the third and fourth ventricles.",
+          "sources": [
+            {
+              "id": "ch14-l1",
+              "pages": [
+                5,
+                6
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                17,
+                18
               ]
             }
           ],
@@ -818,9 +882,83 @@
             }
           ],
           "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-01",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "csf",
+          "prompt": "Which combination matches the three CSF functions the instructor explicitly asked students to know?",
+          "options": [
+            "Buoyant support, cushioning, and transport/exchange",
+            "Voluntary movement, sound detection, and hormone storage",
+            "Blood clotting, erythrocyte production, and glucose storage",
+            "Myelin repair, muscle contraction, and sweating"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The spoken list is shock absorption, nutrient exchange and supporting the brain by buoyancy; the supplied slide also includes transport of wastes and chemical signals.",
+          "sources": [
+            {
+              "id": "ch14-l1",
+              "pages": [
+                5
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                14
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-03",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "csf",
+          "prompt": "CSF production continues, but its resorption is impaired. Which consequence fits the lecture?",
+          "options": [
+            "Fluid accumulates and may enlarge the ventricles",
+            "All ventricular fluid immediately disappears",
+            "The brain produces additional red blood cells",
+            "The subarachnoid space becomes a motor tract"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecture links failure of balanced production and absorption to hydrocephalus and ventricular enlargement.",
+          "sources": [
+            {
+              "id": "ch14-l1",
+              "pages": [
+                9,
+                10
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
-      "figure": "ch14-l1-p9"
+      "figure": "ch14-l1-p9",
+      "lectureNote": "Explicit spoken priority (paragraph 14): shock absorption, exchange/transport and buoyant support. Paragraphs 17–18 equate cerebral, mesencephalic and midbrain aqueduct terminology."
     },
     {
       "id": "meninges",
@@ -998,6 +1136,40 @@
                 5,
                 6,
                 7
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-04",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "meninges",
+          "prompt": "What distinction did the lecturer emphasize about cranial dura compared with spinal dura?",
+          "options": [
+            "Cranial dura includes periosteal and meningeal layers",
+            "Spinal dura is the only place that contains a periosteal cranial layer",
+            "Cranial dura is identical to pia mater",
+            "Dura does not occur around the brain"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The transcript emphasizes two layers in the skull; the supplied textbook names the periosteal and meningeal cranial layers.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                5,
+                6
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                29,
+                30
               ]
             }
           ],
@@ -1181,9 +1353,46 @@
             }
           ],
           "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-05",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "barriers",
+          "prompt": "Why does the lecture discuss BBB exceptions near endocrine structures?",
+          "options": [
+            "Hormones must be exchanged with the circulation at selected sites",
+            "All blood components can freely enter all brain tissue",
+            "The entire BBB disappears during sleep",
+            "Endocrine structures contain no capillaries"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "Selected regions permit endocrine exchange; this does not mean the entire CNS is freely permeable.",
+          "sources": [
+            {
+              "id": "ch14-l1",
+              "pages": [
+                12
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                76,
+                77,
+                78,
+                79,
+                98
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
-      "figure": "ch14-l1-p12"
+      "figure": "ch14-l1-p12",
+      "lectureNote": "Paragraphs 70–115 distinguish the BBB and blood–CSF barrier and use endocrine exchange as an example. Raw medical anecdotes are not study recommendations."
     },
     {
       "id": "medulla",
@@ -1370,6 +1579,47 @@
             }
           ],
           "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-10",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "medulla",
+          "prompt": "A question asks about changing peripheral vessel diameter to regulate blood flow. Which medullary center fits?",
+          "options": [
+            "Vasomotor center",
+            "Visual association cortex",
+            "Language comprehension area",
+            "Olfactory bulb"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecturer separates the cardiac center from the vasomotor center, which adjusts vascular diameter.",
+          "sources": [
+            {
+              "id": "ch14-l2",
+              "pages": [
+                3,
+                4
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                129,
+                130,
+                131,
+                132,
+                133,
+                134,
+                135,
+                136,
+                137
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
       "figure": "ch14-l2-p4"
@@ -1539,10 +1789,54 @@
               ]
             }
           ],
+          "scope": "lecture",
+          "examExcluded": true,
+          "exclusionReason": "Brainstem cranial-nerve attachment group excluded from requested scope in transcript paragraphs 155–156."
+        },
+        {
+          "id": "e4-lecture17-11",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "pons",
+          "prompt": "In the breathing examples, how do pontine centers relate to the medulla?",
+          "options": [
+            "They modify the activity of the medullary respiratory rhythmicity centers",
+            "They replace the medulla with a peripheral ganglion",
+            "They only detect smells and have no respiratory role",
+            "They produce CSF instead of affecting breathing"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The instructor explicitly links apneustic and pneumotaxic centers to modification of the medullary breathing rhythm.",
+          "sources": [
+            {
+              "id": "ch14-l2",
+              "pages": [
+                4,
+                5
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                146,
+                147,
+                148,
+                149,
+                150,
+                151,
+                152,
+                153,
+                154
+              ]
+            }
+          ],
           "scope": "lecture"
         }
       ],
-      "figure": "ch14-l2-p5"
+      "figure": "ch14-l2-p5",
+      "lectureNote": "Explicit spoken priority (paragraph 146): know apneustic and pneumotaxic centers by name and that they modify medullary respiratory activity."
     },
     {
       "id": "midbrain",
@@ -1780,9 +2074,57 @@
             }
           ],
           "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-12",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "midbrain",
+          "prompt": "A sudden unexpected sound makes someone turn their head. Which paired midbrain structures match the lecturer’s example?",
+          "options": [
+            "Inferior colliculi",
+            "Superior colliculi only",
+            "Lateral ventricles",
+            "Mammillary bodies"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecture contrasts sound-related inferior-colliculus responses with visual superior-colliculus responses.",
+          "sources": [
+            {
+              "id": "ch14-l2",
+              "pages": [
+                7,
+                8
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                189,
+                190,
+                191,
+                192,
+                193,
+                194,
+                195,
+                196,
+                197,
+                198,
+                199,
+                200,
+                201,
+                202,
+                203
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
-      "figure": "ch14-l2-p9"
+      "figure": "ch14-l2-p9",
+      "lectureNote": "Paragraphs 189–224 emphasize visual versus auditory reflex examples, red-nucleus tone and substantia-nigra dopamine. Pigment wording is retained as a source caution."
     },
     {
       "id": "cerebellum",
@@ -2010,9 +2352,99 @@
             }
           ],
           "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-13",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "cerebellum",
+          "prompt": "A person’s movements become jerky and poorly coordinated in the lecturer’s cerebellar example. Which term applies?",
+          "options": [
+            "Ataxia",
+            "Saltatory conduction",
+            "Temporal summation",
+            "Arachnoid resorption"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The instructor describes ataxia as lost coordination; the supplied slide relates it to cerebellar damage.",
+          "sources": [
+            {
+              "id": "ch14-l2",
+              "pages": [
+                12
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                274,
+                275,
+                276,
+                277,
+                278,
+                279,
+                280,
+                281,
+                282,
+                287,
+                288,
+                289,
+                290
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-14",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "cerebellum",
+          "prompt": "Which combination best captures the cerebellar functions emphasized in this lecture?",
+          "options": [
+            "Posture, balance and fluid skeletal-muscle movement",
+            "CSF absorption, blood clotting and red-cell production",
+            "Primary smell detection, pupil pigment and endocrine secretion",
+            "Direct storage of ADH and oxytocin"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecture repeatedly names postural control, balance and the fluidity of skeletal-muscle movements.",
+          "sources": [
+            {
+              "id": "ch14-l2",
+              "pages": [
+                12
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                264,
+                265,
+                266,
+                267,
+                268,
+                269,
+                270,
+                271,
+                272,
+                273,
+                287,
+                288,
+                289,
+                290
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
-      "figure": "ch14-l2-p12"
+      "figure": "ch14-l2-p12",
+      "lectureNote": "Paragraphs 257–290 emphasize posture, balance, fluidity and ataxia. The spoken synapse count is uncertain and is not a quiz target."
     },
     {
       "id": "thalamus",
@@ -2311,6 +2743,146 @@
             }
           ],
           "scope": "textbook"
+        },
+        {
+          "id": "e4-lecture17-06",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "hypothalamus",
+          "prompt": "Which pairing matches the lecture’s distinction between producing ADH/oxytocin and releasing them?",
+          "options": [
+            "Produced in the hypothalamus; released from the posterior pituitary",
+            "Produced in the cerebellum; released from the thalamus",
+            "Produced in the posterior pituitary; released from the olfactory bulb",
+            "Produced in the medulla; released from the arachnoid granulations"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecture and supplied textbook place production in hypothalamic neurons and release into the blood at the posterior pituitary.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                10,
+                19,
+                20
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                81,
+                82,
+                83,
+                86
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-07",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "hypothalamus",
+          "prompt": "In the lecture’s ADH example, which effect is emphasized?",
+          "options": [
+            "Reduced water loss through increased renal water retention",
+            "Increased loss of water as the only normal action",
+            "Release of ACh at skeletal motor end plates",
+            "Direct opening of the cerebral aqueduct"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The lecture describes antidiuretic hormone as promoting water retention; the textbook says it restricts water loss by the kidneys.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                19,
+                20
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                82,
+                83
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-08",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "hypothalamus",
+          "prompt": "The childbirth example illustrates positive feedback because what happens?",
+          "options": [
+            "Cervical stimulation increases oxytocin and contractions, which increase the stimulus",
+            "The first contraction permanently suppresses all later contractions",
+            "Cervical stimulation blocks every hypothalamic response",
+            "Oxytocin stops all uterine activity immediately"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "In the lecturer’s example, increased pressure produces more oxytocin and stronger/more frequent contractions until birth ends the loop.",
+          "sources": [
+            {
+              "id": "textbook",
+              "pages": [
+                20
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                86,
+                87,
+                88,
+                89,
+                90
+              ]
+            }
+          ],
+          "scope": "lecture"
+        },
+        {
+          "id": "e4-lecture17-09",
+          "type": "single",
+          "chapter": 14,
+          "topicId": "hypothalamus",
+          "prompt": "Which gland is paired with melatonin and sleep rhythms in the lecture?",
+          "options": [
+            "Pineal gland",
+            "Anterior horn of the spinal cord",
+            "Choroid plexus",
+            "Superior cervical ganglion"
+          ],
+          "answer": [
+            0
+          ],
+          "explanation": "The pineal gland is the endocrine structure associated with melatonin in both the lecture and supplied brain chapter.",
+          "sources": [
+            {
+              "id": "ch14-l1",
+              "pages": [
+                12
+              ]
+            },
+            {
+              "id": "lecture-20261117-ch14",
+              "paragraphs": [
+                98,
+                99
+              ]
+            }
+          ],
+          "scope": "lecture"
         }
       ],
       "figure": "textbook-p19"
@@ -3159,7 +3731,8 @@
           "scope": "textbook"
         }
       ],
-      "figure": "textbook-p31"
+      "figure": "textbook-p31",
+      "lectureNote": "Instructor asks for names, numbers and functions at the level of a promised handout (paragraph 156). The handout is not yet supplied; these are textbook-supported functions, not a claim about its final scope."
     },
     {
       "id": "cranial-details",
@@ -3285,7 +3858,9 @@
               ]
             }
           ],
-          "scope": "textbook"
+          "scope": "textbook",
+          "examExcluded": true,
+          "exclusionReason": "Detailed foramen reference held outside active practice pending the instructor’s promised cranial-nerve handout."
         },
         {
           "id": "e4-cranial-details-03",
@@ -3362,7 +3937,8 @@
           "scope": "textbook"
         }
       ],
-      "figure": "textbook-p41"
+      "figure": "textbook-p41",
+      "lectureNote": "Detailed passages remain textbook reference; the new lecture limits expected nerve detail to names, numbers and handout-level function. The exact handout is pending."
     },
     {
       "id": "eeg",
@@ -7745,7 +8321,8 @@
             4
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-brain-development-02-card",
@@ -7766,7 +8343,8 @@
             4
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-brain-development-03-card",
@@ -7787,7 +8365,8 @@
             4
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-brain-development-04-card",
@@ -7808,7 +8387,8 @@
             4
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-ventricles-01-card",
@@ -8408,7 +8988,8 @@
             13
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-midbrain-01-card",
@@ -9282,7 +9863,8 @@
             43
           ]
         }
-      ]
+      ],
+      "examExcluded": true
     },
     {
       "id": "e4-cranial-details-03-card",
@@ -11580,12 +12162,471 @@
           ]
         }
       ]
+    },
+    {
+      "id": "e4-lecture17-01-card",
+      "chapter": 14,
+      "topicId": "csf",
+      "front": "Which combination matches the three CSF functions the instructor explicitly asked students to know?",
+      "back": "Buoyant support, cushioning, and transport/exchange The spoken list is shock absorption, nutrient exchange and supporting the brain by buoyancy; the supplied slide also includes transport of wastes and chemical signals.",
+      "sources": [
+        {
+          "id": "ch14-l1",
+          "pages": [
+            5
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            14
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-02-card",
+      "chapter": 14,
+      "topicId": "ventricles",
+      "front": "The instructor uses “mesencephalic aqueduct” and “cerebral aqueduct” for which passage?",
+      "back": "The midbrain passage connecting the third and fourth ventricles These are alternate names for the aqueduct of the midbrain connecting the third and fourth ventricles.",
+      "sources": [
+        {
+          "id": "ch14-l1",
+          "pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            17,
+            18
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-03-card",
+      "chapter": 14,
+      "topicId": "csf",
+      "front": "CSF production continues, but its resorption is impaired. Which consequence fits the lecture?",
+      "back": "Fluid accumulates and may enlarge the ventricles The lecture links failure of balanced production and absorption to hydrocephalus and ventricular enlargement.",
+      "sources": [
+        {
+          "id": "ch14-l1",
+          "pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-04-card",
+      "chapter": 14,
+      "topicId": "meninges",
+      "front": "What distinction did the lecturer emphasize about cranial dura compared with spinal dura?",
+      "back": "Cranial dura includes periosteal and meningeal layers The transcript emphasizes two layers in the skull; the supplied textbook names the periosteal and meningeal cranial layers.",
+      "sources": [
+        {
+          "id": "textbook",
+          "pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            29,
+            30
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-05-card",
+      "chapter": 14,
+      "topicId": "barriers",
+      "front": "Why does the lecture discuss BBB exceptions near endocrine structures?",
+      "back": "Hormones must be exchanged with the circulation at selected sites Selected regions permit endocrine exchange; this does not mean the entire CNS is freely permeable.",
+      "sources": [
+        {
+          "id": "ch14-l1",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            76,
+            77,
+            78,
+            79,
+            98
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-06-card",
+      "chapter": 14,
+      "topicId": "hypothalamus",
+      "front": "Which pairing matches the lecture’s distinction between producing ADH/oxytocin and releasing them?",
+      "back": "Produced in the hypothalamus; released from the posterior pituitary The lecture and supplied textbook place production in hypothalamic neurons and release into the blood at the posterior pituitary.",
+      "sources": [
+        {
+          "id": "textbook",
+          "pages": [
+            10,
+            19,
+            20
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            81,
+            82,
+            83,
+            86
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-07-card",
+      "chapter": 14,
+      "topicId": "hypothalamus",
+      "front": "In the lecture’s ADH example, which effect is emphasized?",
+      "back": "Reduced water loss through increased renal water retention The lecture describes antidiuretic hormone as promoting water retention; the textbook says it restricts water loss by the kidneys.",
+      "sources": [
+        {
+          "id": "textbook",
+          "pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            82,
+            83
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-08-card",
+      "chapter": 14,
+      "topicId": "hypothalamus",
+      "front": "The childbirth example illustrates positive feedback because what happens?",
+      "back": "Cervical stimulation increases oxytocin and contractions, which increase the stimulus In the lecturer’s example, increased pressure produces more oxytocin and stronger/more frequent contractions until birth ends the loop.",
+      "sources": [
+        {
+          "id": "textbook",
+          "pages": [
+            20
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            86,
+            87,
+            88,
+            89,
+            90
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-09-card",
+      "chapter": 14,
+      "topicId": "hypothalamus",
+      "front": "Which gland is paired with melatonin and sleep rhythms in the lecture?",
+      "back": "Pineal gland The pineal gland is the endocrine structure associated with melatonin in both the lecture and supplied brain chapter.",
+      "sources": [
+        {
+          "id": "ch14-l1",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            98,
+            99
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-10-card",
+      "chapter": 14,
+      "topicId": "medulla",
+      "front": "A question asks about changing peripheral vessel diameter to regulate blood flow. Which medullary center fits?",
+      "back": "Vasomotor center The lecturer separates the cardiac center from the vasomotor center, which adjusts vascular diameter.",
+      "sources": [
+        {
+          "id": "ch14-l2",
+          "pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            129,
+            130,
+            131,
+            132,
+            133,
+            134,
+            135,
+            136,
+            137
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-11-card",
+      "chapter": 14,
+      "topicId": "pons",
+      "front": "In the breathing examples, how do pontine centers relate to the medulla?",
+      "back": "They modify the activity of the medullary respiratory rhythmicity centers The instructor explicitly links apneustic and pneumotaxic centers to modification of the medullary breathing rhythm.",
+      "sources": [
+        {
+          "id": "ch14-l2",
+          "pages": [
+            4,
+            5
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            146,
+            147,
+            148,
+            149,
+            150,
+            151,
+            152,
+            153,
+            154
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-12-card",
+      "chapter": 14,
+      "topicId": "midbrain",
+      "front": "A sudden unexpected sound makes someone turn their head. Which paired midbrain structures match the lecturer’s example?",
+      "back": "Inferior colliculi The lecture contrasts sound-related inferior-colliculus responses with visual superior-colliculus responses.",
+      "sources": [
+        {
+          "id": "ch14-l2",
+          "pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            189,
+            190,
+            191,
+            192,
+            193,
+            194,
+            195,
+            196,
+            197,
+            198,
+            199,
+            200,
+            201,
+            202,
+            203
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-13-card",
+      "chapter": 14,
+      "topicId": "cerebellum",
+      "front": "A person’s movements become jerky and poorly coordinated in the lecturer’s cerebellar example. Which term applies?",
+      "back": "Ataxia The instructor describes ataxia as lost coordination; the supplied slide relates it to cerebellar damage.",
+      "sources": [
+        {
+          "id": "ch14-l2",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            274,
+            275,
+            276,
+            277,
+            278,
+            279,
+            280,
+            281,
+            282,
+            287,
+            288,
+            289,
+            290
+          ]
+        }
+      ],
+      "scope": "lecture"
+    },
+    {
+      "id": "e4-lecture17-14-card",
+      "chapter": 14,
+      "topicId": "cerebellum",
+      "front": "Which combination best captures the cerebellar functions emphasized in this lecture?",
+      "back": "Posture, balance and fluid skeletal-muscle movement The lecture repeatedly names postural control, balance and the fluidity of skeletal-muscle movements.",
+      "sources": [
+        {
+          "id": "ch14-l2",
+          "pages": [
+            12
+          ]
+        },
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            264,
+            265,
+            266,
+            267,
+            268,
+            269,
+            270,
+            271,
+            272,
+            273,
+            287,
+            288,
+            289,
+            290
+          ]
+        }
+      ],
+      "scope": "lecture"
     }
   ],
   "cautions": [
     {
-      "title": "Recordings and transcripts pending",
-      "text": "This version uses five uploaded lecture PDFs and the 100-page textbook excerpt. No Chapter 14–16 recording or transcript has been added, and no oral lecture emphasis is inferred.",
+      "title": "One recording, two exam scopes",
+      "text": "The recording is filed under Chapters 14–16. Transcript paragraphs 291–351 are a closing Chapters 12–13 review and are excluded from the new Exam 4 additions. The text has no timestamps; paragraph locations are not audio times.",
+      "sources": [
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            290
+          ]
+        },
+        {
+          "id": "lecture-20261117-exam3",
+          "paragraphs": [
+            291,
+            348
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Brain development excluded; cranial-nerve handout pending",
+      "text": "The instructor says the developmental components will not be asked (paragraph 11). Those four questions remain reference material but are removed from active practice/cards. Paragraph 156 limits cranial nerves to names, numbers and handout-level function; brainstem attachment-group and detailed-foramen questions are held outside active practice. The promised handout has not been supplied.",
+      "sources": [
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            11,
+            155,
+            156
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Transcript errors and disagreements are not new facts",
+      "text": "The raw transcription contains garbled anatomical terms. Its pigment/melatonin passage differs from the textbook’s substantia-nigra pigment description; its Purkinje synapse count is explicitly uncertain. Hemorrhage/herniation wording, yawning/circadian explanations, and reflex examples also require caution. These disputed statements and personal medication anecdotes are not made definitive quiz answers or health advice. Organized notes use terms corroborated by the supplied slides/book; the raw wording remains visible.",
+      "sources": [
+        {
+          "id": "lecture-20261117-ch14",
+          "paragraphs": [
+            44,
+            45,
+            46,
+            216,
+            217,
+            222,
+            223,
+            224,
+            225,
+            226,
+            262,
+            263
+          ]
+        },
+        {
+          "id": "textbook",
+          "pages": [
+            7,
+            14,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "title": "More class material may change scope",
+      "text": "One Chapter 14 recording/transcript is now included. Later lecture recordings, transcripts and the promised cranial-nerve handout are still pending. Existing textbook extensions are not automatically promoted to confirmed lecture priorities.",
       "sources": []
     },
     {

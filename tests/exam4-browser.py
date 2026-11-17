@@ -5,7 +5,7 @@ from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]; QA=ROOT/'qa-exam4';QA.mkdir(exist_ok=True)
 BASE=os.environ.get('EXAM4_BASE','http://127.0.0.1:8765/')
 KEY='bio233-exam4-v1'
-c=json.loads((ROOT/'exam4-content.json').read_text());lib=json.loads((ROOT/'exam4-sources.json').read_text());qs=[q for t in c['topics'] for q in t['questions']];qmap={q['id']:q for q in qs};errors=[]
+c=json.loads((ROOT/'exam4-content.json').read_text());lib=json.loads((ROOT/'exam4-sources.json').read_text());qs=[q for t in c['topics'] for q in t['questions'] if not q.get('examExcluded')];qmap={q['id']:q for q in qs};errors=[]
 with sync_playwright() as pw:
     browser=pw.chromium.launch(headless=True,**({'executable_path':os.environ['CHROMIUM_PATH']} if os.environ.get('CHROMIUM_PATH') else {}))
     ctx=browser.new_context(viewport={'width':1440,'height':1000})
@@ -20,23 +20,23 @@ with sync_playwright() as pw:
     page.screenshot(path=str(QA/'home-desktop.png'),full_page=True)
     go('practice','#practice-form')
     assert page.locator('#practice-count').count()==0 and page.locator('#practice-priority').count()==0
-    assert '163' in page.locator('#eligible-count').inner_text()
+    assert '171' in page.locator('#eligible-count').inner_text()
     page.screenshot(path=str(QA/'practice-desktop.png'),full_page=True)
     page.click('#start-session');page.wait_for_selector('#choices')
-    first=data()['session'];assert len(first['ids'])==len(set(first['ids']))==163
+    first=data()['session'];assert len(first['ids'])==len(set(first['ids']))==171
     assert first['ids']!=[q['id'] for q in qs]
     assert all(sorted(order)==[0,1,2,3] for order in first['orders'].values())
     page.reload();page.wait_for_selector('#choices');assert data()['session']['ids']==first['ids'] and data()['session']['orders']==first['orders']
     # Correct every question through the rendered interface. No test injection into app internals.
-    for i in range(163):
+    for i in range(171):
         s=data()['session'];assert s['pos']==i;q=qmap[s['ids'][s['pos']]]
         page.click(f'[data-option="{q["answer"][0]}"]');page.click('#question-action')
         assert page.locator('#feedback h3').inner_text()=='Correct.'
         if i==0:page.screenshot(path=str(QA/'quiz-desktop.png'),full_page=True)
         page.click('#question-action')
-    page.wait_for_function("location.hash === '#results'");assert len(data()['answers'])==163
+    page.wait_for_function("location.hash === '#results'");assert len(data()['answers'])==171
     assert all(r['attempts']==1 and r['correct']==1 for r in data()['answers'].values())
-    print('PASS: all 163 correct-answer UI paths and result summary',flush=True)
+    print('PASS: all 171 correct-answer UI paths and result summary',flush=True)
     # New session has a new order; deliberately wrong answer is counted once.
     go('practice','#practice-form');page.click('#start-session');page.wait_for_selector('#choices');assert data()['session']['ids']!=first['ids']
     s=data()['session'];qid=s['ids'][0];page.click('[data-option="1"]');page.click('#question-action')
@@ -60,7 +60,11 @@ with sync_playwright() as pw:
     go('visuals/ch14-l2-p6','#source-image');page.wait_for_function("document.querySelector('#source-image').complete && document.querySelector('#source-image').naturalWidth>0")
     page.select_option('#visual-zoom','200');assert page.locator('#source-image').evaluate('(e)=>e.style.width')=='200%'
     page.select_option('#visual-zoom','100');page.screenshot(path=str(QA/'source-view.png'),full_page=True)
-    go('sources','.e4-shelf');assert 'PENDING' in page.locator('.e4-shelf').inner_text();assert page.locator('audio').count()==0
+    go('sources','.e4-shelf');assert 'RECORDING RECEIVED' in page.locator('.e4-shelf').inner_text();assert page.locator('audio').count()==0
+    go('recordings','#lecture-audio');page.wait_for_function("document.querySelector('#lecture-audio').duration>4750");assert page.locator('#transcript-text p').count()==290
+    go('recordings/review','#lecture-audio');assert page.locator('#transcript-text p').count()==61
+    assert page.locator('#transcript-p291').count()==1
+    go('practice/topic/brain-development','#practice-form');assert page.locator('#start-session').is_disabled()
     assert page.evaluate("localStorage.getItem('bio233-studio-deck-20261113')")=='legacy-sentinel'
     assert page.evaluate("localStorage.getItem('bio233missed')")=='[1,4]'
     print('PASS: all lessons, source images, filters, test mode and legacy state',flush=True)
@@ -80,5 +84,5 @@ with sync_playwright() as pw:
     page.screenshot(path=str(QA/'home-dark-mobile.png'),full_page=True)
     assert not errors,errors
     browser.close()
-report={'status':'PASS','questionsGraded':163,'topicsOpened':38,'sourceImagesChecked':63,'allQuestionsRandomized':True,'resumeOrderPreserved':True,'filtersComplete':True,'testMode':True,'progressExportImport':True,'legacyStoragePreserved':True,'mobileOverflow':False,'browserErrors':errors}
+report={'status':'PASS','questionsGraded':171,'topicsOpened':38,'sourceImagesChecked':63,'allQuestionsRandomized':True,'resumeOrderPreserved':True,'filtersComplete':True,'testMode':True,'progressExportImport':True,'legacyStoragePreserved':True,'mobileOverflow':False,'browserErrors':errors}
 (QA/'report.json').write_text(json.dumps(report,indent=2));print(json.dumps(report,indent=2))

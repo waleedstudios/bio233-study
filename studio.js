@@ -1,4 +1,4 @@
-import {guideHomeBanner,renderGuideLibrary,renderSlideViewer,renderAssistance} from './study-guide.js?v=deck-20261113';
+import {guideHomeBanner,renderGuideLibrary,renderSlideViewer,renderAssistance} from './study-guide.js?v=personal-20261117';
 const STORAGE_KEY = 'bio233-studio-deck-20261113';
 import {STORAGE_KEY as LEGACY_STORAGE_KEY,freshProgress,shuffle,grade,scheduleCard,recordAnswer,metrics,validateProgress} from './study-engine.mjs';
 import {anatomyHero,labelFigure,renderAnatomyLab,stopAnatomy} from './real-anatomy.mjs?v=anatomy-20261113';

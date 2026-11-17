@@ -1,15 +1,17 @@
 {
-  "version": "exam4-initial-20261117",
-  "status": "initial-slides-and-textbook",
+  "version": "exam4-lecture-20261117",
+  "status": "slides-textbook-and-one-partitioned-lecture",
   "counts": {
     "topics": 38,
-    "questions": 163,
-    "flashcards": 163,
-    "sourceImages": 63
+    "questions": 171,
+    "flashcards": 171,
+    "sourceImages": 63,
+    "recordings": 1,
+    "referenceQuestions": 6
   },
   "pending": [
-    "Chapter 14\u201316 lecture recordings",
-    "Chapter 14\u201316 lecture transcripts"
+    "Later Chapter 14\u201316 recordings and transcripts",
+    "Instructor cranial-nerve handout"
   ],
   "sourceFiles": [
     {
@@ -35,6 +37,15 @@
     {
       "filename": "chapters14-16 textbook.pdf",
       "pages": 100
+    },
+    {
+      "filename": "Pasted text(4).txt",
+      "paragraphs": 351,
+      "splitAtParagraph": 291
+    },
+    {
+      "filename": "Henry Ford College 3.m4a",
+      "durationSeconds": 4759.722667
     }
   ]
 }

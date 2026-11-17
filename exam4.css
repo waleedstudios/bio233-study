@@ -18,3 +18,10 @@ html{scroll-behavior:smooth}body{overflow-wrap:break-word}h1,h2,h3{letter-spacin
 @media(max-width:650px){.e4-hero{grid-template-columns:1fr;padding:22px}.e4-hero figure{max-width:480px}.e4-topic-grid,.e4-shelf,.e4-filters{grid-template-columns:1fr}.e4-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.e4-image-tile img{height:145px}.e4-stat{padding:14px}.e4-stat strong{font-size:25px}.e4-question .panel{padding:18px}.e4-choice{padding:12px;gap:10px;font-size:14px}.e4-flashcard{padding:26px 20px}.e4-viewer{padding:4px}.e4-tbl{min-width:560px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.sidebar,.topbar,footer,#toast,button,.e4-nav-actions{display:none!important}.workspace{margin:0}.e4-lesson{display:block}.e4-status{break-inside:avoid}body{background:white;color:black}.panel{border:none}.e4-viewer{max-height:none;overflow:visible}}
+
+.lecture-transcript{max-height:580px;overflow:auto;padding:14px;border:1px solid var(--line);border-radius:10px}.lecture-transcript p{line-height:1.7;margin:0 0 16px}.lecture-transcript strong{color:var(--accent,#7050bd)}.lecture-highlight{background:#fff0b8;color:#242938;padding:10px}.lecture-warning{border-left:3px solid #b56f20;padding:15px;background:#fff5dd;color:#36313b}
+
+/* Keep inherited transcript text and page canvas readable in both themes. */
+html,body{color:var(--text);background:var(--bg)}
+
+[data-theme=dark] .button.secondary{color:var(--text)}
