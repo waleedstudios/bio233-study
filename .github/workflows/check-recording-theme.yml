@@ -1,0 +1,68 @@
+name: Check Lecture Recording Contrast
+on:
+  push:
+    branches: [personalized-sheet-lecture-20261117]
+    paths: [.github/workflows/check-recording-theme.yml]
+permissions:
+  contents: write
+jobs:
+  theme:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: personalized-sheet-lecture-20261117
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Make inherited text and page background follow the Exam 4 theme
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path('exam4.css');s=p.read_text();s+='\n/* Keep inherited transcript text and page canvas readable in both themes. */\nhtml,body{color:var(--text);background:var(--bg)}\n';p.write_text(s)
+          p=Path('exam4.html');s=p.read_text();assert 'exam4.css?v=20261117' in s;s=s.replace('exam4.css?v=20261117','exam4.css?v=lecture-20261117');p.write_text(s)
+          p=Path('personalized-update-manifest.json');m=json.loads(p.read_text())
+          for f in m['files']:
+              raw=Path(f['path']).read_bytes();f['sha256']=hashlib.sha256(raw).hexdigest();f['bytes']=len(raw)
+          p.write_text(json.dumps(m,indent=2)+'\n')
+          PY
+          python tests/validate-exam4.py
+      - name: Check light and dark recording views
+        run: |
+          pip install playwright==1.51.0
+          python -m playwright install --with-deps chromium
+          python -m http.server 8765 > "$RUNNER_TEMP/theme-http.log" 2>&1 &
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from playwright.sync_api import sync_playwright
+          qa=Path('qa-theme');qa.mkdir(exist_ok=True);report=[]
+          with sync_playwright() as pw:
+              b=pw.chromium.launch();p=b.new_page(viewport={'width':1440,'height':1000});errors=[];p.on('pageerror',lambda e:errors.append(str(e)))
+              p.goto('http://127.0.0.1:8765/exam4.html#recordings');p.wait_for_selector('#lecture-audio')
+              for theme in ['light','dark']:
+                  p.evaluate('(theme)=>document.documentElement.dataset.theme=theme',theme)
+                  styles=p.evaluate('''()=>{const s=getComputedStyle(document.body);return {color:s.color,background:s.backgroundColor}}''')
+                  expected={'light':{'color':'rgb(34, 41, 57)','background':'rgb(247, 248, 252)'},'dark':{'color':'rgb(237, 240, 247)','background':'rgb(17, 21, 30)'}}
+                  assert styles==expected[theme],(theme,styles)
+                  p.screenshot(path=str(qa/(theme+'-recording.png')),full_page=True)
+                  report.append({'theme':theme,'styles':styles,'status':'PASS'})
+              p.set_viewport_size({'width':390,'height':844});assert p.evaluate('document.documentElement.scrollWidth<=innerWidth+1');p.screenshot(path=str(qa/'dark-recording-mobile.png'),full_page=True)
+              assert not errors,errors;b.close()
+          (qa/'report.json').write_text(json.dumps({'status':'PASS','checks':report,'errors':errors},indent=2))
+          PY
+      - name: Commit verified contrast correction
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exam4.css exam4.html personalized-update-manifest.json
+          git commit -m "Keep Exam 4 lecture text readable in dark mode and refresh stylesheet cache"
+          git push origin HEAD:personalized-sheet-lecture-20261117
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: recording-theme-check
+          path: qa-theme/
+          retention-days: 3
