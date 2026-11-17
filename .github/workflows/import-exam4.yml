@@ -22,10 +22,10 @@ jobs:
           python-version: '3.12'
       - name: Fetch verified source-grounded update
         env:
-          BUNDLE_URL: https://at.adobe.com/rlA1RHtcjdFHgv51
+          BUNDLE_URL: https://at.adobe.com/10LNd8z3sc7hUyPJ
         run: |
           curl --fail --location --retry 3 "$BUNDLE_URL" -o "$RUNNER_TEMP/exam4.zip"
-          echo "d27e4c77de496dd676b25072b241b51a09fe3dc073f1a22b2071b7b86cd27e26  $RUNNER_TEMP/exam4.zip" | sha256sum --check
+          echo "1da6a2b6019d24390e1f30ef2c48e20b2919388380a0d62b92a5f2c29caccba9  $RUNNER_TEMP/exam4.zip" | sha256sum --check
           python - <<'PY'
           import os,zipfile
           from pathlib import Path
