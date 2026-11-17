@@ -1,0 +1,40 @@
+{
+  "version": "exam4-initial-20261117",
+  "status": "initial-slides-and-textbook",
+  "counts": {
+    "topics": 38,
+    "questions": 163,
+    "flashcards": 163,
+    "sourceImages": 63
+  },
+  "pending": [
+    "Chapter 14\u201316 lecture recordings",
+    "Chapter 14\u201316 lecture transcripts"
+  ],
+  "sourceFiles": [
+    {
+      "filename": "233 Ch14_Lecture 01_PDF Presentation.pdf",
+      "pages": 12
+    },
+    {
+      "filename": "233 Ch14_Lecture 02_PDF Presentation.pdf",
+      "pages": 13
+    },
+    {
+      "filename": "CH15 Lecture slides.pdf",
+      "pages": 9
+    },
+    {
+      "filename": "chapter 16 slide 1.pdf",
+      "pages": 4
+    },
+    {
+      "filename": "chapter 16 slides 2.pdf",
+      "pages": 6
+    },
+    {
+      "filename": "chapters14-16 textbook.pdf",
+      "pages": 100
+    }
+  ]
+}
