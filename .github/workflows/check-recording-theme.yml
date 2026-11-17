@@ -16,13 +16,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Make inherited text and page background follow the Exam 4 theme
+      - name: Make secondary lecture tabs follow the theme text color
         run: |
           python - <<'PY'
           import json,hashlib
           from pathlib import Path
-          p=Path('exam4.css');s=p.read_text();s+='\n/* Keep inherited transcript text and page canvas readable in both themes. */\nhtml,body{color:var(--text);background:var(--bg)}\n';p.write_text(s)
-          p=Path('exam4.html');s=p.read_text();assert 'exam4.css?v=20261117' in s;s=s.replace('exam4.css?v=20261117','exam4.css?v=lecture-20261117');p.write_text(s)
+          p=Path('exam4.css');s=p.read_text();s+='\n[data-theme=dark] .button.secondary{color:var(--text)}\n';p.write_text(s)
           p=Path('personalized-update-manifest.json');m=json.loads(p.read_text())
           for f in m['files']:
               raw=Path(f['path']).read_bytes();f['sha256']=hashlib.sha256(raw).hexdigest();f['bytes']=len(raw)
@@ -47,6 +46,7 @@ jobs:
                   styles=p.evaluate('''()=>{const s=getComputedStyle(document.body);return {color:s.color,background:s.backgroundColor}}''')
                   expected={'light':{'color':'rgb(34, 41, 57)','background':'rgb(247, 248, 252)'},'dark':{'color':'rgb(237, 240, 247)','background':'rgb(17, 21, 30)'}}
                   assert styles==expected[theme],(theme,styles)
+                  if theme=='dark':assert p.locator('.button.secondary').first.evaluate('(e)=>getComputedStyle(e).color')==styles['color']
                   p.screenshot(path=str(qa/(theme+'-recording.png')),full_page=True)
                   report.append({'theme':theme,'styles':styles,'status':'PASS'})
               p.set_viewport_size({'width':390,'height':844});assert p.evaluate('document.documentElement.scrollWidth<=innerWidth+1');p.screenshot(path=str(qa/'dark-recording-mobile.png'),full_page=True)
@@ -57,8 +57,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exam4.css exam4.html personalized-update-manifest.json
-          git commit -m "Keep Exam 4 lecture text readable in dark mode and refresh stylesheet cache"
+          git add exam4.css personalized-update-manifest.json
+          git commit -m "Keep inactive recording tabs readable in dark mode"
           git push origin HEAD:personalized-sheet-lecture-20261117
       - uses: actions/upload-artifact@v4
         if: always()
