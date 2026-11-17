@@ -1,0 +1,138 @@
+{
+  "version": "personal-20261117",
+  "basis": "Existing source-linked Chapters 12–13 review deck and current Study Assistance Sheet; the closing review is tagged separately.",
+  "topics": {
+    "deck-organization": {
+      "title": "ORGANIZATION + RECEPTORS",
+      "core": "SAME: sensory = afferent (arrives); motor = efferent (exits). CNS: brain + cord. PNS: nerves/ganglia. ENS: gut networks. Somatic motor targets skeletal muscle; autonomic targets smooth/cardiac muscle, glands and adipose.",
+      "extra": "Extero = external; intero = internal; proprio = muscle/joint position. Nerve/tract = PNS/CNS axon bundle; ganglion/nucleus = PNS/CNS cell bodies.",
+      "cue": "A arrives; E exits."
+    },
+    "deck-neurons": {
+      "title": "NEURONS + TRANSPORT",
+      "core": "Dendrites receive; soma integrates; axon conducts to telodendria/terminals. Axolemma = axon membrane; axoplasm = cytoplasm. Nissl = rough ER + ribosomes. Kinesin moves cargo away from soma; dynein returns it; transport uses ATP.",
+      "extra": "Multipolar: many dendrites + one axon. Bipolar: two processes. Unipolar: soma off to side of one branching process. Anaxonic: no obvious axon.",
+      "cue": "Kinesin carries out; dynein delivers back."
+    },
+    "deck-glia": {
+      "title": "GLIA + MYELIN",
+      "core": "CNS: astrocytes support the BBB/environment; ependymal cells line ventricles/canal and help with CSF; oligodendrocytes myelinate; microglia phagocytose. PNS: satellite cells surround ganglion cell bodies; Schwann cells support/myelinate axons.",
+      "extra": "Oligodendrocyte: segments on several axons. Schwann: one myelinated segment of one axon. Internode = insulated segment; node = gap. PNS repair: distal degeneration, cleanup, Schwann guidance and regrowth.",
+      "cue": "CNS: A-E-O-M. PNS: satellite + Schwann."
+    },
+    "deck-resting-potential": {
+      "title": "RESTING VOLTAGE + GRADIENTS",
+      "core": "Rest is about -70 mV: inside negative relative to outside. Na+ is high outside; K+ high inside. Pump: 3 Na+ OUT, 2 K+ IN per ATP; maintains gradients. At rest, Na+ chemical/electrical forces act inward; K+ chemical force outward, electrical inward.",
+      "extra": "Course equilibrium examples: K+ about -90 mV; Na+ about +66 mV. These are selective-permeability examples, not a universal result of turning the pump off.",
+      "cue": "Three out, two in; ATP maintains the difference."
+    },
+    "deck-graded-channels": {
+      "title": "CHANNELS + GRADED POTENTIALS",
+      "core": "Chemical gate: ligand binds (e.g., ACh at a nicotinic receptor). Voltage gate: membrane voltage changes (axonal Na+/K+; terminal Ca2+). Mechanical gate: stretch/distortion (touch/pressure). Leak channels are open at rest, not one of the three gated categories.",
+      "extra": "Graded potentials are local, variable, fade with distance, can sum and may depolarize or hyperpolarize. They do not have their own AP threshold or refractory period; sufficient summed input brings the axon initial segment to threshold.",
+      "cue": "Chemical binds; voltage changes; mechanical bends."
+    },
+    "deck-action-potential": {
+      "title": "ACTION POTENTIAL + REFRACTORY",
+      "core": "Course sequence: -70 mV rest; about -55 mV threshold; voltage-gated Na+ opens and Na+ enters; about +30 mV peak; Na+ inactivates and K+ exits; repolarization; delayed K+ closure produces undershoot. Some source figures use -60 mV threshold.",
+      "extra": "Absolute refractory: no new AP regardless of stimulus strength. Relative refractory: a stronger stimulus can trigger an AP. APs are all-or-none, regenerated and do not sum in amplitude.",
+      "cue": "Na+ IN rises; K+ OUT returns."
+    },
+    "deck-propagation": {
+      "title": "CONTINUOUS + SALTATORY",
+      "core": "Unmyelinated: local current depolarizes the next adjacent region to threshold; voltage-gated Na+ opens and regenerates a full AP. Myelinated: current spreads beneath insulated internodes and triggers a new AP at the next node of Ranvier.",
+      "extra": "Myelin and larger axon diameter increase speed, not axon length alone. Fewer regions regenerate APs under myelin, so less ion movement requires restoration. A stronger sustained stimulus usually raises AP frequency, not height.",
+      "cue": "Continuous = every region relays; saltatory = node to node. Each relay renews the full message."
+    },
+    "deck-synapses": {
+      "title": "SYNAPSES + ACh",
+      "core": "Electrical synapse: gap junctions. Chemical: neurotransmitter crosses a cleft. Terminal AP opens voltage-gated Ca2+ channels; Ca2+ influx triggers vesicle exocytosis; ACh binds postsynaptic channels. AChE splits ACh into acetate + choline; choline is recycled.",
+      "extra": "Axodendritic/axosomatic/axoaxonic = to dendrite/soma/axon. Release and binding steps create synaptic delay; more synapses add delay. Fatigue occurs when demand exceeds transmitter replenishment.",
+      "cue": "Calcium enters; vesicles release; transmitter binds."
+    },
+    "deck-transmitters": {
+      "title": "TRANSMITTERS + RECEPTORS",
+      "core": "Cholinergic uses ACh; adrenergic uses NE/related signaling. Dopamine, serotonin and NE are amines. Endorphins/enkephalins/dynorphins are opioid peptides. GABA/glycine inhibit; glutamate often excites. The receptor determines the response.",
+      "extra": "Ionotropic receptors directly affect channels. Metabotropic receptors use G proteins/second messengers; adenylate cyclase converts ATP to cAMP, changing downstream channels or enzymes.",
+      "cue": "Ionotropic: direct channel. Metabotropic: messenger steps."
+    },
+    "deck-summation": {
+      "title": "SUMMATION + PRESYNAPTIC CONTROL",
+      "core": "EPSP moves toward threshold; IPSP opposes excitation (chapter examples: K+ out or Cl- entry). Temporal summation: repeated input at one site. Spatial: inputs from multiple sites. Graded potentials sum; AP amplitudes do not.",
+      "extra": "Course terminal examples: GABA-mediated presynaptic inhibition reduces Ca2+ entry and transmitter release; serotonin-mediated facilitation increases them. These are source examples, not universal effects at every receptor.",
+      "cue": "Temporal = time; spatial = space. Presynaptic = before the next cell."
+    },
+    "deck-cord-gross": {
+      "title": "CORD + SPINAL NERVES",
+      "core": "31 pairs: 8 cervical, 12 thoracic, 5 lumbar, 5 sacral, 1 coccygeal. C1-7 exit above the matching vertebra; C8 between C7/T1; T1 onward below. Conus medullaris: cord end near L1-2. Cauda equina: long roots; filum terminale: support thread.",
+      "extra": "Spinal cord segments are not identical to vertebral levels. Enlargements serve the limbs; roots link individual spinal nerves to the cord.",
+      "cue": "8-12-5-5-1 = 31."
+    },
+    "deck-meninges": {
+      "title": "MENINGES + SUPPORT",
+      "core": "Outer to inner: dura, arachnoid, pia. Epidural space is outside spinal dura. CSF is in the subarachnoid space and central canal. Denticulate ligaments extend from pia to dura for lateral stability.",
+      "extra": "Filum terminale/coccygeal support provides longitudinal stabilization. Distinguish the CSF-containing space from the membranes surrounding it.",
+      "cue": "D-A-P, outside in."
+    },
+    "deck-cord-section": {
+      "title": "GRAY MATTER + ROOTS",
+      "core": "DAVE: dorsal afferent; ventral efferent. Dorsal root ganglion holds sensory cell bodies. Posterior gray contains sensory nuclei; anterior/lateral regions contain motor nuclei. The chapter pattern posterior to anterior is somatic sensory, visceral sensory, visceral motor, somatic motor.",
+      "extra": "Gray commissure joins left/right gray around the canal. Anterior white commissure lies farther forward. Roots unite as a mixed spinal nerve; both rami remain mixed.",
+      "cue": "S-V-V-S: sensory behind; motor in front."
+    },
+    "deck-nerves-tracts": {
+      "title": "NERVE COVERINGS + TRACTS",
+      "core": "Endoneurium surrounds an individual axon; perineurium a fascicle; epineurium the whole nerve. A nerve is a PNS axon bundle; a tract is a CNS bundle. Ascending pathways carry sensory input; descending pathways carry motor output.",
+      "extra": "A dermatome is the skin area supplied by a spinal nerve. The previous lecture excludes memorizing the detailed dermatome map; recognize the concept and source qualifications.",
+      "cue": "Endo = each; peri = packet; epi = entire."
+    },
+    "deck-routes": {
+      "title": "RAMI + SYMPATHETIC ROUTES",
+      "core": "Posterior ramus serves deep back/overlying skin; anterior ramus serves front/sides of trunk and limbs and forms plexuses. Both are mixed. White rami carry myelinated preganglionic sympathetic fibers (T1-L2); gray rami return unmyelinated postganglionic fibers.",
+      "extra": "Body-wall routes synapse in the chain then return by gray ramus to spinal nerve/rami. Thoracic routes synapse in chain ganglia; abdominopelvic routes pass through the chain to collateral ganglia.",
+      "cue": "Pre/post refers to the ganglion synapse, not direction alone."
+    },
+    "deck-plexus-phrenic": {
+      "title": "PLEXUSES + PHRENIC",
+      "core": "Course ranges: cervical C1-5; brachial C5-T1; lumbar T12-L4; sacral L4-S4. The phrenic nerve receives C3, C4 and C5 fibers and supplies the diaphragm.",
+      "extra": "The closing review explicitly asks for plexus boundaries and these phrenic roots, not every individual nerve-root contribution. Preserve the course range where other sources differ.",
+      "cue": "C3, C4, C5 keep the diaphragm alive."
+    },
+    "deck-limb-nerves": {
+      "title": "NAMED NERVES + TARGETS",
+      "core": "Musculocutaneous: arm flexors. Radial: arm/forearm extensors. Median/ulnar: forearm/hand flexion groups. Femoral: anterior-thigh/hip-flexion group. Obturator: thigh adductors.",
+      "extra": "Superior gluteal: medius/minimus; inferior gluteal: maximus. Sciatic: highlighted hamstrings and tibial/common fibular branches. These are course muscle-group associations, not exhaustive innervation lists.",
+      "cue": "Radial extends; obturator adducts; inferior gluteal → maximus."
+    },
+    "deck-circuits": {
+      "title": "NEURAL CIRCUITS",
+      "core": "Divergence: one neuron to many. Convergence: many inputs to one. Serial processing: successive steps. Parallel processing: simultaneous paths. Reverberation: feedback reactivates an earlier part of a circuit.",
+      "extra": "Follow arrow direction and where branches merge or split. Do not confuse multiple outputs (divergence) with combined inputs (convergence).",
+      "cue": "Diverge distributes; converge collects."
+    },
+    "deck-reflex-basics": {
+      "title": "REFLEX ARC + CLASSES",
+      "core": "Arc: receptor detects; sensory neuron enters CNS; integration occurs at synapse(s); motor neuron exits; effector responds. Monosynaptic = one synapse, two neurons. Polysynaptic = interneuron(s), multiple synapses.",
+      "extra": "Classify innate/acquired, somatic/visceral, mono/poly, spinal/cranial. A protective spinal response can occur before conscious perception; extra synapses add delay. The brain can still receive information and modulate reflexes.",
+      "cue": "Receptor → sensory → integration → motor → effector."
+    },
+    "deck-stretch-tendon": {
+      "title": "STRETCH + TENDON REFLEXES",
+      "core": "Muscle spindle detects length/stretch; stretch reflex contracts the stretched muscle. Intrafusal fibers are inside the spindle; extrafusal fibers produce force. Gamma motor neurons adjust spindle sensitivity.",
+      "extra": "Golgi tendon organs detect tendon tension; the tendon reflex inhibits the same muscle through interneurons. Do not substitute tendon tension for spindle length.",
+      "cue": "Spindle = stretch/length; tendon organ = tension."
+    },
+    "deck-withdrawal-crossed": {
+      "title": "WITHDRAWAL + CROSSED EXTENSION",
+      "core": "Withdrawal: flexors on and antagonistic extensors off on the stimulated side (reciprocal inhibition). Crossed extensor: opposite leg extensors on and flexors off, supporting body weight.",
+      "extra": "Ipsilateral = same side; contralateral = opposite. These coordinated protective responses involve interneurons and multiple synapses.",
+      "cue": "Pull away on one side; support on the other."
+    },
+    "deck-brain-reflex": {
+      "title": "BRAIN CONTROL + PLANTAR",
+      "core": "Brain pathways can facilitate or inhibit spinal reflexes; reinforcement enhances a response. Normal adult plantar response: toes curl. Infant Babinski: great-toe extension and fanning can be normal.",
+      "extra": "A Babinski response in an adult suggests impaired descending control in the course description; do not treat the infant pattern as an abnormality by itself.",
+      "cue": "Age changes the meaning of the response."
+    }
+  }
+}

@@ -1,0 +1,121 @@
+[291] When can somebody not receive or conduct an impulse, regardless of the strength of a stimulus? Pardon? Say it again?
+
+[292] Absolute... refractory. Absolute refractory, right? Could they conduct an impulse in when they're in relative refractory?
+
+[293] Yes, it is. But what's necessary. If it's strong enough.
+
+[294] Right. Right? Um, Why does our brain find out later about a reflex stimulus?
+
+[295] Why is it processing the spinal cord, not the brain? To avoid tissue damage, to save time. Pardon me?
+
+[296] Because it takes too long. And what's one of the reasons why it takes too long? Well, think about it.
+
+[297] A sensation coming in is a polysynaptic process, right? Sensory in, interneuron, sensory up, thalamus, cortical region, back down and out to the effector. You have a latent period in all of that, right?
+
+[298] Between the release of a neurotransmitter to the binding of the gates, to the opening of the channels, you have synaptic delay. The more synapses, the more delay, the more delay, the more time. And as she said, the greater the tissue damage, if you're talking about grabbing something hot or stepping on something sharp, right?
+
+[299] And so, it gets processed in the spinal cord. Does the brain find out about it at any time? Yeah.
+
+[300] That's when you're perceptively aware. You feel the pain. And we've mentioned, though, you might grab something so committedly that you do feel the pain right then, but more often than not, you go to grab something and you withdraw so fast, the heat or the pain or whatever comes a little second later, right?
+
+[301] And that quick withdrawal, not your idea. That's your body responding to an imminent danger. When you're in absolute refractory, what has just occurred?
+
+[302] Action potential, right? And how is that achieved? Impulse on the axon, let's take a little further.
+
+[303] What did that impulse do at the Axon? What had to occur on the axon? Thresholds, what I'm looking for.
+
+[304] Yeah, threshold been followed by depolarization, right? Because when you hit threshold, what happens? on the axon?
+
+[305] Because, yeah. What kind of channels? Voltage gated sodium channels, right?
+
+[306] So, when that first one hits threshold on the initial segment, it'll open everyone after that. If it's not a mylanated axon, what type of propagation would that be? Continuous.
+
+[307] Saltatories when it's smiling data. jumps from no denote. When you hit, how will you know when you've hit threshold on the cell body of the den rates? Pardon me?
+
+[308] Yeah. Repolarization? No, grating.
+
+[309] Right. You have greater potential, and when does it achieve threshold? Why is she struggling to come up with when greater potential will hit threshold?
+
+[310] Greater potential doesn't have a threshold. It was a Fargain trick question, right? It doesn't have threshold.
+
+[311] It'll just keep depolarizing, right? Until we bring that voltage gated one into the threshold. So what does that tell you about the difference between the cell body and dendrates membrane and the axon's membrane?
+
+[312] The axon membrane is what? One word. I'm looking for.
+
+[313] The same word that described the sarco lemma beyond the motor endplate. Beyond the motor emplate, the sarco lemma was... Whereas the motor implate was not?
+
+[314] This type of membrane. Excitable, right? Because excitable membrane will completely depolarize.
+
+[315] Oh, I didn't hear you say that. Okay, yeah. Yeah.
+
+[316] So greater potential doesn't have a threshold. It's not an excitable membrane. How are these gates open?
+
+[317] What opens the gates on the cell body of the den rates? Give you a hint. Same thing that opens the gates at the motor and plate or the neuromuscular junction.
+
+[318] Chemicals, right? What did you guys tell me was on the axon? Voltage gated channels.
+
+[319] What's on the cell body and dead rates? Chemically gated. That's why it has no threshold.
+
+[320] You release a neurotransmitter, opens the gates, sodium rushes in, starts to depolarize anything that moves towards a more positive value is a depolarizing event. Right? So, it starts to depolarize.
+
+[321] But it doesn't have a threshold, so it doesn't matter if you take it all the way to plus 90. Until that initial segment on the axon hits minus 55 or minus 60, nothing happens. You could then remove the stimulus from the cell body.
+
+[322] Everything will go back to the way it was. Right? The gates will close, the pumps will restore, right?
+
+[323] RMP, resting memory potential. It was depolarizing. But it didn't hit a threshold 'cause it doesn't have a threshold.
+
+[324] What would happen if you released GABBA? on the axon that was gonna depolarize a cell body? It would inhibit it.?
+
+[325] We wouldn't block channel. It inhibits by not, it inhibits the opening of what? Pardon me?
+
+[326] No? Remember in a muscle when we were going to contract a muscle, the impulse came down the axon to the terminal, and it did something that made the terminal release ACH. What did it do?
+
+[327] Calcium. So Gabba blocks the calcium channels. If you don't have calcium coming in, you have much, much less neurotransmitter being released.
+
+[328] Because we're inhibiting the calcium channels. We need that calcium to enter the axon terminal, so that the vessels release their neurotransmitter, and then they excite, or start to depolarize the next membrane. What would we call this process?
+
+[329] That post would be pre, because it's on the axon terminal before the postsynaptic cell. So it's pre synaptic inhibition. It'd be just the opposite, and we'd call it pre synaptic facilitation, because we'd greatly open the calcium channels, lots of neurotransmitter release, more profound effect on the post synaptic cell.
+
+[330] What would we do to cause this pre synaptic facilitation? Serotonin, serotonin will open lots of calcium channels, right? True or false, visceral, autonomic, sensory information enters through the spinal nerve.
+
+[331] Into the dorsal root. True. True or false?
+
+[332] Motor information, visceral motor information, going to the thoracic cavity, will not synapse in the sympathetic ganglion. You have a puzzled look on your face. False.
+
+[333] It will synapse in the synthetic gangland. What if it's going to the abdominal pelvic viscera? Will it synapses in the sympathetic ganglia?
+
+[334] Sharknado 3, right? What was the subtitle for Sharknado III? Oh, hell no.
+
+[335] Right? So, no, it won't. Remember, in the abdominal pelvic cavity, it'll synapse in those collateral gang there, which we haven't looked at yet.
+
+[336] But, if it's going to go back to the anterior or posterior components of the body and body, wall, and limbs, it will synapse there, and then it backtracks through the Rayman Communicantes, right? Then through the spinal nerve. Sure or false?
+
+[337] Sympathetic ganglia, as well as somatic ganglia, are outside of the CNS. True, yeah. Ganglia, our aggregates of cell, you know, collections, cell bodies, outside the sea nest, period.
+
+[338] Right? Nuclei are in the CNS. True or false, the two nuclei found in the posterior horn of gray matter are both sensory.
+
+[339] Yeah, they are. One sematic, one's visceral. And in the inferior component, if you cut right through at the commissioner, then you have visceral and somatic motor.
+
+[340] Right? I said, remember that pattern. Sensory on top, motor on the bottom.
+
+[341] Somatic, visceral, visceral, motor. All right, visceral semantic, right? So I'll just say it again.
+
+[342] Somatic, visceral, visceral, somatic. These two down here, motor, these two up here, and bilateral symmetry, right? What are the boundaries of the cervical plexus?
+
+[343] C1 through C5. There are eight, you're right about the number of cervical nerves. 1 through 8. But the plexus is 1 through 5.
+
+[344] And the brachial plexus? Overlap at C5 and go all the way to T1. T1, right?
+
+[345] What? Does C3, 4, and 5 contribute to that I wanted you to know? Well, not the diaphragm.
+
+[346] It innervates the diaphragm for breathing. What is that nerve called? Frenic, yes.
+
+[347] Frenic. Right? So, know the boundaries of the plexuses, know those three fibers, specifically, that contribute the fredic.
+
+[348] The fibers, I won't want you to know, but things like the muscular cutaneous, medium, radio, and all their nerves. I want to know what they innervate, the gluteal nerves, floral nerve, operator nerve, right? All right, I'll see you guys all for a little quiz on Thursday, and I'll see you guys, whoever's going to show up for lab.
+
+[349] Please show up. You guys don't want to lose time with the models. Mm hmm.
+
+[350] It's one sided paper? Is it a, is it, like, just a one sided chicken? Yeah.
+
+[351] Believe it or not, it does not pick up the sniffling, only your voice. Yeah, it's amazing. Yeah, it's technology now.
