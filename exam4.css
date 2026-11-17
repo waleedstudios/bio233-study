@@ -20,3 +20,6 @@ html{scroll-behavior:smooth}body{overflow-wrap:break-word}h1,h2,h3{letter-spacin
 @media print{.sidebar,.topbar,footer,#toast,button,.e4-nav-actions{display:none!important}.workspace{margin:0}.e4-lesson{display:block}.e4-status{break-inside:avoid}body{background:white;color:black}.panel{border:none}.e4-viewer{max-height:none;overflow:visible}}
 
 .lecture-transcript{max-height:580px;overflow:auto;padding:14px;border:1px solid var(--line);border-radius:10px}.lecture-transcript p{line-height:1.7;margin:0 0 16px}.lecture-transcript strong{color:var(--accent,#7050bd)}.lecture-highlight{background:#fff0b8;color:#242938;padding:10px}.lecture-warning{border-left:3px solid #b56f20;padding:15px;background:#fff5dd;color:#36313b}
+
+/* Keep inherited transcript text and page canvas readable in both themes. */
+html,body{color:var(--text);background:var(--bg)}

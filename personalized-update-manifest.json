@@ -46,14 +46,14 @@
     {
       "path": "exam4.css",
       "before": "01689376f7614148ca1a187f97da206e27b35f1e43c9901e1ccdac76c103b49c",
-      "sha256": "c82fca12fdd09c780a40128d4c92ca0fb45e053728e924c5c87b7d8584abc56b",
-      "bytes": 9288
+      "sha256": "2c01d8cd603910dc02c5688bd13090d5751f82bcbd8476b5f0f5f51104baf7b7",
+      "bytes": 9417
     },
     {
       "path": "exam4.html",
       "before": "24774da637db8f8a5c738b873f15c220eb166e18625d8ed46fc8f5e6cf35075b",
-      "sha256": "decca0bafbefcc777bfac2b0b866e557ae4017b793a5e9ec53dc409cd3a30661",
-      "bytes": 3213
+      "sha256": "8f0f60b3bc6877690db4efcd90336dcf5a282b728c3ebdae130d136123f7a030",
+      "bytes": 3221
     },
     {
       "path": "exam4.js",
