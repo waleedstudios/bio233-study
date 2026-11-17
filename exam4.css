@@ -23,3 +23,5 @@ html{scroll-behavior:smooth}body{overflow-wrap:break-word}h1,h2,h3{letter-spacin
 
 /* Keep inherited transcript text and page canvas readable in both themes. */
 html,body{color:var(--text);background:var(--bg)}
+
+[data-theme=dark] .button.secondary{color:var(--text)}
