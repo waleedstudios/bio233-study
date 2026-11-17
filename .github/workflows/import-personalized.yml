@@ -22,10 +22,10 @@ jobs:
           python-version: '3.12'
       - name: Apply hash-verified targeted update
         env:
-          BUNDLE_URL: https://at.adobe.com/tlB7KTy5qD1sVd7m
+          BUNDLE_URL: https://at.adobe.com/VBAAyWlPQUxSfZSO
         run: |
           curl --fail --location --retry 3 "$BUNDLE_URL" -o "$RUNNER_TEMP/update.zip"
-          echo "10387bd622534e6a133771e69ccae98947fa518e45e2511d587832a1005e9251  $RUNNER_TEMP/update.zip" | sha256sum --check
+          echo "00418fbbb8f60bf6a78b321986534939a1da9c70a0d65a09eff7c8734b375777  $RUNNER_TEMP/update.zip" | sha256sum --check
           python - <<'PY'
           import os,zipfile
           from pathlib import Path
